@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "奶龙保卫战",
+  "short_name": "奶龙保卫战",
+  "description": "26关冒险、13位奶龙守护者，横屏触控塔防。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#274735",
+  "background_color": "#274735",
+  "icons": [
+    {"src":"assets/app-icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"assets/app-icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

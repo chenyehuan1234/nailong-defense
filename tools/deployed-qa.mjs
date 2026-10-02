@@ -6,6 +6,7 @@ await mkdir('test-results/deployed',{recursive:true});const reports=[];
 for(const browserKind of [chromium,webkit]){
  const browser=await browserKind.launch(browserKind===chromium?{channel:'chrome',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']}:{headless:true,proxy:{server:'http://127.0.0.1:9',bypass:'chenyehuan1234.github.io'}});
  const page=await browser.newPage({viewport:{width:844,height:390},deviceScaleFactor:1,isMobile:true,hasTouch:true}),errors=[],requests=[];
+ await page.addInitScript(()=>{const NativeAudio=window.Audio;window.__QA_AUDIO__=[];window.Audio=function(...args){const e=new NativeAudio(...args);window.__QA_AUDIO__.push(e);return e;};window.Audio.prototype=NativeAudio.prototype;});
  page.setDefaultTimeout(90000);page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});page.on('request',r=>requests.push(r.url()));
  const response=await page.goto(url,{waitUntil:'networkidle',timeout:120000});assert.equal(response.status(),200);
  await page.locator('[data-action="training-skip"]').tap();assert.equal(await page.locator('[data-level-select] option').count(),26);
@@ -19,7 +20,11 @@ for(const browserKind of [chromium,webkit]){
  assert.deepEqual(errors,[]);const base=new URL(url),unexpected=requests.filter(r=>{const u=new URL(r);if(u.protocol==='data:')return false;if(u.protocol==='blob:')return u.origin!==base.origin;return u.origin!==base.origin||!u.pathname.startsWith(base.pathname);});
  assert.deepEqual(unexpected,[],'assets should use the GitHub project path');
  const manifest=await(await page.request.get(new URL('assets/audio/manifest.json',url).href)).json(),song=manifest['music-forest'][0];
- const music=await page.request.get(new URL('assets/audio/'+song,url).href,{headers:{Range:'bytes=1000-1999'}});assert.ok([200,206].includes(music.status()));assert.match(music.headers()['content-type'],/audio\/mpeg/);
- reports.push({browser:browserKind.name(),url,status:'passed',http:200,projectAssets:true,productionDebugAbsent:true,touchBuild:true,goldAfterBuild:195,waveStart:true,speed3:true,settingsSurviveReload:true,musicAvailable:true,errors});console.log(browserKind.name()+' deployed mobile passed');await browser.close();
+ const music=await page.request.get(new URL('assets/audio/'+song,url).href,{headers:{Range:'bytes=1000-1999'}});assert.ok([200,206].includes(music.status()));assert.match(music.headers()['content-type'],/audio\/(mpeg|mp3)/);
+ const decoded=await page.waitForFunction(()=>window.__QA_AUDIO__.some(e=>Number.isFinite(e.duration)&&e.duration>=180),null,{timeout:15000}).then(()=>true,()=>false);
+ const playback=await page.evaluate(()=>window.__QA_AUDIO__.map(e=>({duration:Number.isFinite(e.duration)?e.duration:null,readyState:e.readyState,currentTime:e.currentTime,paused:e.paused,error:e.error?.code??null})));
+ if(browserKind===chromium)assert.ok(decoded,'Chromium should decode a full-length music stream');
+ assert.ok(playback.every(e=>!e.error),'streaming MP3 should decode without a media error');
+ reports.push({browser:browserKind.name(),url,status:'passed',http:200,projectAssets:true,productionDebugAbsent:true,touchBuild:true,goldAfterBuild:195,waveStart:true,speed3:true,settingsSurviveReload:true,musicAvailable:true,musicDecoded:decoded,audioLimitation:decoded?null:'Windows WebKit did not resume/decode audio in headless mode; physical iPhone audio is unverified.',playback,errors});console.log(browserKind.name()+' deployed mobile passed');await browser.close();
 }
 await writeFile('test-results/deployed-v5.json',JSON.stringify(reports,null,2));

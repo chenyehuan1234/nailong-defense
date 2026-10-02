@@ -7,6 +7,7 @@ export function resizeViewport(){
   document.documentElement.classList.toggle('mobile',mobile);
   document.documentElement.classList.toggle('portrait',width<height);
   shell.style.setProperty('--scale',String(scale));
+  shell.style.setProperty('--viewport-height',`${height}px`);
   shell.style.setProperty('--canvas-x',`${(width-1600*scale)/2}px`);
   shell.style.setProperty('--canvas-y',`${(height-900*scale)/2}px`);
 }

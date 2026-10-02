@@ -1,0 +1,10 @@
+import {chromium} from '@playwright/test';import fs from 'node:fs';
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1600,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
+await page.goto('http://127.0.0.1:5188',{waitUntil:'networkidle'});await page.waitForSelector('.world-node');
+if(await page.locator('[data-action="training-skip"]').count())await page.locator('[data-action="training-skip"]').click();
+fs.mkdirSync('test-results/visual-v4',{recursive:true});await page.screenshot({path:'test-results/visual-v4/world.png'});
+console.log('NODES',await page.locator('.world-node').count(),'HEROES',await page.locator('[data-action="hero"]').count());
+await page.locator('[data-action="start"]').click();await page.waitForTimeout(1000);await page.screenshot({path:'test-results/visual-v4/stage01.png'});
+console.log('BATTLE',await page.evaluate(()=>({level:window.__NAILONG__.sim.level.id,paths:window.__NAILONG__.sim.roads.length,hero:window.__NAILONG__.sim.hero.kind,assets:window.__NAILONG__.ui.audio.buffers.size})),'ERRORS',errors);
+await browser.close();

@@ -1,0 +1,101 @@
+{
+  "version": 4,
+  "tracks": [
+    {
+      "title": "Pathfinder",
+      "file": "music-v4-forest-0.mp3",
+      "theme": "forest",
+      "seconds": 204.36,
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "source": "https://www.scottbuckley.com.au/library/pathfinder/",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    },
+    {
+      "title": "Discovery",
+      "file": "music-v4-forest-1.mp3",
+      "theme": "forest",
+      "seconds": 235.34,
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "source": "https://www.scottbuckley.com.au/library/discovery/",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    },
+    {
+      "title": "Forgotten Victory",
+      "file": "music-v4-forest-2.mp3",
+      "theme": "forest",
+      "seconds": 248.58,
+      "author": "yd",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/forgotten-victory",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    },
+    {
+      "title": "Calm Track",
+      "file": "music-v4-dark-0.mp3",
+      "theme": "dark",
+      "seconds": 251.96,
+      "author": "pmiller",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/calm-track",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    },
+    {
+      "title": "Twists",
+      "file": "music-v4-dark-1.mp3",
+      "theme": "dark",
+      "seconds": 180.06,
+      "author": "Alexander Ehlers",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/free-music-pack",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    },
+    {
+      "title": "Dungeon of Qetzyl",
+      "file": "music-v4-dark-2.mp3",
+      "theme": "dark",
+      "seconds": 182.07,
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "source": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    },
+    {
+      "title": "Permafrost",
+      "file": "music-v4-boss-0.mp3",
+      "theme": "boss",
+      "seconds": 448.42,
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "source": "https://www.scottbuckley.com.au/library/permafrost/",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    },
+    {
+      "title": "Vanguard",
+      "file": "music-v4-boss-1.mp3",
+      "theme": "boss",
+      "seconds": 234.57999999999998,
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "source": "https://www.scottbuckley.com.au/library/vanguard/",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    },
+    {
+      "title": "Beautiful Oblivion",
+      "file": "music-v4-boss-2.mp3",
+      "theme": "boss",
+      "seconds": 426.24,
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "source": "https://www.scottbuckley.com.au/library/beautiful-oblivion/",
+      "changes": "Full recording retained; loudness normalized and MP3 encoded."
+    }
+  ],
+  "bow": {
+    "author": "artisticdude",
+    "license": "CC0-1.0",
+    "source": "https://opengameart.org/content/battle-sound-effects",
+    "changes": "Cropped, softened high frequencies, normalized, pitch variations."
+  }
+}

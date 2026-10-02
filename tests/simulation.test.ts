@@ -1,0 +1,21 @@
+import {legacyFixture} from './fixture';
+import { describe, expect, it } from 'vitest';
+import { Simulation, STEP } from '../src/simulation';
+import { LEVELS } from '../content/levels';
+import { HERO_KEYS, TOWER_KEYS } from '../content/definitions';
+import { Road } from '../src/math';
+import { freshSave, freeStars, validateSave } from '../src/save';
+import { validateLevel } from '../src/validation';
+import type { LevelDefinition } from '../src/types';
+const fixture=():LevelDefinition=>({...legacyFixture(),gold:5000,maxTowerLevel:4,unlocks:{archer:3,barracks:3,mage:3,engineer:3},paths:[[{x:-100,y:400},{x:1700,y:400}]],slots:[{x:300,y:290},{x:600,y:290}],heroStart:{x:350,y:400}});
+const step=(sim:Simulation,n:number)=>{for(let i=0;i<n;i++)sim.step();};
+describe('life cycle regressions',()=>{
+  it('cannot build with insufficient gold or invalid slot',()=>{const s=new Simulation(fixture());s.gold=50;expect(s.command({type:'build',slot:0,kind:'archer'})).toBe(false);expect(s.command({type:'build',slot:90,kind:'archer'})).toBe(false);expect(s.gold).toBe(50);});
+  it('barracks create three soldiers and rally only within road and camp range',()=>{const s=new Simulation(fixture());s.command({type:'build',slot:0,kind:'barracks'});expect(s.allies.filter(a=>a.kind==='soldier')).toHaveLength(3);expect(s.command({type:'rally',slot:0,point:{x:300,y:405}})).toBe(true);expect(s.command({type:'rally',slot:0,point:{x:1200,y:405}})).toBe(false);expect(s.command({type:'rally',slot:0,point:{x:300,y:700}})).toBe(false);s.command({type:'sell',slot:0});expect(s.allies).toHaveLength(1);});
+  it('flying enemies cannot be blocked by melee units',()=>{const s=new Simulation(fixture());const bat=s.spawn('bat',0,450);step(s,30);expect(s.blocked.has(bat.id)).toBe(false);expect(bat.distance).toBeGreaterThan(500);});
+  it('ground explosions do not splash flying enemies beside a ground target',()=>{const s=new Simulation(fixture());const bat=s.spawn('bat',0,600),boar=s.spawn('boar',0,600);s.grid.rebuild(s.enemies);const hp=bat.hp;s.area(boar,100,30,'physical',undefined,undefined,false);expect(bat.hp).toBe(hp);expect(boar.hp).toBeLessThan(boar.maxHp);s.area(bat,100,30,'magic');expect(bat.hp).toBeLessThan(hp);});
+  it('hero can retreat from a blocking position and respawns after death',()=>{const s=new Simulation(fixture());s.spawn('ogre',0,450);step(s,2);const x=s.hero.x;s.command({type:'move-hero',point:{x:650,y:400}});step(s,20);expect(s.hero.x).toBeGreaterThan(x+50);s.hitAlly(s.hero,5000);expect(s.hero.hp).toBe(0);step(s,550);expect(s.hero.hp).toBeGreaterThan(0);});
+  it('leaks and victory settle only once',()=>{const l=fixture();l.waves=[{groups:[{type:'mushroom',count:1,path:0,interval:1,delay:0}],rest:0}];const s=new Simulation(l);s.command({type:'next-wave'});s.step();s.damage(s.enemies[0],1000,'true');s.step();expect(s.result).toBe('won');const t=s.time;step(s,30);expect(s.time).toBe(t);expect(s.events.filter(e=>e.type==='result')).toHaveLength(1);const loss=new Simulation(fixture());loss.spawn('boss',0,loss.roads[0].total-1);step(loss,3);expect(loss.result).toBe('lost');expect(loss.lives).toBe(0);});
+  it('rejects invalid level coordinates, enemy types and negative scheduling',()=>{const l=fixture();l.waves[0].groups[0].interval=-1;expect(()=>validateLevel(l)).toThrow();const bad=fixture();bad.slots[0].x=NaN;expect(()=>validateLevel(bad)).toThrow();});
+  it('road projection agrees with rendered path coordinates',()=>{const road=new Road([{x:0,y:0},{x:150,y:200},{x:300,y:0}]);const p=road.at(road.total*.4);expect(road.nearest(p).distance).toBeLessThan(.001);});
+});

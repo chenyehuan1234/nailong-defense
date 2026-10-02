@@ -1,0 +1,31 @@
+{
+  "name": "nailong-defense",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5188 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5188 --strictPort",
+    "test": "vitest run",
+    "assets": "node tools/prepare-assets.mjs && node tools/pack-expansion.mjs && node tools/pack-walk-cycles.mjs && node tools/pack-action-layers.mjs && node tools/prepare-audio.mjs && node tools/prepare-audio-v4.mjs && node tools/prepare-reference-maps.mjs && node tools/update-asset-manifest.mjs",
+    "verify": "npm run test && npm run build",
+    "test:browser": "node tools/experience-v4-qa.mjs && node tools/production-qa.mjs",
+    "test:audio": "node tools/audio-soak-v4.mjs",
+    "test:performance": "node tools/performance.mjs",
+    "test:interaction": "node tools/interaction-v41-qa.mjs",
+    "test:mobile": "node tools/mobile-qa.mjs"
+  },
+  "dependencies": {
+    "phaser": "3.90.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.0.0",
+    "ffmpeg-static": "^5.3.0",
+    "sharp": "^0.35.5",
+    "typescript": "^5.7.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.3"
+  }
+}

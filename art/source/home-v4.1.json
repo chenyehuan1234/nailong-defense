@@ -1,0 +1,15 @@
+{
+  "version": "4.1",
+  "tool": "built-in image_gen",
+  "intent": "New main-menu illustration using existing hero portraits as identity/style references",
+  "source": "home-v4.1.png",
+  "runtime": "../../public/assets/home-v4.1.webp",
+  "prompt": "Use case: illustration-story. Asset type: finished main menu background for the Chinese 2D cartoon tower-defense game 奶龙保卫战. Create a new polished wide 16:9 landscape illustration, no text, no logo, no UI. The three input images are references ONLY for the yellow chubby dragon identity and the game's painted art style, not images to collage. Preserve the recognisable yellow face, round green eyes, gentle smile, cream big belly, short limbs and small tail of these NaiLong guardians. Compose the left 38 percent as a quiet softly shaded deep forest clearing with no characters so a menu title and buttons can be overlaid there. In the right 60 percent, paint an adventurous team of yellow NaiLong heroes standing naturally on a stone-and-grass terrace: a heroic shield knight with blue cloak and silver armor at the front, a green hooded bow ranger, a blue star wizard with glowing staff, a red dual-axe warrior, a bearded yellow dragon with ancestral axe, and a thunder-hammer dragon. Characters must be fully visible, correctly proportioned, with expressive faces, clear distinct equipment, coherent perspective, grounded feet and gentle shadows. Behind them a winding trail travels from lush forest and a wooden bridge through distant blue snow mountains toward a shadowed ruined castle, suggesting the game's expanded 26-stage adventure. Rich hand-painted cartoon storybook finish, clean confident outlines, detailed materials and foliage, warm upper-left sunlight and cinematic depth, yellow characters prominent against restrained natural greens and cool distant colors. Keep the top 12 percent and bottom 12 percent relatively calm for navigation and footer overlays. No cropped heads or feet, no cutout borders, no duplicate faces, no floating sprites, no photorealism, no typography, no watermark.",
+  "referenceImages": [
+    "public/assets/heroes-0.png",
+    "public/assets/heroes-1.png",
+    "public/assets/heroes-2.png"
+  ],
+  "processedWith": "sharp: 1600x900 cover resize, WebP quality 90",
+  "created": "2026-10-02"
+}

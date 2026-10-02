@@ -1,0 +1,5 @@
+import {execFile} from 'node:child_process';import {promisify} from 'node:util';import fs from 'node:fs';
+const run=promisify(execFile);fs.mkdirSync('art/source/audio',{recursive:true});
+const sources=[['rpg.zip','https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip'],['impact.zip','https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip'],['interface.zip','https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip'],['forest.wav','https://opengameart.org/sites/default/files/once_upon_a_time_loop.wav'],['dark.ogg','https://opengameart.org/sites/default/files/dark_place.ogg'],['boss.wav','https://opengameart.org/sites/default/files/determined_pursuit_loop.wav']];
+await Promise.all(sources.map(async([name,url])=>{await run('curl.exe',['--noproxy','*','-f','-L','--retry','2','--max-time','120','-s','-o','art/source/audio/'+name,url]);console.log(name,fs.statSync('art/source/audio/'+name).size);}));
+fs.writeFileSync('art/source/audio/downloads.json',JSON.stringify(sources,null,2));

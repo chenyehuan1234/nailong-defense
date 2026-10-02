@@ -1,0 +1,18 @@
+from pathlib import Path
+p=Path('src/ui.ts');s=p.read_text(encoding='utf-8')
+s="import {editWaveGroups,editRoads,customizeLevel} from './editor-compatibility';\n"+s
+s=s.replace("Number(this.scene?.sim?.level.id.split('-')[1])>=7", "[7,8,9,10,11,12,18,19,20,21,23,24,25,26].includes(Number(this.scene?.sim?.level.id.split('-')[1]))")
+s=s.replace("const cd=sim.cooldowns[skill],key=skill==='reinforce'?'Q':'W';text(skill+'-cd',cd>0?", "const cd=sim.cooldowns[skill],locked=!!sim.level.lockedPowers?.[skill==='meteor'?0:1],key=skill==='reinforce'?'Q':'W';text(skill+'-cd',locked?'尚未开放':cd>0?")
+s=s.replace("button.disabled=cd>0;button.classList", "button.disabled=locked||cd>0;button.classList")
+s=s.replace("boss.hp<boss.maxHp*.5?'狂暴阶段':'第一阶段'", "'进攻中'")
+s=s.replace("Math.min(60,Math.floor(remaining))", "Math.ceil(remaining)")
+s=s.replace("if(action==='work-path-add'", "if(action==='work-path-add'||action==='work-path-remove')editRoads(l);if(action==='work-group-add'||action==='work-group-remove')editWaveGroups(w);if(action==='work-path-add'")
+s=s.replace("v.modes=undefined;c.levels.push(v)", "customizeLevel(v);c.levels.push(v)")
+s=s.replace("l.waves[this.editorWave].rest=Math.max(0,Math.min(120,Number(input.value)||0));", "{l.waves[this.editorWave].rest=Math.max(0,Math.min(120,Number(input.value)||0));l.waves[this.editorWave].originalInterval=l.waves[this.editorWave].rest;}")
+s=s.replace("else if(input.dataset.group){const group", "else if(input.dataset.group){editWaveGroups(l.waves[this.editorWave]);const group")
+s=s.replace("else{if((this.editorMode==='nodes'&&list.length>=60)", "else{if((this.editorMode==='nodes'&&list.length>=(this.editorLevel!.densePaths?5000:60))")
+s=s.replace("this.rememberEditor();if(this.editorMode==='hero')", "this.rememberEditor();if(this.editorMode==='nodes')editRoads(this.editorLevel!);if(this.editorMode==='hero')")
+s=s.replace("this.editorDragSaved=true;}Object.assign", "this.editorDragSaved=true;if(this.editorMode==='nodes')editRoads(this.editorLevel!);}Object.assign")
+s=s.replace("this.rememberEditor();if(this.editorMode==='slots')", "this.rememberEditor();if(this.editorMode==='nodes')editRoads(this.editorLevel!);if(this.editorMode==='slots')")
+s=s.replace("const candidate=validateLevel({...this.editorLevel!,waves:JSON.parse(this.editorWaveDraft)});", "const waves=JSON.parse(this.editorWaveDraft) as LevelDefinition['waves'];waves.forEach((wave,i)=>{const old=this.editorLevel!.waves[i];if(old&&JSON.stringify(old.groups)!==JSON.stringify(wave.groups)&&JSON.stringify(old.timeline)===JSON.stringify(wave.timeline))editWaveGroups(wave);});const candidate=validateLevel({...this.editorLevel!,waves});")
+p.write_text(s,encoding='utf-8')

@@ -1,0 +1,530 @@
+{
+  "1": {
+    "hero": "shield",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "2": {
+    "hero": "shield",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "3": {
+    "hero": "shield",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "4": {
+    "hero": "shield",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "5": {
+    "hero": "shield",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "6": {
+    "hero": "ranger",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "7": {
+    "hero": "ranger",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "8": {
+    "hero": "malik",
+    "variant": 2,
+    "driver": "legacy"
+  },
+  "9": {
+    "hero": "star",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "10": {
+    "hero": "star",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "11": {
+    "hero": "ignus",
+    "variant": 2,
+    "driver": "legacy"
+  },
+  "12": {
+    "hero": "oni",
+    "variant": 0,
+    "driver": "legacy"
+  },
+  "13": {
+    "hero": "tenshi",
+    "variant": 3,
+    "driver": "native"
+  },
+  "14": {
+    "hero": "tenshi",
+    "variant": 3,
+    "driver": "native"
+  },
+  "20": {
+    "hero": "tenshi",
+    "variant": 0,
+    "driver": "native"
+  },
+  "22": {
+    "hero": "tenshi",
+    "variant": 6,
+    "driver": "native"
+  },
+  "23": {
+    "hero": "tenshi",
+    "variant": 0,
+    "driver": "native"
+  },
+  "24": {
+    "hero": "tenshi",
+    "variant": 1,
+    "driver": "native"
+  },
+  "16": {
+    "hero": "tenshi",
+    "variant": 8,
+    "driver": "native"
+  },
+  "19": {
+    "hero": "elora",
+    "variant": 8,
+    "driver": "native"
+  },
+  "15": {
+    "hero": "tenshi",
+    "variant": 11,
+    "driver": "native"
+  },
+  "25": {
+    "hero": "oni",
+    "variant": 11,
+    "driver": "native"
+  },
+  "17": {
+    "hero": "tenshi",
+    "variant": 7,
+    "driver": "legacy"
+  },
+  "18": {
+    "hero": "ignus",
+    "variant": 2,
+    "driver": "native"
+  },
+  "26": {
+    "hero": "tenshi",
+    "variant": 2,
+    "driver": "native"
+  },
+  "21": {
+    "hero": "ingvar",
+    "variant": 17,
+    "driver": "native"
+  },
+  "bySeed": {
+    "9451": {
+      "1": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "2": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "3": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "4": {
+        "hero": "shield",
+        "variant": 2,
+        "driver": "legacy"
+      },
+      "5": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "6": {
+        "hero": "ranger",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "7": {
+        "hero": "ranger",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "8": {
+        "hero": "malik",
+        "variant": 2,
+        "driver": "legacy"
+      },
+      "9": {
+        "hero": "star",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "10": {
+        "hero": "star",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "11": {
+        "hero": "ignus",
+        "variant": 2,
+        "driver": "legacy"
+      },
+      "12": {
+        "hero": "oni",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "13": {
+        "hero": "tenshi",
+        "variant": 11,
+        "driver": "native"
+      },
+      "14": {
+        "hero": "tenshi",
+        "variant": 3,
+        "driver": "native"
+      },
+      "15": {
+        "hero": "tenshi",
+        "variant": 11,
+        "driver": "native"
+      },
+      "16": {
+        "hero": "tenshi",
+        "variant": 8,
+        "driver": "native"
+      },
+      "17": {
+        "hero": "tenshi",
+        "variant": 15,
+        "driver": "native"
+      },
+      "18": {
+        "hero": "oni",
+        "variant": 14,
+        "driver": "native"
+      },
+      "19": {
+        "hero": "tenshi",
+        "variant": 6,
+        "driver": "native"
+      },
+      "20": {
+        "hero": "tenshi",
+        "variant": 0,
+        "driver": "native"
+      },
+      "21": {
+        "hero": "ingvar",
+        "variant": 17,
+        "driver": "native"
+      },
+      "22": {
+        "hero": "tenshi",
+        "variant": 6,
+        "driver": "native"
+      },
+      "23": {
+        "hero": "tenshi",
+        "variant": 0,
+        "driver": "native"
+      },
+      "24": {
+        "hero": "tenshi",
+        "variant": 1,
+        "driver": "native"
+      },
+      "25": {
+        "hero": "oni",
+        "variant": 11,
+        "driver": "native"
+      },
+      "26": {
+        "hero": "tenshi",
+        "variant": 2,
+        "driver": "native"
+      }
+    },
+    "20261001": {
+      "1": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "2": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "3": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "4": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "5": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "6": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "7": {
+        "hero": "ranger",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "8": {
+        "hero": "malik",
+        "variant": 2,
+        "driver": "legacy"
+      },
+      "9": {
+        "hero": "star",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "10": {
+        "hero": "star",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "11": {
+        "hero": "ignus",
+        "variant": 2,
+        "driver": "legacy"
+      },
+      "12": {
+        "hero": "oni",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "13": {
+        "hero": "tenshi",
+        "variant": 15,
+        "driver": "native"
+      },
+      "14": {
+        "hero": "tenshi",
+        "variant": 3,
+        "driver": "native"
+      },
+      "15": {
+        "hero": "tenshi",
+        "variant": 11,
+        "driver": "native"
+      },
+      "16": {
+        "hero": "tenshi",
+        "variant": 8,
+        "driver": "native"
+      },
+      "17": {
+        "hero": "tenshi",
+        "variant": 15,
+        "driver": "native"
+      },
+      "18": {
+        "hero": "oni",
+        "variant": 15,
+        "driver": "native"
+      },
+      "19": {
+        "hero": "elora",
+        "variant": 8,
+        "driver": "native"
+      },
+      "20": {
+        "hero": "tenshi",
+        "variant": 0,
+        "driver": "native"
+      },
+      "21": {
+        "hero": "ingvar",
+        "variant": 17,
+        "driver": "native"
+      },
+      "22": {
+        "hero": "tenshi",
+        "variant": 6,
+        "driver": "native"
+      },
+      "23": {
+        "hero": "tenshi",
+        "variant": 0,
+        "driver": "native"
+      },
+      "24": {
+        "hero": "tenshi",
+        "variant": 1,
+        "driver": "native"
+      },
+      "25": {
+        "hero": "oni",
+        "variant": 11,
+        "driver": "native"
+      },
+      "26": {
+        "hero": "tenshi",
+        "variant": 2,
+        "driver": "native"
+      }
+    },
+    "314159": {
+      "1": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "2": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "3": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "4": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "5": {
+        "hero": "shield",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "6": {
+        "hero": "ranger",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "7": {
+        "hero": "ranger",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "8": {
+        "hero": "malik",
+        "variant": 2,
+        "driver": "legacy"
+      },
+      "9": {
+        "hero": "star",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "10": {
+        "hero": "star",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "11": {
+        "hero": "ignus",
+        "variant": 2,
+        "driver": "legacy"
+      },
+      "12": {
+        "hero": "oni",
+        "variant": 0,
+        "driver": "legacy"
+      },
+      "13": {
+        "hero": "tenshi",
+        "variant": 15,
+        "driver": "native"
+      },
+      "14": {
+        "hero": "tenshi",
+        "variant": 3,
+        "driver": "native"
+      },
+      "15": {
+        "hero": "tenshi",
+        "variant": 11,
+        "driver": "native"
+      },
+      "16": {
+        "hero": "tenshi",
+        "variant": 8,
+        "driver": "native"
+      },
+      "17": {
+        "hero": "tenshi",
+        "variant": 15,
+        "driver": "native"
+      },
+      "18": {
+        "hero": "oni",
+        "variant": 14,
+        "driver": "native"
+      },
+      "19": {
+        "hero": "elora",
+        "variant": 8,
+        "driver": "native"
+      },
+      "20": {
+        "hero": "tenshi",
+        "variant": 0,
+        "driver": "native"
+      },
+      "21": {
+        "hero": "ingvar",
+        "variant": 17,
+        "driver": "native"
+      },
+      "22": {
+        "hero": "tenshi",
+        "variant": 0,
+        "driver": "native"
+      },
+      "23": {
+        "hero": "tenshi",
+        "variant": 0,
+        "driver": "native"
+      },
+      "24": {
+        "hero": "tenshi",
+        "variant": 1,
+        "driver": "native"
+      },
+      "25": {
+        "hero": "oni",
+        "variant": 11,
+        "driver": "native"
+      },
+      "26": {
+        "hero": "tenshi",
+        "variant": 2,
+        "driver": "native"
+      }
+    }
+  }
+}

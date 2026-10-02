@@ -1,0 +1,203 @@
+{
+  "version": 4,
+  "sources": [
+    {
+      "file": "01_-_it_is_dangerous_to_be_lonely_without_a_sword.ogg",
+      "url": "https://opengameart.org/sites/default/files/01_-_it_is_dangerous_to_be_lonely_without_a_sword.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 3966979,
+      "sha256": "e4002b38f1132b916fadc8527b8861b7bc492350102ed5d152ff23224c3af599"
+    },
+    {
+      "file": "02_-_the_town_where_i_got_the_magic_bottle.ogg",
+      "url": "https://opengameart.org/sites/default/files/02_-_the_town_where_i_got_the_magic_bottle.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 4634046,
+      "sha256": "712c1d908c4c08ede51362483de48a3b709367adcd2c99cd6dafe9b9dd227ce0"
+    },
+    {
+      "file": "03_-_quest_of_magic_cowboy_dude.ogg",
+      "url": "https://opengameart.org/sites/default/files/03_-_quest_of_magic_cowboy_dude.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 3399155,
+      "sha256": "6de2a34922c49e3f154704c3fed8ad4907548b3dcd2755131ae461823463f77b"
+    },
+    {
+      "file": "04_-_youthful_elf_seeking_adventure.ogg",
+      "url": "https://opengameart.org/sites/default/files/04_-_youthful_elf_seeking_adventure.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 4853433,
+      "sha256": "62533e488e77d6f58053bd6e67669bd6ed591a059363a9d3e651c77bbbd14475"
+    },
+    {
+      "file": "05_-_tower_of_the_vampire.ogg",
+      "url": "https://opengameart.org/sites/default/files/05_-_tower_of_the_vampire.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 6792892,
+      "sha256": "7882ee3a014d04277a7cb444f9a0673c9e256653c7fbca71778941cf22e6ac6d"
+    },
+    {
+      "file": "06_-_samurai_eats_ninja_for_breakfast.ogg",
+      "url": "https://opengameart.org/sites/default/files/06_-_samurai_eats_ninja_for_breakfast.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 2127232,
+      "sha256": "8c354024e980da98d3fb228c75c6e2c7a18e8d12c495691f6fd7a6b3034c9291"
+    },
+    {
+      "file": "07_-_youthful_elf_in_the_dark_world.ogg",
+      "url": "https://opengameart.org/sites/default/files/07_-_youthful_elf_in_the_dark_world.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 3189097,
+      "sha256": "1419a6f00b8c3f45a1d1afae31a250d01374fe6557b08bcd20ba309755b2885c"
+    },
+    {
+      "file": "08_-_poison_the_sultan_with_saltpeter_slower_world_version.ogg",
+      "url": "https://opengameart.org/sites/default/files/08_-_poison_the_sultan_with_saltpeter_slower_world_version.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 1556303,
+      "sha256": "55f341343fded193967f0e4bb89e061853684c8584096d8654133c90586cef5a"
+    },
+    {
+      "file": "08_-_poison_the_sultan_with_saltpeter_world_version.ogg",
+      "url": "https://opengameart.org/sites/default/files/08_-_poison_the_sultan_with_saltpeter_world_version.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 1415305,
+      "sha256": "6bbf3973574d03f6ffcc6e26f5cf57b08a222e2d8dfc04694ffb7e40a668ba8f"
+    },
+    {
+      "file": "09_-_the_tribe_is_mellow.ogg",
+      "url": "https://opengameart.org/sites/default/files/09_-_the_tribe_is_mellow.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 2649388,
+      "sha256": "8d51840d9c010bb9865cdc47dc74302869a37429ef5e3883878370e8ff58de43"
+    },
+    {
+      "file": "10_-_the_shaman_is_dancing.ogg",
+      "url": "https://opengameart.org/sites/default/files/10_-_the_shaman_is_dancing.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 3175290,
+      "sha256": "d344fded526a468935e264816e4105550cf19d92f37fbc36d4cacd10007792c8"
+    },
+    {
+      "file": "11_-_dungeon_of_qetzyl.ogg",
+      "url": "https://opengameart.org/sites/default/files/11_-_dungeon_of_qetzyl.ogg",
+      "page": "https://opengameart.org/content/orchestral-and-world-music-pack",
+      "author": "Ragnar Random",
+      "license": "CC0-1.0",
+      "bytes": 3669111,
+      "sha256": "2552fffc53921e5cdd289df155df318fafbb89b6645a402819c62b7954f6fe93"
+    },
+    {
+      "file": "battle_sound_effects_0.zip",
+      "url": "https://opengameart.org/sites/default/files/battle_sound_effects_0.zip",
+      "page": "https://opengameart.org/content/battle-sound-effects",
+      "author": "artisticdude",
+      "license": "CC0-1.0 (chosen from offered licenses)",
+      "bytes": 220956,
+      "sha256": "44e3d26b2378d2eb3a4f28b4c5cbc71908ad13c7389038348dbe9b8cde4f4c05"
+    },
+    {
+      "file": "ehlers.zip",
+      "url": "https://opengameart.org/sites/default/files/Alexander%20Ehlers%20-%20Free%20Music%20Pack.zip",
+      "page": "https://opengameart.org/content/free-music-pack",
+      "author": "Alexander Ehlers",
+      "license": "CC0-1.0",
+      "bytes": 31380370,
+      "sha256": "99a1ce81856b35ba71e04870b6deac47fbded314308d5eb8e4de519649e38021"
+    },
+    {
+      "file": "ForgottenVictory.ogg",
+      "url": "https://opengameart.org/sites/default/files/ForgottenVictory.ogg",
+      "page": "https://opengameart.org/content/forgotten-victory",
+      "author": "yd",
+      "license": "CC0-1.0",
+      "bytes": 3845115,
+      "sha256": "3a3f980a285588ad88ce47482a8663b17ec7c8cf6ff35e893d83c9cc0ba3f076"
+    },
+    {
+      "file": "calm_track.ogg",
+      "url": "https://opengameart.org/sites/default/files/calm_track.ogg",
+      "page": "https://opengameart.org/content/calm-track",
+      "author": "pmiller",
+      "license": "CC0-1.0",
+      "bytes": 3453852,
+      "sha256": "ab004477a4f37183beb5b6153fdccd6659181c2cca87b12bee68d29ffb7a4f33"
+    },
+    {
+      "file": "pathfinder.mp3",
+      "url": "https://www.scottbuckley.com.au/library/wp-content/uploads/2021/04/sb_pathfinder.mp3",
+      "page": "https://www.scottbuckley.com.au/library/pathfinder/",
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "bytes": 8176518,
+      "sha256": "f20e3e9aaac2d947510ec971d7ea477320370091c3ea7b1541792c3fe5683e78"
+    },
+    {
+      "file": "discovery.mp3",
+      "url": "https://www.scottbuckley.com.au/library/wp-content/uploads/2020/01/sb_discovery.mp3",
+      "page": "https://www.scottbuckley.com.au/library/discovery/",
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "bytes": 9415765,
+      "sha256": "e4629422bd18a927950167dabfbe7c77c061595329da367f2407a8b4021fb832"
+    },
+    {
+      "file": "permafrost.mp3",
+      "url": "https://www.scottbuckley.com.au/library/wp-content/uploads/2022/08/Permafrost.mp3",
+      "page": "https://www.scottbuckley.com.au/library/permafrost/",
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "bytes": 17939045,
+      "sha256": "9585b9825339e7bd421db06368695bab7bc726e98611c7e15cd7d4dfc0c539ab"
+    },
+    {
+      "file": "titan.mp3",
+      "url": "https://www.scottbuckley.com.au/library/wp-content/uploads/2018/06/sb_titan.mp3",
+      "page": "https://www.scottbuckley.com.au/library/titan/",
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "bytes": 7034419,
+      "sha256": "fb921a09cc6181228b14945c7a6b90b50a83f4f38a37644a383bf7c70ea83729"
+    },
+    {
+      "file": "vanguard.mp3",
+      "url": "https://www.scottbuckley.com.au/library/wp-content/uploads/2023/07/Vanguard.mp3",
+      "page": "https://www.scottbuckley.com.au/library/vanguard/",
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "bytes": 9385461,
+      "sha256": "e3eaf7e0e8727f06db9ceb6b93324bee73cf37f44370a1228da516800bffadff"
+    },
+    {
+      "file": "beautiful-oblivion.mp3",
+      "url": "https://www.scottbuckley.com.au/library/wp-content/uploads/2020/10/sb_beautifuloblivion.mp3",
+      "page": "https://www.scottbuckley.com.au/library/beautiful-oblivion/",
+      "author": "Scott Buckley",
+      "license": "CC-BY-4.0",
+      "bytes": 17051943,
+      "sha256": "19c8f2ad5cabf4f21980ab923948f5e8cb3ce02c4d8c211a7954559e3831f863"
+    }
+  ]
+}

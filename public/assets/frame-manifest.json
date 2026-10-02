@@ -1,0 +1,4998 @@
+{
+  "version": 2,
+  "cell": 192,
+  "frames": [
+    {
+      "sheet": "heroes",
+      "row": 0,
+      "col": 0,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 2,
+        "top": 2,
+        "width": 218,
+        "height": 246
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 0,
+      "col": 1,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 224,
+        "top": 2,
+        "width": 218,
+        "height": 246
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 0,
+      "col": 2,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 446,
+        "top": 2,
+        "width": 217,
+        "height": 246
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 0,
+      "col": 3,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 667,
+        "top": 2,
+        "width": 218,
+        "height": 246
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 0,
+      "col": 4,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 889,
+        "top": 2,
+        "width": 218,
+        "height": 246
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 0,
+      "col": 5,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1111,
+        "top": 2,
+        "width": 218,
+        "height": 246
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 0,
+      "col": 6,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1333,
+        "top": 2,
+        "width": 217,
+        "height": 246
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 0,
+      "col": 7,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1554,
+        "top": 2,
+        "width": 218,
+        "height": 246
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 1,
+      "col": 0,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 2,
+        "top": 252,
+        "width": 218,
+        "height": 210
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 1,
+      "col": 1,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 224,
+        "top": 252,
+        "width": 218,
+        "height": 210
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 1,
+      "col": 2,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 446,
+        "top": 252,
+        "width": 217,
+        "height": 210
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 1,
+      "col": 3,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 667,
+        "top": 252,
+        "width": 218,
+        "height": 210
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 1,
+      "col": 4,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 889,
+        "top": 252,
+        "width": 218,
+        "height": 210
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 1,
+      "col": 5,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1111,
+        "top": 252,
+        "width": 218,
+        "height": 210
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 1,
+      "col": 6,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1333,
+        "top": 252,
+        "width": 217,
+        "height": 210
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 1,
+      "col": 7,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1554,
+        "top": 252,
+        "width": 218,
+        "height": 210
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 2,
+      "col": 0,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 2,
+        "top": 466,
+        "width": 218,
+        "height": 211
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 2,
+      "col": 1,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 224,
+        "top": 466,
+        "width": 218,
+        "height": 211
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 2,
+      "col": 2,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 446,
+        "top": 466,
+        "width": 217,
+        "height": 211
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 2,
+      "col": 3,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 667,
+        "top": 466,
+        "width": 218,
+        "height": 211
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 2,
+      "col": 4,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 889,
+        "top": 466,
+        "width": 218,
+        "height": 211
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 2,
+      "col": 5,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1111,
+        "top": 466,
+        "width": 218,
+        "height": 211
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 2,
+      "col": 6,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1333,
+        "top": 466,
+        "width": 217,
+        "height": 211
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 2,
+      "col": 7,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1554,
+        "top": 466,
+        "width": 218,
+        "height": 211
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 3,
+      "col": 0,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 2,
+        "top": 681,
+        "width": 218,
+        "height": 204
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 3,
+      "col": 1,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 224,
+        "top": 681,
+        "width": 218,
+        "height": 204
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 3,
+      "col": 2,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 446,
+        "top": 681,
+        "width": 217,
+        "height": 204
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 3,
+      "col": 3,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 667,
+        "top": 681,
+        "width": 218,
+        "height": 204
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 3,
+      "col": 4,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 889,
+        "top": 681,
+        "width": 218,
+        "height": 204
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 3,
+      "col": 5,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1111,
+        "top": 681,
+        "width": 218,
+        "height": 204
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 3,
+      "col": 6,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1333,
+        "top": 681,
+        "width": 217,
+        "height": 204
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "heroes",
+      "row": 3,
+      "col": 7,
+      "source": "art/source/heroes-v2.png",
+      "rect": {
+        "left": 1554,
+        "top": 681,
+        "width": 218,
+        "height": 204
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 0,
+      "col": 0,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 2,
+        "top": 2,
+        "width": 218,
+        "height": 236
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 0,
+      "col": 1,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 224,
+        "top": 2,
+        "width": 218,
+        "height": 236
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 0,
+      "col": 2,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 446,
+        "top": 2,
+        "width": 217,
+        "height": 236
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 0,
+      "col": 3,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 667,
+        "top": 2,
+        "width": 218,
+        "height": 236
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 0,
+      "col": 4,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 889,
+        "top": 2,
+        "width": 218,
+        "height": 236
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 0,
+      "col": 5,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1111,
+        "top": 2,
+        "width": 218,
+        "height": 236
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 0,
+      "col": 6,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1333,
+        "top": 2,
+        "width": 217,
+        "height": 236
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 0,
+      "col": 7,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1554,
+        "top": 2,
+        "width": 218,
+        "height": 236
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 1,
+      "col": 0,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 2,
+        "top": 242,
+        "width": 218,
+        "height": 224
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 1,
+      "col": 1,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 224,
+        "top": 242,
+        "width": 218,
+        "height": 224
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 1,
+      "col": 2,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 446,
+        "top": 242,
+        "width": 217,
+        "height": 224
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 1,
+      "col": 3,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 667,
+        "top": 242,
+        "width": 218,
+        "height": 224
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 1,
+      "col": 4,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 889,
+        "top": 242,
+        "width": 218,
+        "height": 224
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 1,
+      "col": 5,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1111,
+        "top": 242,
+        "width": 218,
+        "height": 224
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 1,
+      "col": 6,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1333,
+        "top": 242,
+        "width": 217,
+        "height": 224
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 1,
+      "col": 7,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1554,
+        "top": 242,
+        "width": 218,
+        "height": 224
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 2,
+      "col": 0,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 2,
+        "top": 470,
+        "width": 218,
+        "height": 198
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 2,
+      "col": 1,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 224,
+        "top": 470,
+        "width": 218,
+        "height": 198
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 2,
+      "col": 2,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 446,
+        "top": 470,
+        "width": 217,
+        "height": 198
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 2,
+      "col": 3,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 667,
+        "top": 470,
+        "width": 218,
+        "height": 198
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 2,
+      "col": 4,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 889,
+        "top": 470,
+        "width": 218,
+        "height": 198
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 2,
+      "col": 5,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1111,
+        "top": 470,
+        "width": 218,
+        "height": 198
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 2,
+      "col": 6,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1333,
+        "top": 470,
+        "width": 217,
+        "height": 198
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 2,
+      "col": 7,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1554,
+        "top": 470,
+        "width": 218,
+        "height": 198
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 3,
+      "col": 0,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 2,
+        "top": 672,
+        "width": 218,
+        "height": 213
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 3,
+      "col": 1,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 224,
+        "top": 672,
+        "width": 218,
+        "height": 213
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 3,
+      "col": 2,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 446,
+        "top": 672,
+        "width": 217,
+        "height": 213
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 3,
+      "col": 3,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 667,
+        "top": 672,
+        "width": 218,
+        "height": 213
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 3,
+      "col": 4,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 889,
+        "top": 672,
+        "width": 218,
+        "height": 213
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 3,
+      "col": 5,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1111,
+        "top": 672,
+        "width": 218,
+        "height": 213
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 3,
+      "col": 6,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1333,
+        "top": 672,
+        "width": 217,
+        "height": 213
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "soldiers",
+      "row": 3,
+      "col": 7,
+      "source": "art/source/soldiers-v2.png",
+      "rect": {
+        "left": 1554,
+        "top": 672,
+        "width": 218,
+        "height": 213
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 0,
+      "col": 0,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 2,
+        "top": 2,
+        "width": 164,
+        "height": 186
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 0,
+      "col": 1,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 170,
+        "top": 2,
+        "width": 163,
+        "height": 186
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 0,
+      "col": 2,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 337,
+        "top": 2,
+        "width": 164,
+        "height": 186
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 0,
+      "col": 3,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 505,
+        "top": 2,
+        "width": 163,
+        "height": 186
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 0,
+      "col": 4,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 672,
+        "top": 2,
+        "width": 164,
+        "height": 186
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 0,
+      "col": 5,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 840,
+        "top": 2,
+        "width": 163,
+        "height": 186
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 0,
+      "col": 6,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 1007,
+        "top": 2,
+        "width": 164,
+        "height": 186
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 1,
+      "col": 0,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 2,
+        "top": 192,
+        "width": 164,
+        "height": 171
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 1,
+      "col": 1,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 170,
+        "top": 192,
+        "width": 163,
+        "height": 171
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 1,
+      "col": 2,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 337,
+        "top": 192,
+        "width": 164,
+        "height": 171
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 1,
+      "col": 3,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 505,
+        "top": 192,
+        "width": 163,
+        "height": 171
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 1,
+      "col": 4,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 672,
+        "top": 192,
+        "width": 164,
+        "height": 171
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 1,
+      "col": 5,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 840,
+        "top": 192,
+        "width": 163,
+        "height": 171
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 1,
+      "col": 6,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 1007,
+        "top": 192,
+        "width": 164,
+        "height": 171
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 2,
+      "col": 0,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 2,
+        "top": 367,
+        "width": 164,
+        "height": 190
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 2,
+      "col": 1,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 170,
+        "top": 367,
+        "width": 163,
+        "height": 190
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 2,
+      "col": 2,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 337,
+        "top": 367,
+        "width": 164,
+        "height": 190
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 2,
+      "col": 3,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 505,
+        "top": 367,
+        "width": 163,
+        "height": 190
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 2,
+      "col": 4,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 672,
+        "top": 367,
+        "width": 164,
+        "height": 190
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 2,
+      "col": 5,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 840,
+        "top": 367,
+        "width": 163,
+        "height": 190
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 2,
+      "col": 6,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 1007,
+        "top": 367,
+        "width": 164,
+        "height": 190
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 3,
+      "col": 0,
+      "source": "art/source/enemy-marauder.png",
+      "rect": {
+        "left": 2,
+        "top": 2,
+        "width": 306,
+        "height": 720
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 3,
+      "col": 1,
+      "source": "art/source/enemy-marauder.png",
+      "rect": {
+        "left": 312,
+        "top": 2,
+        "width": 307,
+        "height": 720
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 3,
+      "col": 2,
+      "source": "art/source/enemy-marauder.png",
+      "rect": {
+        "left": 623,
+        "top": 2,
+        "width": 306,
+        "height": 720
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 3,
+      "col": 3,
+      "source": "art/source/enemy-marauder.png",
+      "rect": {
+        "left": 933,
+        "top": 2,
+        "width": 306,
+        "height": 720
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 3,
+      "col": 4,
+      "source": "art/source/enemy-marauder.png",
+      "rect": {
+        "left": 1243,
+        "top": 2,
+        "width": 306,
+        "height": 720
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 3,
+      "col": 5,
+      "source": "art/source/enemy-marauder.png",
+      "rect": {
+        "left": 1553,
+        "top": 2,
+        "width": 307,
+        "height": 720
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 3,
+      "col": 6,
+      "source": "art/source/enemy-marauder.png",
+      "rect": {
+        "left": 1864,
+        "top": 2,
+        "width": 306,
+        "height": 720
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 4,
+      "col": 0,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 2,
+        "top": 561,
+        "width": 164,
+        "height": 166
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 4,
+      "col": 1,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 170,
+        "top": 561,
+        "width": 163,
+        "height": 166
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 4,
+      "col": 2,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 337,
+        "top": 561,
+        "width": 164,
+        "height": 166
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 4,
+      "col": 3,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 505,
+        "top": 561,
+        "width": 163,
+        "height": 166
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 4,
+      "col": 4,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 672,
+        "top": 561,
+        "width": 164,
+        "height": 166
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 4,
+      "col": 5,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 840,
+        "top": 561,
+        "width": 163,
+        "height": 166
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 4,
+      "col": 6,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 1007,
+        "top": 561,
+        "width": 164,
+        "height": 166
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 5,
+      "col": 0,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 2,
+        "top": 731,
+        "width": 164,
+        "height": 219
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 5,
+      "col": 1,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 170,
+        "top": 731,
+        "width": 163,
+        "height": 219
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 5,
+      "col": 2,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 337,
+        "top": 731,
+        "width": 164,
+        "height": 219
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 5,
+      "col": 3,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 505,
+        "top": 731,
+        "width": 163,
+        "height": 219
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 5,
+      "col": 4,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 672,
+        "top": 731,
+        "width": 164,
+        "height": 219
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 5,
+      "col": 5,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 840,
+        "top": 731,
+        "width": 163,
+        "height": 219
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 5,
+      "col": 6,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 1007,
+        "top": 731,
+        "width": 164,
+        "height": 219
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 6,
+      "col": 0,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 2,
+        "top": 954,
+        "width": 164,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 6,
+      "col": 1,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 170,
+        "top": 954,
+        "width": 163,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 6,
+      "col": 2,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 337,
+        "top": 954,
+        "width": 164,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 6,
+      "col": 3,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 505,
+        "top": 954,
+        "width": 163,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 6,
+      "col": 4,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 672,
+        "top": 954,
+        "width": 164,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 6,
+      "col": 5,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 840,
+        "top": 954,
+        "width": 163,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 6,
+      "col": 6,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 1007,
+        "top": 954,
+        "width": 164,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 7,
+      "col": 0,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 2,
+        "top": 1102,
+        "width": 164,
+        "height": 237
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 7,
+      "col": 1,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 170,
+        "top": 1102,
+        "width": 163,
+        "height": 237
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 7,
+      "col": 2,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 337,
+        "top": 1102,
+        "width": 164,
+        "height": 237
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 7,
+      "col": 3,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 505,
+        "top": 1102,
+        "width": 163,
+        "height": 237
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 7,
+      "col": 4,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 672,
+        "top": 1102,
+        "width": 164,
+        "height": 237
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 7,
+      "col": 5,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 840,
+        "top": 1102,
+        "width": 163,
+        "height": 237
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-1",
+      "row": 7,
+      "col": 6,
+      "source": "art/source/enemy-new-1.png",
+      "rect": {
+        "left": 1007,
+        "top": 1102,
+        "width": 164,
+        "height": 237
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 0,
+      "col": 0,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 2,
+        "top": 2,
+        "width": 187,
+        "height": 129
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 0,
+      "col": 1,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 193,
+        "top": 2,
+        "width": 188,
+        "height": 129
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 0,
+      "col": 2,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 385,
+        "top": 2,
+        "width": 187,
+        "height": 129
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 0,
+      "col": 3,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 576,
+        "top": 2,
+        "width": 188,
+        "height": 129
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 0,
+      "col": 4,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 768,
+        "top": 2,
+        "width": 187,
+        "height": 129
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 0,
+      "col": 5,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 959,
+        "top": 2,
+        "width": 188,
+        "height": 129
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 0,
+      "col": 6,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 1151,
+        "top": 2,
+        "width": 187,
+        "height": 129
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 1,
+      "col": 0,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 2,
+        "top": 135,
+        "width": 187,
+        "height": 152
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 1,
+      "col": 1,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 193,
+        "top": 135,
+        "width": 188,
+        "height": 152
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 1,
+      "col": 2,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 385,
+        "top": 135,
+        "width": 187,
+        "height": 152
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 1,
+      "col": 3,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 576,
+        "top": 135,
+        "width": 188,
+        "height": 152
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 1,
+      "col": 4,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 768,
+        "top": 135,
+        "width": 187,
+        "height": 152
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 1,
+      "col": 5,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 959,
+        "top": 135,
+        "width": 188,
+        "height": 152
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 1,
+      "col": 6,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 1151,
+        "top": 135,
+        "width": 187,
+        "height": 152
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 2,
+      "col": 0,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 2,
+        "top": 291,
+        "width": 187,
+        "height": 145
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 2,
+      "col": 1,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 193,
+        "top": 291,
+        "width": 188,
+        "height": 145
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 2,
+      "col": 2,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 385,
+        "top": 291,
+        "width": 187,
+        "height": 145
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 2,
+      "col": 3,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 576,
+        "top": 291,
+        "width": 188,
+        "height": 145
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 2,
+      "col": 4,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 768,
+        "top": 291,
+        "width": 187,
+        "height": 145
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 2,
+      "col": 5,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 959,
+        "top": 291,
+        "width": 188,
+        "height": 145
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 2,
+      "col": 6,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 1151,
+        "top": 291,
+        "width": 187,
+        "height": 145
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 3,
+      "col": 0,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 2,
+        "top": 440,
+        "width": 187,
+        "height": 139
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 3,
+      "col": 1,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 193,
+        "top": 440,
+        "width": 188,
+        "height": 139
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 3,
+      "col": 2,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 385,
+        "top": 440,
+        "width": 187,
+        "height": 139
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 3,
+      "col": 3,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 576,
+        "top": 440,
+        "width": 188,
+        "height": 139
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 3,
+      "col": 4,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 768,
+        "top": 440,
+        "width": 187,
+        "height": 139
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 3,
+      "col": 5,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 959,
+        "top": 440,
+        "width": 188,
+        "height": 139
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 3,
+      "col": 6,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 1151,
+        "top": 440,
+        "width": 187,
+        "height": 139
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 4,
+      "col": 0,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 2,
+        "top": 583,
+        "width": 187,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 4,
+      "col": 1,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 193,
+        "top": 583,
+        "width": 188,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 4,
+      "col": 2,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 385,
+        "top": 583,
+        "width": 187,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 4,
+      "col": 3,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 576,
+        "top": 583,
+        "width": 188,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 4,
+      "col": 4,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 768,
+        "top": 583,
+        "width": 187,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 4,
+      "col": 5,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 959,
+        "top": 583,
+        "width": 188,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 4,
+      "col": 6,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 1151,
+        "top": 583,
+        "width": 187,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 5,
+      "col": 0,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 2,
+        "top": 728,
+        "width": 187,
+        "height": 158
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 5,
+      "col": 1,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 193,
+        "top": 728,
+        "width": 188,
+        "height": 158
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 5,
+      "col": 2,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 385,
+        "top": 728,
+        "width": 187,
+        "height": 158
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 5,
+      "col": 3,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 576,
+        "top": 728,
+        "width": 188,
+        "height": 158
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 5,
+      "col": 4,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 768,
+        "top": 728,
+        "width": 187,
+        "height": 158
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 5,
+      "col": 5,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 959,
+        "top": 728,
+        "width": 188,
+        "height": 158
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 5,
+      "col": 6,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 1151,
+        "top": 728,
+        "width": 187,
+        "height": 158
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 6,
+      "col": 0,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 2,
+        "top": 890,
+        "width": 187,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 6,
+      "col": 1,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 193,
+        "top": 890,
+        "width": 188,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 6,
+      "col": 2,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 385,
+        "top": 890,
+        "width": 187,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 6,
+      "col": 3,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 576,
+        "top": 890,
+        "width": 188,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 6,
+      "col": 4,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 768,
+        "top": 890,
+        "width": 187,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 6,
+      "col": 5,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 959,
+        "top": 890,
+        "width": 188,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 6,
+      "col": 6,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 1151,
+        "top": 890,
+        "width": 187,
+        "height": 144
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 7,
+      "col": 0,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 2,
+        "top": 1038,
+        "width": 187,
+        "height": 134
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 7,
+      "col": 1,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 193,
+        "top": 1038,
+        "width": 188,
+        "height": 134
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 7,
+      "col": 2,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 385,
+        "top": 1038,
+        "width": 187,
+        "height": 134
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 7,
+      "col": 3,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 576,
+        "top": 1038,
+        "width": 188,
+        "height": 134
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 7,
+      "col": 4,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 768,
+        "top": 1038,
+        "width": 187,
+        "height": 134
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 7,
+      "col": 5,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 959,
+        "top": 1038,
+        "width": 188,
+        "height": 134
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-2",
+      "row": 7,
+      "col": 6,
+      "source": "art/source/enemy-new-2.png",
+      "rect": {
+        "left": 1151,
+        "top": 1038,
+        "width": 187,
+        "height": 134
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 0,
+      "col": 0,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 2,
+        "top": 2,
+        "width": 183,
+        "height": 174
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 0,
+      "col": 1,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 189,
+        "top": 2,
+        "width": 184,
+        "height": 174
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 0,
+      "col": 2,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 377,
+        "top": 2,
+        "width": 183,
+        "height": 174
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 0,
+      "col": 3,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 564,
+        "top": 2,
+        "width": 184,
+        "height": 174
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 0,
+      "col": 4,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 752,
+        "top": 2,
+        "width": 183,
+        "height": 174
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 0,
+      "col": 5,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 939,
+        "top": 2,
+        "width": 184,
+        "height": 174
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 0,
+      "col": 6,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 1127,
+        "top": 2,
+        "width": 183,
+        "height": 174
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 1,
+      "col": 0,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 2,
+        "top": 180,
+        "width": 183,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 1,
+      "col": 1,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 189,
+        "top": 180,
+        "width": 184,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 1,
+      "col": 2,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 377,
+        "top": 180,
+        "width": 183,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 1,
+      "col": 3,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 564,
+        "top": 180,
+        "width": 184,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 1,
+      "col": 4,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 752,
+        "top": 180,
+        "width": 183,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 1,
+      "col": 5,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 939,
+        "top": 180,
+        "width": 184,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 1,
+      "col": 6,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 1127,
+        "top": 180,
+        "width": 183,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 2,
+      "col": 0,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 2,
+        "top": 343,
+        "width": 183,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 2,
+      "col": 1,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 189,
+        "top": 343,
+        "width": 184,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 2,
+      "col": 2,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 377,
+        "top": 343,
+        "width": 183,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 2,
+      "col": 3,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 564,
+        "top": 343,
+        "width": 184,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 2,
+      "col": 4,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 752,
+        "top": 343,
+        "width": 183,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 2,
+      "col": 5,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 939,
+        "top": 343,
+        "width": 184,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 2,
+      "col": 6,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 1127,
+        "top": 343,
+        "width": 183,
+        "height": 159
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 3,
+      "col": 0,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 2,
+        "top": 506,
+        "width": 183,
+        "height": 126
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 3,
+      "col": 1,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 189,
+        "top": 506,
+        "width": 184,
+        "height": 126
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 3,
+      "col": 2,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 377,
+        "top": 506,
+        "width": 183,
+        "height": 126
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 3,
+      "col": 3,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 564,
+        "top": 506,
+        "width": 184,
+        "height": 126
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 3,
+      "col": 4,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 752,
+        "top": 506,
+        "width": 183,
+        "height": 126
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 3,
+      "col": 5,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 939,
+        "top": 506,
+        "width": 184,
+        "height": 126
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 3,
+      "col": 6,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 1127,
+        "top": 506,
+        "width": 183,
+        "height": 126
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 4,
+      "col": 0,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 2,
+        "top": 636,
+        "width": 183,
+        "height": 140
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 4,
+      "col": 1,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 189,
+        "top": 636,
+        "width": 184,
+        "height": 140
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 4,
+      "col": 2,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 377,
+        "top": 636,
+        "width": 183,
+        "height": 140
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 4,
+      "col": 3,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 564,
+        "top": 636,
+        "width": 184,
+        "height": 140
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 4,
+      "col": 4,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 752,
+        "top": 636,
+        "width": 183,
+        "height": 140
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 4,
+      "col": 5,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 939,
+        "top": 636,
+        "width": 184,
+        "height": 140
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 4,
+      "col": 6,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 1127,
+        "top": 636,
+        "width": 183,
+        "height": 140
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 5,
+      "col": 0,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 2,
+        "top": 780,
+        "width": 183,
+        "height": 132
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 5,
+      "col": 1,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 189,
+        "top": 780,
+        "width": 184,
+        "height": 132
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 5,
+      "col": 2,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 377,
+        "top": 780,
+        "width": 183,
+        "height": 132
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 5,
+      "col": 3,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 564,
+        "top": 780,
+        "width": 184,
+        "height": 132
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 5,
+      "col": 4,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 752,
+        "top": 780,
+        "width": 183,
+        "height": 132
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 5,
+      "col": 5,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 939,
+        "top": 780,
+        "width": 184,
+        "height": 132
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 5,
+      "col": 6,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 1127,
+        "top": 780,
+        "width": 183,
+        "height": 132
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 6,
+      "col": 0,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 2,
+        "top": 916,
+        "width": 183,
+        "height": 142
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 6,
+      "col": 1,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 189,
+        "top": 916,
+        "width": 184,
+        "height": 142
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 6,
+      "col": 2,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 377,
+        "top": 916,
+        "width": 183,
+        "height": 142
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 6,
+      "col": 3,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 564,
+        "top": 916,
+        "width": 184,
+        "height": 142
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 6,
+      "col": 4,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 752,
+        "top": 916,
+        "width": 183,
+        "height": 142
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 6,
+      "col": 5,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 939,
+        "top": 916,
+        "width": 184,
+        "height": 142
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 6,
+      "col": 6,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 1127,
+        "top": 916,
+        "width": 183,
+        "height": 142
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 7,
+      "col": 0,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 2,
+        "top": 1062,
+        "width": 183,
+        "height": 135
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 7,
+      "col": 1,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 189,
+        "top": 1062,
+        "width": 184,
+        "height": 135
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 7,
+      "col": 2,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 377,
+        "top": 1062,
+        "width": 183,
+        "height": 135
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 7,
+      "col": 3,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 564,
+        "top": 1062,
+        "width": 184,
+        "height": 135
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 7,
+      "col": 4,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 752,
+        "top": 1062,
+        "width": 183,
+        "height": 135
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 7,
+      "col": 5,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 939,
+        "top": 1062,
+        "width": 184,
+        "height": 135
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-3",
+      "row": 7,
+      "col": 6,
+      "source": "art/source/enemy-new-3.png",
+      "rect": {
+        "left": 1127,
+        "top": 1062,
+        "width": 183,
+        "height": 135
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 0,
+      "col": 0,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 2,
+        "top": 2,
+        "width": 183,
+        "height": 133
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 0,
+      "col": 1,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 189,
+        "top": 2,
+        "width": 184,
+        "height": 133
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 0,
+      "col": 2,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 377,
+        "top": 2,
+        "width": 183,
+        "height": 133
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 0,
+      "col": 3,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 564,
+        "top": 2,
+        "width": 184,
+        "height": 133
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 0,
+      "col": 4,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 752,
+        "top": 2,
+        "width": 183,
+        "height": 133
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 0,
+      "col": 5,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 939,
+        "top": 2,
+        "width": 184,
+        "height": 133
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 0,
+      "col": 6,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 1127,
+        "top": 2,
+        "width": 183,
+        "height": 133
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 1,
+      "col": 0,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 2,
+        "top": 139,
+        "width": 183,
+        "height": 154
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 1,
+      "col": 1,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 189,
+        "top": 139,
+        "width": 184,
+        "height": 154
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 1,
+      "col": 2,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 377,
+        "top": 139,
+        "width": 183,
+        "height": 154
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 1,
+      "col": 3,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 564,
+        "top": 139,
+        "width": 184,
+        "height": 154
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 1,
+      "col": 4,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 752,
+        "top": 139,
+        "width": 183,
+        "height": 154
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 1,
+      "col": 5,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 939,
+        "top": 139,
+        "width": 184,
+        "height": 154
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 1,
+      "col": 6,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 1127,
+        "top": 139,
+        "width": 183,
+        "height": 154
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 2,
+      "col": 0,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 2,
+        "top": 297,
+        "width": 183,
+        "height": 162
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 2,
+      "col": 1,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 189,
+        "top": 297,
+        "width": 184,
+        "height": 162
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 2,
+      "col": 2,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 377,
+        "top": 297,
+        "width": 183,
+        "height": 162
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 2,
+      "col": 3,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 564,
+        "top": 297,
+        "width": 184,
+        "height": 162
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 2,
+      "col": 4,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 752,
+        "top": 297,
+        "width": 183,
+        "height": 162
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 2,
+      "col": 5,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 939,
+        "top": 297,
+        "width": 184,
+        "height": 162
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 2,
+      "col": 6,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 1127,
+        "top": 297,
+        "width": 183,
+        "height": 162
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 3,
+      "col": 0,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 2,
+        "top": 463,
+        "width": 183,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 3,
+      "col": 1,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 189,
+        "top": 463,
+        "width": 184,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 3,
+      "col": 2,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 377,
+        "top": 463,
+        "width": 183,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 3,
+      "col": 3,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 564,
+        "top": 463,
+        "width": 184,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 3,
+      "col": 4,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 752,
+        "top": 463,
+        "width": 183,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 3,
+      "col": 5,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 939,
+        "top": 463,
+        "width": 184,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 3,
+      "col": 6,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 1127,
+        "top": 463,
+        "width": 183,
+        "height": 141
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 4,
+      "col": 0,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 2,
+        "top": 608,
+        "width": 183,
+        "height": 150
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 4,
+      "col": 1,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 189,
+        "top": 608,
+        "width": 184,
+        "height": 150
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 4,
+      "col": 2,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 377,
+        "top": 608,
+        "width": 183,
+        "height": 150
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 4,
+      "col": 3,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 564,
+        "top": 608,
+        "width": 184,
+        "height": 150
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 4,
+      "col": 4,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 752,
+        "top": 608,
+        "width": 183,
+        "height": 150
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 4,
+      "col": 5,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 939,
+        "top": 608,
+        "width": 184,
+        "height": 150
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 4,
+      "col": 6,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 1127,
+        "top": 608,
+        "width": 183,
+        "height": 150
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 5,
+      "col": 0,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 2,
+        "top": 762,
+        "width": 183,
+        "height": 143
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 5,
+      "col": 1,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 189,
+        "top": 762,
+        "width": 184,
+        "height": 143
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 5,
+      "col": 2,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 377,
+        "top": 762,
+        "width": 183,
+        "height": 143
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 5,
+      "col": 3,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 564,
+        "top": 762,
+        "width": 184,
+        "height": 143
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 5,
+      "col": 4,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 752,
+        "top": 762,
+        "width": 183,
+        "height": 143
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 5,
+      "col": 5,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 939,
+        "top": 762,
+        "width": 184,
+        "height": 143
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 5,
+      "col": 6,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 1127,
+        "top": 762,
+        "width": 183,
+        "height": 143
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 6,
+      "col": 0,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 2,
+        "top": 909,
+        "width": 183,
+        "height": 146
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 6,
+      "col": 1,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 189,
+        "top": 909,
+        "width": 184,
+        "height": 146
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 6,
+      "col": 2,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 377,
+        "top": 909,
+        "width": 183,
+        "height": 146
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 6,
+      "col": 3,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 564,
+        "top": 909,
+        "width": 184,
+        "height": 146
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 6,
+      "col": 4,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 752,
+        "top": 909,
+        "width": 183,
+        "height": 146
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 6,
+      "col": 5,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 939,
+        "top": 909,
+        "width": 184,
+        "height": 146
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 6,
+      "col": 6,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 1127,
+        "top": 909,
+        "width": 183,
+        "height": 146
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 7,
+      "col": 0,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 2,
+        "top": 1059,
+        "width": 183,
+        "height": 138
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 7,
+      "col": 1,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 189,
+        "top": 1059,
+        "width": 184,
+        "height": 138
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 7,
+      "col": 2,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 377,
+        "top": 1059,
+        "width": 183,
+        "height": 138
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 7,
+      "col": 3,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 564,
+        "top": 1059,
+        "width": 184,
+        "height": 138
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 7,
+      "col": 4,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 752,
+        "top": 1059,
+        "width": 183,
+        "height": 138
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 7,
+      "col": 5,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 939,
+        "top": 1059,
+        "width": 184,
+        "height": 138
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "enemy-new-4",
+      "row": 7,
+      "col": 6,
+      "source": "art/source/enemy-new-4.png",
+      "rect": {
+        "left": 1127,
+        "top": 1059,
+        "width": 183,
+        "height": 138
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 0,
+      "col": 0,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 2,
+        "top": 2,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 0,
+      "col": 1,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 224,
+        "top": 2,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 0,
+      "col": 2,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 446,
+        "top": 2,
+        "width": 217,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 0,
+      "col": 3,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 667,
+        "top": 2,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 0,
+      "col": 4,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 889,
+        "top": 2,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 0,
+      "col": 5,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1111,
+        "top": 2,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 0,
+      "col": 6,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1333,
+        "top": 2,
+        "width": 217,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 0,
+      "col": 7,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1554,
+        "top": 2,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 1,
+      "col": 0,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 2,
+        "top": 298,
+        "width": 218,
+        "height": 291
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 1,
+      "col": 1,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 224,
+        "top": 298,
+        "width": 218,
+        "height": 291
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 1,
+      "col": 2,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 446,
+        "top": 298,
+        "width": 217,
+        "height": 291
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 1,
+      "col": 3,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 667,
+        "top": 298,
+        "width": 218,
+        "height": 291
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 1,
+      "col": 4,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 889,
+        "top": 298,
+        "width": 218,
+        "height": 291
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 1,
+      "col": 5,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1111,
+        "top": 298,
+        "width": 218,
+        "height": 291
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 1,
+      "col": 6,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1333,
+        "top": 298,
+        "width": 217,
+        "height": 291
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 1,
+      "col": 7,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1554,
+        "top": 298,
+        "width": 218,
+        "height": 291
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 2,
+      "col": 0,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 2,
+        "top": 593,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 2,
+      "col": 1,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 224,
+        "top": 593,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 2,
+      "col": 2,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 446,
+        "top": 593,
+        "width": 217,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 2,
+      "col": 3,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 667,
+        "top": 593,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 2,
+      "col": 4,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 889,
+        "top": 593,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 2,
+      "col": 5,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1111,
+        "top": 593,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 2,
+      "col": 6,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1333,
+        "top": 593,
+        "width": 217,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    {
+      "sheet": "special-allies",
+      "row": 2,
+      "col": 7,
+      "source": "art/source/special-allies.png",
+      "rect": {
+        "left": 1554,
+        "top": 593,
+        "width": 218,
+        "height": 292
+      },
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    }
+  ]
+}

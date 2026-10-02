@@ -1,0 +1,112 @@
+{
+  "version": 2,
+  "tool": "image_gen",
+  "note": "Original generated files copied without alteration; processing only packs/crops runtime assets. Prompt specifications are recorded in docs/art-direction.md.",
+  "assets": [
+    {
+      "name": "campaign-v2",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-7b3d37aa-631b-427a-a368-cf6108158cab.png",
+      "local": "art/source/campaign-v2.png"
+    },
+    {
+      "name": "map-01",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-ec33e72a-6d0d-4678-b2c8-b1148b1bcc3e.png",
+      "local": "art/source/map-01.png"
+    },
+    {
+      "name": "map-02",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-c890c584-651d-4fb8-8f28-0a01eb70aab5.png",
+      "local": "art/source/map-02.png"
+    },
+    {
+      "name": "map-03",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-d7965ff7-644a-4c03-9a30-a28f82ecf280.png",
+      "local": "art/source/map-03.png"
+    },
+    {
+      "name": "map-04",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-e9acc952-2938-4496-9eb0-d3ef8ba62063.png",
+      "local": "art/source/map-04.png"
+    },
+    {
+      "name": "map-05",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-f8942460-16aa-437f-8846-2335891cf20b.png",
+      "local": "art/source/map-05.png"
+    },
+    {
+      "name": "map-06",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-669509fe-f558-47b7-8773-8c5da0e4cf71.png",
+      "local": "art/source/map-06.png"
+    },
+    {
+      "name": "map-07",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-e03a442e-56ac-4dda-9ea2-a317d8f8736d.png",
+      "local": "art/source/map-07.png"
+    },
+    {
+      "name": "map-08",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-ad5e6aff-9dd4-442b-b5af-81ed52fcb700.png",
+      "local": "art/source/map-08.png"
+    },
+    {
+      "name": "map-09",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-052f16a3-33a0-4b04-93ed-f46589184e9d.png",
+      "local": "art/source/map-09.png"
+    },
+    {
+      "name": "map-10",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-722e8305-712b-4cbd-a46e-258205107226.png",
+      "local": "art/source/map-10.png"
+    },
+    {
+      "name": "map-11",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-32227cdc-e56d-4c3e-a923-1b2477019f99.png",
+      "local": "art/source/map-11.png"
+    },
+    {
+      "name": "map-12",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-1696a597-3903-4a23-9002-9fc6362fc897.png",
+      "local": "art/source/map-12.png"
+    },
+    {
+      "name": "heroes-v2",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-6bd26840-d4b3-4d15-a4c4-f245bc72b2f3.png",
+      "local": "art/source/heroes-v2.png"
+    },
+    {
+      "name": "soldiers-v2",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-e00c28e6-04de-424e-ba7a-ec635df2b4d4.png",
+      "local": "art/source/soldiers-v2.png"
+    },
+    {
+      "name": "enemy-new-1",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-84e01e46-4487-4509-a7fe-404d67c459d1.png",
+      "local": "art/source/enemy-new-1.png"
+    },
+    {
+      "name": "enemy-new-2",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-7a0d6d59-a22e-46dc-980b-6ac9ec0fdc48.png",
+      "local": "art/source/enemy-new-2.png"
+    },
+    {
+      "name": "enemy-new-3",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-fbef53ab-2601-48ee-a1b2-c465ddb97a3b.png",
+      "local": "art/source/enemy-new-3.png"
+    },
+    {
+      "name": "enemy-new-4",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-6261d7d6-32f9-4fa9-9b4c-1b6759afd3b6.png",
+      "local": "art/source/enemy-new-4.png"
+    },
+    {
+      "name": "enemy-marauder",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-3c1c7da9-898b-4281-a67c-94d95e69b59b.png",
+      "local": "art/source/enemy-marauder.png"
+    },
+    {
+      "name": "special-allies",
+      "path": "C:\\Users\\17443\\.codex\\generated_images\\01a0f317-2790-7cd0-951c-d5cbfea0c407\\exec-1012918e-7377-4c74-9b0b-444e1649c10f.png",
+      "local": "art/source/special-allies.png"
+    }
+  ]
+}

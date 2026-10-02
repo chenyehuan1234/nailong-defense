@@ -1,0 +1,26 @@
+import {ASSET_BASE} from './assets';
+import {CHAPTERS} from '../content/reference-levels';
+import {LEVELS} from '../content/levels';
+import {HEROES,HERO_KEYS} from '../content/definitions';
+import {earnedStars,scoreKey} from './save';
+import {escapeHtml as esc} from './icons';
+import type {SaveData,Difficulty} from './types';
+export function campaignUnlocked(save:SaveData,index:number){const l=LEVELS[index];return!!l&&(l.requires??(index?[LEVELS[index-1].id]:[])).every(id=>!!save.scores[scoreKey('main',id)]);}
+export function heroUnlocked(save:SaveData,key:typeof HERO_KEYS[number]){return LEVELS.some((_,index)=>index+1>=(HEROES[key].unlockLevel??4)&&campaignUnlocked(save,index));}
+export function campaignMarkup(save:SaveData,index:number,difficulty:Difficulty,chapter:string,scouting:string){
+ const level=LEVELS[index],shown=chapter?LEVELS.filter(l=>l.chapterId===chapter):LEVELS;
+ const points=shown.map(l=>({x:(l.node!.x-120)/.49*.76+70,y:(l.node!.y-130)/.68*.94+15}));
+ const minX=Math.min(...points.map(p=>p.x)),maxX=Math.max(...points.map(p=>p.x)),minY=Math.min(...points.map(p=>p.y)),maxY=Math.max(...points.map(p=>p.y));
+ const factor=chapter?Math.min(2.6,1300/Math.max(480,maxX-minX),680/Math.max(200,maxY-minY)):1;
+ const point=(id:string)=>{const j=shown.findIndex(l=>l.id===id),p=points[j];return factor===1?p:{x:800+(p.x-(minX+maxX)/2)*factor,y:440+(p.y-(minY+maxY)/2)*factor};};
+ const stars=(n:number)=>`<span class="map-stars">${'★'.repeat(n)}${'☆'.repeat(3-n)}</span>`;
+ return`<div class="world-v2 world-v4"><header class="world-header"><button class="nav-button" data-action="home">奶龙保卫战</button><span>26关远征 · 13位守护者</span><nav><button class="nav-button" data-action="training-menu">训练营</button><button class="nav-button" data-action="upgrades">★ ${earnedStars(save)} / 78 · 升级</button><button class="nav-button" data-action="editor">关卡工坊</button><button class="nav-button" data-action="book">图鉴</button><button class="nav-button" data-action="settings">设置</button></nav></header>
+ <div class="chapter-nav"><button data-action="chapter" data-chapter="" class="${!chapter?'active':''}">全图</button>${CHAPTERS.map(c=>`<button data-action="chapter" data-chapter="${c.id}" class="${chapter===c.id?'active':''}">${c.name}</button>`).join('')}</div>
+ <section class="world-map" aria-label="26关战役地图"><div class="world-map-surface"><img src="${ASSET_BASE}campaign-v4.webp" alt="王国远征与七个支线章节"><svg class="campaign-progress" viewBox="0 0 1600 900" aria-hidden="true">${shown.flatMap(l=>(l.requires??[]).filter(id=>shown.some(s=>s.id===id)).map(id=>{const a=point(id),b=point(l.id);return`<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" class="${campaignUnlocked(save,LEVELS.indexOf(l))?'open':'closed'}"/>`;})).join('')}</svg>
+ ${shown.map(l=>{const i=LEVELS.indexOf(l),p=point(l.id),unlocked=campaignUnlocked(save,i),score=save.scores[scoreKey('main',l.id)];return`<button class="world-node ${chapter?'zoom-node':'overview-node'} ${index===i?'active':''} ${unlocked?score?'completed':'available':'locked'}" style="left:${p.x/16}%;top:${p.y/9}%" data-action="level" data-index="${i}" ${unlocked?'':'disabled'} title="${i+1} · ${l.name}"><span>${i+1}</span><small>${l.name}</small>${stars(score?.stars??0)}</button>`;}).join('')}</div></section>
+ <div class="campaign-caption">${chapter?CHAPTERS.find(c=>c.id===chapter)!.name:'先完成王国远征，再沿章节分支继续探索。'} · 点击章节可放大查看</div>
+ <aside class="expedition-v2"><label class="mobile-stage-picker">选择关卡<select data-level-select>${LEVELS.map((l,i)=>`<option value="${i}" ${i===index?'selected':''} ${campaignUnlocked(save,i)?'':'disabled'}>${i+1}. ${l.name}${campaignUnlocked(save,i)?'':' · 未解锁'}</option>`).join('')}</select></label><span class="eyebrow">${esc(level.subtitle)} · ${String(index+1).padStart(2,'0')}</span><h1>${level.name}</h1><p>${level.description}</p><div class="level-tags"><span>${level.waves.length}波</span><span>${level.slots.length}塔位</span><span>${level.gold}金币</span></div>${scouting}
+ <div class="difficulty">${(['casual','normal','veteran'] as const).map((d,i)=>`<button data-action="difficulty" data-value="${d}" class="${difficulty===d?'active':''}" aria-pressed="${difficulty===d}">${['休闲','普通','老兵'][i]}</button>`).join('')}</div>
+ <h3>${level.heroes===false?'本关以防御塔建立防线':'选择奶龙守护者'}</h3><div class="compact-heroes" ${level.heroes===false?'hidden':''}>${HERO_KEYS.map(k=>{const h=HEROES[k],open=heroUnlocked(save,k);return`<button data-action="hero" data-hero="${k}" class="${save.hero===k?'selected':''} ${open?'':'hero-locked'}" ${open?'':'disabled'} aria-pressed="${save.hero===k}" title="${esc(h.reference+' · '+h.description)}"><img src="${ASSET_BASE}heroes-${h.row}.png" alt="${h.name}"><small>${h.name}</small><em>${open?h.role:'第'+h.unlockLevel+'关解锁'}</em></button>`;}).join('')}</div>
+ <p class="hero-description">${level.heroes===false?'英雄从第四关加入；现在使用塔楼、援军和流星守护道路。':HEROES[save.hero].description}</p><p class="challenge-coming">英雄／铁人挑战将在准确配置完成后开放。</p><button class="button primary embark" data-action="start">开始守护 →</button><p class="world-hint">战役章节解锁 · 每局英雄从一级成长 · 满分78星</p></aside></div>`;
+}

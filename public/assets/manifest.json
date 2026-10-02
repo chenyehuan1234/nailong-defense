@@ -1,0 +1,246 @@
+{
+  "version": 4,
+  "maps": [
+    "map-01.webp",
+    "map-02.webp",
+    "map-03.webp",
+    "map-04.webp",
+    "map-05.webp",
+    "map-06.webp",
+    "map-07.webp",
+    "map-08.webp",
+    "map-09.webp",
+    "map-10.webp",
+    "map-11.webp",
+    "map-12.webp",
+    "map-13.webp",
+    "map-14.webp",
+    "map-15.webp",
+    "map-16.webp",
+    "map-17.webp",
+    "map-18.webp",
+    "map-19.webp",
+    "map-20.webp",
+    "map-21.webp",
+    "map-22.webp",
+    "map-23.webp",
+    "map-24.webp",
+    "map-25.webp",
+    "map-26.webp"
+  ],
+  "footAnchor": {
+    "x": 96,
+    "y": 176
+  },
+  "actions": {
+    "allies": [
+      "front",
+      "side",
+      "back",
+      "walkA",
+      "walkB",
+      "attack",
+      "hurt",
+      "skill"
+    ],
+    "enemies": [
+      "front",
+      "side",
+      "back",
+      "walkA",
+      "walkB",
+      "attack",
+      "death"
+    ],
+    "towers": [
+      "level1",
+      "level2",
+      "level3",
+      "branch1",
+      "branch2"
+    ]
+  },
+  "audio": {
+    "type": "streamed HTMLAudio music + short WebAudio buffers",
+    "manifest": "audio/manifest.json",
+    "production": "art/source/audio/v4/downloads.json",
+    "license": "CC0 + CC BY 4.0 + project-authored layers",
+    "credits": "audio/CREDITS.md",
+    "version": 4
+  },
+  "atlases": {
+    "heroes": {
+      "file": "heroes.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "soldiers": {
+      "file": "soldiers.png",
+      "columns": 8,
+      "rows": 4,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "towers": {
+      "file": "towers.png",
+      "columns": 5,
+      "rows": 4,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "enemies-a": {
+      "file": "enemies-a.png",
+      "columns": 7,
+      "rows": 5,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "enemies-b": {
+      "file": "enemies-b.png",
+      "columns": 7,
+      "rows": 6,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "enemy-new-1": {
+      "file": "enemy-new-1.png",
+      "columns": 7,
+      "rows": 8,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "enemy-new-2": {
+      "file": "enemy-new-2.png",
+      "columns": 7,
+      "rows": 8,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "enemy-new-3": {
+      "file": "enemy-new-3.png",
+      "columns": 7,
+      "rows": 8,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "enemy-new-4": {
+      "file": "enemy-new-4.png",
+      "columns": 7,
+      "rows": 8,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "special-allies": {
+      "file": "special-allies.png",
+      "columns": 8,
+      "rows": 3,
+      "frameWidth": 192,
+      "frameHeight": 192
+    },
+    "heroes-walk-a": {
+      "file": "heroes-walk-a.png",
+      "columns": 6,
+      "rows": 6,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    "heroes-walk-b": {
+      "file": "heroes-walk-b.png",
+      "columns": 6,
+      "rows": 6,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    "soldiers-walk-a": {
+      "file": "soldiers-walk-a.png",
+      "columns": 6,
+      "rows": 6,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    "soldiers-walk-b": {
+      "file": "soldiers-walk-b.png",
+      "columns": 6,
+      "rows": 6,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    "tower-plates": {
+      "file": "tower-plates.png",
+      "columns": 5,
+      "rows": 4,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    "tower-operators": {
+      "file": "tower-operators.png",
+      "columns": 6,
+      "rows": 4,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    "heroes-actions": {
+      "file": "heroes-actions.png",
+      "columns": 6,
+      "rows": 4,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    },
+    "soldiers-actions": {
+      "file": "soldiers-actions.png",
+      "columns": 6,
+      "rows": 4,
+      "frameWidth": 192,
+      "frameHeight": 192,
+      "anchor": {
+        "x": 96,
+        "y": 176
+      }
+    }
+  },
+  "sources": [
+    "YHSome/BigNaiWa assets/fruits/08-pineapple.png (identity reference)",
+    "Generated using built-in image_gen; production specifications in docs/art-direction.md"
+  ],
+  "frameManifest": "frame-manifest.json",
+  "actionManifests": [
+    "art/source/animation-v3/manifest.json",
+    "art/source/animation-v3/action-manifest.json"
+  ],
+  "menu": {
+    "image": "home-v4.1.webp",
+    "source": "art/source/home-v4.1.png",
+    "production": "art/source/home-v4.1.json",
+    "version": "4.1"
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "version": 2,
+  "game": "Kingdom Rush",
+  "platform": "Steam Windows",
+  "appId": 246420,
+  "buildId": 24662480,
+  "sourceRoot": "D:\\steam\\steamapps\\common\\Kingdom Rush",
+  "coordinateSystem": {
+    "width": 1024,
+    "height": 768,
+    "yAxis": "up"
+  },
+  "framesPerSecond": 30,
+  "files": {
+    "kr1/game_settings.lua": {
+      "sha256": "a93d4e6e9b84ca352de6a9930f51d60651864252cabd235ee15b603c909a2e4e",
+      "bytes": 3953
+    },
+    "kr1-desktop/data/map_data.lua": {
+      "sha256": "17bbf97c0c1b8b2602cbce2d0c1fd25e01c39a1dce08174d6ad19bef72367c2b",
+      "bytes": 29121
+    },
+    "kr1-desktop/data/map_points.lua": {
+      "sha256": "3bda69f47b1ab1fb0a695eedb697310873ea37842525f1dcdffe09cd922c8750",
+      "bytes": 1270
+    },
+    "kr1/data/waves/level01_waves_campaign.lua": {
+      "sha256": "36fc3a09e60abd3d8821b88cf11b764aefcb4dede879311f9ebf4fe2397b1aac",
+      "bytes": 2217
+    },
+    "kr1/data/levels/level01_data.lua": {
+      "sha256": "64ca3d2f36972bad43c763fa941a114bc62d7d2132ecc5225f2d26e8eec55492",
+      "bytes": 3449
+    },
+    "kr1/data/levels/level01_paths.lua": {
+      "sha256": "9904758cf2f2ab39301c8ad01906ef256b1b6f4d09b71a583394af1099547c8c",
+      "bytes": 16006
+    },
+    "kr1/data/levels/level01_grid.lua": {
+      "sha256": "71963412898d97b04f8489206e22da0e3c01acb3d80913db48f8e2aa8b5701d3",
+      "bytes": 13096
+    },
+    "kr1/data/waves/level02_waves_campaign.lua": {
+      "sha256": "da113ba6a6ce1041beebc8310aa2b8b32f95c41c40ce465cc74db647426b8c54",
+      "bytes": 3086
+    },
+    "kr1/data/levels/level02_data.lua": {
+      "sha256": "16211d80045f72e4289048aac99d5e3e59152459fb20b5f7527eb58d79c122b5",
+      "bytes": 3170
+    },
+    "kr1/data/levels/level02_paths.lua": {
+      "sha256": "144a1b6db71881ba33e7cf62d3897c5d9cd974bf8966bf45cbd5e808dc6fbc11",
+      "bytes": 21963
+    },
+    "kr1/data/levels/level02_grid.lua": {
+      "sha256": "4caafbfead42a5543cfd049c097f1a5597a192f288b5492bd5e0b0f3fe19c639",
+      "bytes": 12936
+    },
+    "kr1/data/waves/level03_waves_campaign.lua": {
+      "sha256": "5be725ef8746d31676cff5409a863491f8910ba4ec0db2d768ad5198e9dbe982",
+      "bytes": 5418
+    },
+    "kr1/data/levels/level03_data.lua": {
+      "sha256": "b3e240dcb5cdafc031afaa6bff68f5951cfcb770ea046211db1054d2bd00de41",
+      "bytes": 6881
+    },
+    "kr1/data/levels/level03_paths.lua": {
+      "sha256": "1d1956f0dcfbd54ada27576e8a56e2246a1fd882415a56a42ba478beb587b358",
+      "bytes": 46016
+    },
+    "kr1/data/levels/level03_grid.lua": {
+      "sha256": "cb7701ea0bad39fdf274d74cf5a3fc6c138cdbfb5a41ad90363c94022dae90db",
+      "bytes": 12563
+    },
+    "kr1/data/waves/level04_waves_campaign.lua": {
+      "sha256": "3648c472bf08490060528768844baeb00c32a2415f9c94cb1bc10226b5aef75a",
+      "bytes": 8734
+    },
+    "kr1/data/levels/level04_data.lua": {
+      "sha256": "dc6626f9efa76c27cb14f82c28de1358b670f7b29a4b0b5a8a60221d8b8c0453",
+      "bytes": 8001
+    },
+    "kr1/data/levels/level04_paths.lua": {
+      "sha256": "a08b76fc79145004f5c88c7eda15fd202971b9d2c8a33ea24eeaa25693a72667",
+      "bytes": 24787
+    },
+    "kr1/data/levels/level04_grid.lua": {
+      "sha256": "9e8c3b0c4a28db79f655e67a97f1a23fdb8ef633fccc35c4df10cfbebea86633",
+      "bytes": 12880
+    },
+    "kr1/data/waves/level05_waves_campaign.lua": {
+      "sha256": "57a518e7e0c9382a9d9f00fb09469b8b86a9cde24dcd5453e72934d5ff97e1f3",
+      "bytes": 8404
+    },
+    "kr1/data/levels/level05_data.lua": {
+      "sha256": "0645e4102bddf388f4d05f4ccc1a27418a2eda5738882752e3574d187f2f353a",
+      "bytes": 6369
+    },
+    "kr1/data/levels/level05_paths.lua": {
+      "sha256": "dff5fdfb70fbd6904619160aecbf9d310103abb08d985b9c0a80d37020fb8cec",
+      "bytes": 37182
+    },
+    "kr1/data/levels/level05_grid.lua": {
+      "sha256": "ba47ad2297cd10ac877ac155c7fd318ec020d44f6f666df45088a65891e6baa6",
+      "bytes": 12780
+    },
+    "kr1/data/waves/level06_waves_campaign.lua": {
+      "sha256": "d53d7b76e74afedadaeb536219586d3ee5b78183466642a6776b4c5520b2d027",
+      "bytes": 12272
+    },
+    "kr1/data/levels/level06_data.lua": {
+      "sha256": "458e4e76e7fabf58f63c6727e7cc1e3aacf5e0f78ddecf00918b4caa4997271f",
+      "bytes": 11989
+    },
+    "kr1/data/levels/level06_paths.lua": {
+      "sha256": "4a44f0060ceea4635f212bd1078c7aa7caece4f54e200fc6d517de224e63d552",
+      "bytes": 71710
+    },
+    "kr1/data/levels/level06_grid.lua": {
+      "sha256": "5204c994a4f76211a679c452139c1efce9bf75547f20375559252bffa04ff49b",
+      "bytes": 12203
+    },
+    "kr1/data/waves/level07_waves_campaign.lua": {
+      "sha256": "78b157deb4b5de094a340829da61b75368b1fde47976eea2c4e9551e1d16eacb",
+      "bytes": 10577
+    },
+    "kr1/data/levels/level07_data.lua": {
+      "sha256": "6fe68a6eaa70e34a0883fa5e2b258d6e32d98b8698703f9591ca3d1cefb11cff",
+      "bytes": 5765
+    },
+    "kr1/data/levels/level07_paths.lua": {
+      "sha256": "ba6c0c42b057f3939c3d10f995df8f21fbdebefd7412c3fdaf09ce5475b77db6",
+      "bytes": 54332
+    },
+    "kr1/data/levels/level07_grid.lua": {
+      "sha256": "e0620e9f2f7d37ca4e392ee23cbc7d6fdba3e7eab3447294cc27852d313779d9",
+      "bytes": 12832
+    },
+    "kr1/data/waves/level08_waves_campaign.lua": {
+      "sha256": "2a66c0200839c0d572157b91eb8900a6d85f4931c4c592bd4b9937c8a91faa20",
+      "bytes": 14646
+    },
+    "kr1/data/levels/level08_data.lua": {
+      "sha256": "a17f8b3618a98821e54b18dff1bf79fc50aedad2a1a28f8b2f6e407df4a6c423",
+      "bytes": 5385
+    },
+    "kr1/data/levels/level08_paths.lua": {
+      "sha256": "fdb6f609996e296df95a04a7c81665daae5c6821387e9f0ed804f66646705a2e",
+      "bytes": 80134
+    },
+    "kr1/data/levels/level08_grid.lua": {
+      "sha256": "e0180b182bd98f2cdae4f1f2e6cc48982a08ad990e2b15ad43da0a0f70ac1a49",
+      "bytes": 12710
+    },
+    "kr1/data/waves/level09_waves_campaign.lua": {
+      "sha256": "c389e8f82524d79b833388a3c11b593170ffbba6b7c2ba1b093b7a9ef72d2a3c",
+      "bytes": 11325
+    },
+    "kr1/data/levels/level09_data.lua": {
+      "sha256": "0d705f9ee9f0d01f44673668c446b662185bc1d21704aade51cd7934a3c326f9",
+      "bytes": 10096
+    },
+    "kr1/data/levels/level09_paths.lua": {
+      "sha256": "4648e9cc6a146ddd42f52aaf02951a3eb783126d06193d3f6fe2b6fc69eb9f3d",
+      "bytes": 47301
+    },
+    "kr1/data/levels/level09_grid.lua": {
+      "sha256": "90911d1bb2b02cf6905a18e91522e7dfd8953e0efc1638505607ec8152f02500",
+      "bytes": 12663
+    },
+    "kr1/data/waves/level10_waves_campaign.lua": {
+      "sha256": "14319cf3eb0edc922646d27d0c23e2e0e8669eab7b8ddb4b21fe1997d1610eff",
+      "bytes": 12046
+    },
+    "kr1/data/levels/level10_data.lua": {
+      "sha256": "0aebfa07c133f7d9d022a9e5b872eb46cd7fb0d15a358d000223aa792ab8bfbe",
+      "bytes": 5070
+    },
+    "kr1/data/levels/level10_paths.lua": {
+      "sha256": "51efa106ff291d8d1568ca0450673b87d1c94e3c2e12d9e43df961f701ab7123",
+      "bytes": 32678
+    },
+    "kr1/data/levels/level10_grid.lua": {
+      "sha256": "f33b24c2a7ed0a9d40dcddc89c55036606a7db54c80db5c1e6a030db8ace0209",
+      "bytes": 12279
+    },
+    "kr1/data/waves/level11_waves_campaign.lua": {
+      "sha256": "f1c98d2886f13067e88b20f3dc2ba6c937b9551c5b0d8bcaf117e970174db3fc",
+      "bytes": 16635
+    },
+    "kr1/data/levels/level11_data.lua": {
+      "sha256": "05866d884606c7d9ac7c12efd9b2b4f72f546004626469bf6662a07a544e9f9b",
+      "bytes": 4614
+    },
+    "kr1/data/levels/level11_paths.lua": {
+      "sha256": "03c79304b14e1765a880945eae186170345ee278449f534a3df30dee18872f61",
+      "bytes": 49462
+    },
+    "kr1/data/levels/level11_grid.lua": {
+      "sha256": "ee2a648f74f094d8becfcc16f7ac0865a7b6346ef263e9e7afcc04305f97805b",
+      "bytes": 12381
+    },
+    "kr1/data/waves/level12_waves_campaign.lua": {
+      "sha256": "61ca2912762458bb57b5064537bcfd3f2e669fab5aba8051e4c6c022e6978a47",
+      "bytes": 10903
+    },
+    "kr1/data/levels/level12_data.lua": {
+      "sha256": "8b9e86b21870b82862c723aa76ed98afee0bf5a0847626b06bb25b83f89451f2",
+      "bytes": 6504
+    },
+    "kr1/data/levels/level12_paths.lua": {
+      "sha256": "4e718e54225ea7325935d1b53789a50f6fbb1983254158e4fd10d80266e511dd",
+      "bytes": 45988
+    },
+    "kr1/data/levels/level12_grid.lua": {
+      "sha256": "c70a627a52bba866229db90b55331ee4a49927f1129bcd7e1fe337aad954c63f",
+      "bytes": 12487
+    },
+    "kr1/data/waves/level13_waves_campaign.lua": {
+      "sha256": "9c9bb7dd5bb69920ce24de7cd5571a943340dd7452f3c1ff77256432bc6e2b22",
+      "bytes": 24988
+    },
+    "kr1/data/levels/level13_data.lua": {
+      "sha256": "f7c14d2b2bd003d120f1cda1be42b2004869a2ceae9f1e9fcdc11e0ef038ae36",
+      "bytes": 4213
+    },
+    "kr1/data/levels/level13_paths.lua": {
+      "sha256": "00d92d09dba834644bd448310e1aabd32e23a07748d50aa372c86337cebdb234",
+      "bytes": 64690
+    },
+    "kr1/data/levels/level13_grid.lua": {
+      "sha256": "28e539cba4f3da8950ec7d2c0a27982b97ba86a761eacc8675bd3a6c93c408d2",
+      "bytes": 12432
+    },
+    "kr1/data/waves/level14_waves_campaign.lua": {
+      "sha256": "10cb624482ad484a50154749a08cc54217e8f5064e8c3b3f8a16c83e8983e751",
+      "bytes": 24706
+    },
+    "kr1/data/levels/level14_data.lua": {
+      "sha256": "35d3f9d6817b9412a5d24ecfd2ea0109c8e3230427908963c027543bd5ca0e66",
+      "bytes": 6153
+    },
+    "kr1/data/levels/level14_paths.lua": {
+      "sha256": "7405aa28c7d7aad52e93b205564929b12636442f7906ee4685e96e4df2afc8aa",
+      "bytes": 53817
+    },
+    "kr1/data/levels/level14_grid.lua": {
+      "sha256": "e54e39f23c85f7c177b86198e13506d25b1aa576840256705bb30379c643c8c3",
+      "bytes": 12177
+    },
+    "kr1/data/waves/level15_waves_campaign.lua": {
+      "sha256": "3374d1d08112fe8cf6702dd11a7db9c67956f39595da1a52d10b716eda605a8a",
+      "bytes": 19898
+    },
+    "kr1/data/levels/level15_data.lua": {
+      "sha256": "74525fc9a688ba9bda806e094b9a96a398e2ecf0bc3d1f175e39222c1ee50db3",
+      "bytes": 6374
+    },
+    "kr1/data/levels/level15_paths.lua": {
+      "sha256": "d8d9a109626e892e7e73a1a3df1e0fea52fff57040b92acb0e6f0890157aacbd",
+      "bytes": 52773
+    },
+    "kr1/data/levels/level15_grid.lua": {
+      "sha256": "85d36142f4b822a7371acbd6aade161d43ef5c0db8ffa37e5c06c04d650f0cc1",
+      "bytes": 12594
+    },
+    "kr1/data/waves/level16_waves_campaign.lua": {
+      "sha256": "61fc30c529011cf8e138a7e51d16652099b09b03cafe71e12eec940dd77921c7",
+      "bytes": 28878
+    },
+    "kr1/data/levels/level16_data.lua": {
+      "sha256": "814a471fd751298de29db29f2b588700a3d1e6025dbc64eb3ab8caaff25ac031",
+      "bytes": 4167
+    },
+    "kr1/data/levels/level16_paths.lua": {
+      "sha256": "519c2492bebbca63cd8d3014efa6f4833327eac6af49c3d2260bf9e95f5376dc",
+      "bytes": 54739
+    },
+    "kr1/data/levels/level16_grid.lua": {
+      "sha256": "5b5d55808d7cba9526780a31585253dc231f1507f8157f02f29546a75dd3395a",
+      "bytes": 12582
+    },
+    "kr1/data/waves/level17_waves_campaign.lua": {
+      "sha256": "74baa8c876b9f8716e88f9426440ce13951ad6a8f4e5be8323db53d70e7d3410",
+      "bytes": 24099
+    },
+    "kr1/data/levels/level17_data.lua": {
+      "sha256": "c8c755c887516d0b82849c9e165fccc16b1e17da9821545d7059c4e106b00a9d",
+      "bytes": 5344
+    },
+    "kr1/data/levels/level17_paths.lua": {
+      "sha256": "f13636450b19d6ba90cb03a8cc20f9c7d20b695e9d725d86365d855e79a49664",
+      "bytes": 75070
+    },
+    "kr1/data/levels/level17_grid.lua": {
+      "sha256": "b167e920232aebe490a5a78ce0c43152612d0d9e27b688a40acbf783bb38c818",
+      "bytes": 12175
+    },
+    "kr1/data/waves/level18_waves_campaign.lua": {
+      "sha256": "a905bd1d1bab1b8ac37d08515293d57fb60301fae524c666297499198b19288e",
+      "bytes": 27793
+    },
+    "kr1/data/levels/level18_data.lua": {
+      "sha256": "5019fbc2003aa718df27bc9dad52584152dbb401f7183b3ce91ee3d8323c6438",
+      "bytes": 4425
+    },
+    "kr1/data/levels/level18_paths.lua": {
+      "sha256": "e7e6e3ebd4444d30c2110d2d37c480d402e86c224834347fe1eb3ef49bed445b",
+      "bytes": 71876
+    },
+    "kr1/data/levels/level18_grid.lua": {
+      "sha256": "81e439bb0677985f56f4b02d887c466c1e66700f5f714b5aaaee404f0ef8cfa8",
+      "bytes": 12951
+    },
+    "kr1/data/waves/level19_waves_campaign.lua": {
+      "sha256": "72d77293150df64c7d8fd965db6300c183e0723f70a633f20ed362e92cd28a22",
+      "bytes": 30321
+    },
+    "kr1/data/levels/level19_data.lua": {
+      "sha256": "8290f5870bb9848d66155d176a51e606b8abec1c9a188aa70f657c94794a1223",
+      "bytes": 5242
+    },
+    "kr1/data/levels/level19_paths.lua": {
+      "sha256": "17bc008e16215a945083fb29fb36248ac3f3cac69f7ce3b668cf16b2170f0e06",
+      "bytes": 43436
+    },
+    "kr1/data/levels/level19_grid.lua": {
+      "sha256": "0663157a243957e08a9a2fb63d673fa55b6dd5e9b70deb05253b01e1d5fd9601",
+      "bytes": 12396
+    },
+    "kr1/data/waves/level20_waves_campaign.lua": {
+      "sha256": "3c44140ae5911349cd489691189e0da4633e4c209b3bc4521a05776cc88dff81",
+      "bytes": 32093
+    },
+    "kr1/data/levels/level20_data.lua": {
+      "sha256": "8b58e5d089e9af19e87c4a62dbde37a0098fe7af19c65f11cccad730851b7754",
+      "bytes": 7307
+    },
+    "kr1/data/levels/level20_paths.lua": {
+      "sha256": "c4105b6759124defe6db7f899dcf1a5e75ee2e496bd02b76a7c8bb146d714adc",
+      "bytes": 34960
+    },
+    "kr1/data/levels/level20_grid.lua": {
+      "sha256": "d7c44a83d52a5e63e7724e012cb7c9e35be2b7d656745fca6fedae7dc288b46b",
+      "bytes": 12415
+    },
+    "kr1/data/waves/level21_waves_campaign.lua": {
+      "sha256": "cbaf35902477529affb5cdfc7dba2dde2010c3ea5937d16d47d371a9b1246e14",
+      "bytes": 45898
+    },
+    "kr1/data/levels/level21_data.lua": {
+      "sha256": "eafe4a1598d8371dc72f62aed2e5fde7e71fc6d57619326e854b4d7c18091aa5",
+      "bytes": 12483
+    },
+    "kr1/data/levels/level21_paths.lua": {
+      "sha256": "474b750214abde69d15f30244cc14d596550c97254dac546936201fb4ddad99f",
+      "bytes": 48905
+    },
+    "kr1/data/levels/level21_grid.lua": {
+      "sha256": "2cad99dd64d6be65431a0838356f423364d90807821387eb61668bc5962c9768",
+      "bytes": 12415
+    },
+    "kr1/data/waves/level22_waves_campaign.lua": {
+      "sha256": "d28450f6e2493b02db9f8dff6038a7a1debd8b280d503cbc3e961acd36217297",
+      "bytes": 28328
+    },
+    "kr1/data/levels/level22_data.lua": {
+      "sha256": "92776962dc8824703719f247d05f55216cb821c6789055045c70881bd905aec5",
+      "bytes": 11522
+    },
+    "kr1/data/levels/level22_paths.lua": {
+      "sha256": "1b30c6e7a942b7a402988364ba5de6bdfe163fe9ea72b6d845f28ba2e3ca79c5",
+      "bytes": 74546
+    },
+    "kr1/data/levels/level22_grid.lua": {
+      "sha256": "b916b4d2d3d9ba90765c702d3719e269bfc8245ca6d59f267164a07a551d20f5",
+      "bytes": 12086
+    },
+    "kr1/data/waves/level23_waves_campaign.lua": {
+      "sha256": "eabb963917e0e74fd45c4ef2cc293c92c6afd2a90d246d8f9f53cf6b11ad52e4",
+      "bytes": 46571
+    },
+    "kr1/data/levels/level23_data.lua": {
+      "sha256": "c67c6ee2458c3c57c3898e484ee9414612f947d0d1ac26ef4568f1a48e359f24",
+      "bytes": 7389
+    },
+    "kr1/data/levels/level23_paths.lua": {
+      "sha256": "5db421da89e37b12c69e33e4f4aa3559f482817836dff70a2ef5397e7fa011b7",
+      "bytes": 66654
+    },
+    "kr1/data/levels/level23_grid.lua": {
+      "sha256": "2a5b78311800a24c9ec3676c819fe2aa139d36bfb2524b02cc7edea86fd62f62",
+      "bytes": 12180
+    },
+    "kr1/data/waves/level24_waves_campaign.lua": {
+      "sha256": "34709d94c6af3c56fc7ae2a4ff761cd16b482dc52c9dc0582c8797c67e845a43",
+      "bytes": 41095
+    },
+    "kr1/data/levels/level24_data.lua": {
+      "sha256": "3bc0b34741c3af3a8de215ca96b71e6ab54433f0ed9ae5708ed656e9a6c39be1",
+      "bytes": 16301
+    },
+    "kr1/data/levels/level24_paths.lua": {
+      "sha256": "baa1367f10f4534f8830be5e56255e73d16dfacfd930dfc6553cccc5e505ab5e",
+      "bytes": 88768
+    },
+    "kr1/data/levels/level24_grid.lua": {
+      "sha256": "7ed546a3c9c058a517ddb52638f41a80766d32821a2970d9575bdad313c77dba",
+      "bytes": 11765
+    },
+    "kr1/data/waves/level25_waves_campaign.lua": {
+      "sha256": "a387dcedd935236ed4effe2c03d7611e7fe89e308e4aeffbf8368795324800d6",
+      "bytes": 33015
+    },
+    "kr1/data/levels/level25_data.lua": {
+      "sha256": "e99e58134313149b9013100b653dffbf4e3856218d195974957f0872b8b0963b",
+      "bytes": 13789
+    },
+    "kr1/data/levels/level25_paths.lua": {
+      "sha256": "febad7ee09c482092075ad8f4aa7064cb57b0f2e7a7c4adc1e2baa7b1cad598c",
+      "bytes": 86736
+    },
+    "kr1/data/levels/level25_grid.lua": {
+      "sha256": "c8715320f70588cf6054e98ca381d0ffbdcc405bd875de559b577ea70109bd07",
+      "bytes": 12382
+    },
+    "kr1/data/waves/level26_waves_campaign.lua": {
+      "sha256": "5f77aad8e4ba5455db15e160fa6cd5d831d98961d87a7b47819bb3030ea3700b",
+      "bytes": 34698
+    },
+    "kr1/data/levels/level26_data.lua": {
+      "sha256": "dc19780724202768c9d34c06fe08ece36a41168e15954fbf4ca5e636f7cb7241",
+      "bytes": 20140
+    },
+    "kr1/data/levels/level26_paths.lua": {
+      "sha256": "69567355384171c36d0d758d82627048f61bbde7ee16f332332fde10c1603708",
+      "bytes": 137958
+    },
+    "kr1/data/levels/level26_grid.lua": {
+      "sha256": "7ca7c958ec05544b55dc67a1290778fadda66fdae56c793d596d5faed3d25fef",
+      "bytes": 11496
+    },
+    "all/systems.lua": {
+      "bytes": 51862,
+      "sha256": "61456985c3c944cf1eaa7d810d539bd0e72a5b849329728c24c15d197d627cea"
+    },
+    "all/scripts.lua": {
+      "bytes": 159881,
+      "sha256": "0e75a0581ba31a2d02f8eeea1ec5d4b81f4c6d042e10a7198f41d5ce20dfb98e"
+    },
+    "kr1/game_templates.lua": {
+      "bytes": 346617,
+      "sha256": "715cdb42f38382070eeadea7b0160e86ac0a9e43234555d7944dcde5b807468e"
+    },
+    "kr1/game_scripts.lua": {
+      "bytes": 207769,
+      "sha256": "a22e4ef0e226214a96dca143f87bf1357ad127643b4b24db57d07fad858638ba"
+    },
+    "all/components.lua": {
+      "bytes": 26440,
+      "sha256": "84ae7cf5a71dfe3002a4e912040c90dec74cc6cb28ac6e1a696c8644384c447f"
+    },
+    "all/constants.lua": {
+      "bytes": 12645,
+      "sha256": "41574108be6345d433e2728716b92df76777d620c2605cbdad1989e6eac442db"
+    },
+    "kr1/upgrades.lua": {
+      "bytes": 14913,
+      "sha256": "8b83a6542da02bf1ea8e0271006fc456bf0ff6b8f74d10e24308a380421baeb5"
+    },
+    "kr1/data/levels/level21.lua": {
+      "bytes": 1001,
+      "sha256": "fe57116129f4e320e07194b52f39a8664df1521ebd04435f27312fdedcc8810c"
+    },
+    "kr1/data/levels/level08.lua": {
+      "bytes": 706,
+      "sha256": "591c905d60a71ee6b27eb0676d0006513c53da12a1c5cdd1c3ce833a74b392f6"
+    },
+    "kr1/data/levels/level20.lua": {
+      "bytes": 1283,
+      "sha256": "d7f52d7afdeb3aaed81276d39d37ba909d244dc1e81c25925a8dfc46e4641ba8"
+    },
+    "kr1/data/levels/level22.lua": {
+      "bytes": 1164,
+      "sha256": "b527d9bad7dad838d67dfbf243f9398a9eaafddf7edd5803d3896f0d54ded4ac"
+    },
+    "kr1/data/levels/level23_spawner.lua": {
+      "bytes": 18139,
+      "sha256": "75c4167313db460a315305816127724df8c989c04f7f3fa729335e5271df01c2"
+    },
+    "kr1/data/levels/level26_spawner.lua": {
+      "bytes": 9032,
+      "sha256": "07910c5e58c0746e4f1f2c624f8e5b4786fee894d43f4152d0425951233dbef5"
+    },
+    "kr1/data/levels/level24_spawner.lua": {
+      "bytes": 17850,
+      "sha256": "6af3da3b82f9db54c4ff3cdd16a1241d78156dc07c781d59ee409256f666570e"
+    },
+    "kr1/data/levels/level01.lua": {
+      "bytes": 1035,
+      "sha256": "da0ea96b83f8e7c866016715d3af69942ad95908c23cab62517b37ea95abab4e"
+    },
+    "kr1/data/levels/level12.lua": {
+      "bytes": 1651,
+      "sha256": "06416a44a6d11816f05257ba29b8742f537c1df7944952b3928f2a383a44ee4b"
+    },
+    "kr1/data/levels/level05.lua": {
+      "bytes": 918,
+      "sha256": "e49110030bef79d2c992aa0cabeb89e57e3a8655b354396acd22663f636f65f7"
+    },
+    "kr1/data/levels/level04.lua": {
+      "bytes": 821,
+      "sha256": "ac2adf3552ae80723c295b3ad16a0483a4296243426643ada473ad783fe130c9"
+    },
+    "kr1/data/levels/level10.lua": {
+      "bytes": 250,
+      "sha256": "a06a8f52ae6b28598dc9d8b1e5148c150f32c52837fd5b6c2af017c7323a09f3"
+    },
+    "all/path_db.lua": {
+      "bytes": 15943,
+      "sha256": "d03762c7a7c70828a9934048d8142ede1d4b54527b0d3803bec35d05243bb457"
+    },
+    "all/grid_db.lua": {
+      "bytes": 8365,
+      "sha256": "864bf0e5db56f6c54f2bc985b06b57fa7012b7971fc89ceb0e6f20b37de389e5"
+    }
+  },
+  "notes": [
+    "Original install is read only. Exported JSON contains gameplay facts; no original executable code or game media is distributed.",
+    "Main-wave oracle v3 executes the original scheduler, path_db and grid_db using native start nodes. Headless rendering/audio helpers are stubbed. Three reference seeds are recorded.",
+    "Extra-wave oracle executes native mega_spawner for stages 23, 24 and 26, retaining exact ticks, lane, subpath, node, origin and forced waypoint.",
+    "Reference traces are isolated scheduling observations. Live gameplay random decisions may consume RNG in a different order; numeric damage uses the project deterministic RNG.",
+    "Map imagery and hero/enemy appearance use project assets; faithful original animation and scenery painting are deferred by user instruction.",
+    "Legion coroutine observation: generation budget 2 makes two children of budget 1; budget 1 makes one child of budget 0. Each entity has a finite copy budget. Render/movement waiting stubs make these timestamps unsuitable as timing acceptance."
+  ]
+}

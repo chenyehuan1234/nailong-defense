@@ -1,0 +1,31 @@
+import Phaser from 'phaser';
+import type { CombatEvent, Point } from './types';
+import type { Simulation } from './simulation';
+type FX={event:CombatEvent;start:number;duration:number};
+export class CombatFX {
+ shots:FX[]=[];impacts:FX[]=[];
+ constructor(public graphics:Phaser.GameObjects.Graphics){}
+ clear(){this.shots=[];this.impacts=[];this.graphics.clear();}
+ add(event:CombatEvent,time:number){if(event.type==='shot'&&event.target)this.shots.push({event,start:time,duration:event.amount??.3});if(['impact','heal','skill'].includes(event.type))this.impacts.push({event,start:time,duration:event.type==='heal'?.6:event.radius?.65:.25});}
+ draw(time:number,sim:Simulation,low=false){
+  const g=this.graphics;g.clear();this.shots=this.shots.filter(f=>time<f.start+f.duration);this.impacts=this.impacts.filter(f=>time<f.start+f.duration);
+  for(const f of this.shots){const e=f.event,t=Math.min(1,(time-f.start)/f.duration),victim=sim.enemies.find(a=>a.id===e.targetId&&a.hp>0),aim=victim??e.target!,grade=e.towerLevel??1,scale=1+(grade-1)*.22,kind=e.effect??e.kind;
+   let from={...e.point};if(e.source!==undefined&&e.source<0){const tower=sim.towerAt(-100-e.source);if(tower){const p=sim.level.slots[tower.slot],col=tower.branch>=0?3+tower.branch:tower.level-1;from={x:p.x+(aim.x<p.x?-20:20),y:p.y+({archer:[-54,-70,-79,-68,-76],barracks:[-21,-36,-49,-54,-43],mage:[-15,-44,-61,-74,-68],engineer:[-22,-32,-44,-39,-53]}as const)[tower.kind][col]-22};}}else if(e.source!==undefined||kind==='enemy')from.y-=38;
+   const artillery=e.towerKind==='engineer'||['engineer','missile','shrapnel'].includes(kind??'');const target={x:aim.x,y:aim.y-(artillery?0:24)};
+   const x=from.x+(target.x-from.x)*t,groundY=from.y+(target.y-from.y)*t,theta=Math.atan2(target.y-from.y,target.x-from.x),length=(e.branch===1?36:26)*scale;
+   if(kind==='lightning'){g.lineStyle(7+grade,0x8fceff,.18);g.lineBetween(from.x,from.y,target.x,target.y);g.lineStyle(2+grade*.3,0xdffaff,.95);g.beginPath();g.moveTo(from.x,from.y);for(let i=1;i<=8;i++)g.lineTo(from.x+(target.x-from.x)*i/8,from.y+(target.y-from.y)*i/8+(i===8?0:Math.sin(i*3+time*35)*14));g.strokePath();continue;}
+   if(e.towerKind==='engineer'||kind==='engineer'||kind==='missile'||kind==='shrapnel'){const y=groundY-Math.sin(t*Math.PI)*(kind==='missile'?135:85);g.fillStyle(0x263326,.23);g.fillEllipse(x,groundY,18*scale,7*scale);if(!low){g.fillStyle(0xb8b6a9,.24);for(let j=1;j<=3;j++)g.fillCircle(x-(target.x-from.x)/30*j,y+(target.y-from.y)/50*j,3+j*2);}g.fillStyle(e.branch===0?0xdcc077:0x293740,1);g.fillCircle(x,y,(kind==='missile'?8:7)*scale);g.lineStyle(2,0x121e20,1);g.strokeCircle(x,y,7*scale);g.fillStyle(0xf7ecb3,.8);g.fillCircle(x-2,y-2,2*scale);if(kind==='missile'){g.lineStyle(5,0xffa84d,.9);g.lineBetween(x,y,x-Math.cos(theta)*20,y-Math.sin(theta)*20);}continue;}
+   if(e.damageKind==='magic'||e.towerKind==='mage'){const color=e.branch===1?0x9fef98:grade>=3?0xcaa7ff:0x6fe2ff;g.fillStyle(color,.12);g.fillCircle(x,groundY,20*scale);g.lineStyle(4*scale,color,.42);g.lineBetween(x,groundY,x-Math.cos(theta)*24*scale,groundY-Math.sin(theta)*24*scale);g.fillStyle(color,.9);g.fillCircle(x,groundY,6*scale);g.fillStyle(0xf4ffff,.95);g.fillCircle(x,groundY,2.6*scale);if(grade>=2){g.lineStyle(1.5,color,.9);g.strokeCircle(x,groundY,10*scale);}continue;}
+   if(kind==='axe'){const angle=t*14;g.lineStyle(4,0xa76a43,1).lineBetween(x-Math.cos(angle)*13,groundY-Math.sin(angle)*13,x+Math.cos(angle)*13,groundY+Math.sin(angle)*13);g.fillStyle(0xd5e3dc,1).fillTriangle(x+Math.cos(angle)*10,groundY+Math.sin(angle)*10,x+Math.cos(angle+1.1)*20,groundY+Math.sin(angle+1.1)*20,x+Math.cos(angle-1.1)*20,groundY+Math.sin(angle-1.1)*20);continue;}
+   const tail={x:x-Math.cos(theta)*length,y:groundY-Math.sin(theta)*length},side={x:-Math.sin(theta),y:Math.cos(theta)};g.lineStyle(2.5*scale,e.branch===0?0x83bc53:0xc69455,1);g.lineBetween(tail.x,tail.y,x,groundY);g.fillStyle(grade>=3?0xf9e5ba:0xc5d9de,1);g.fillTriangle(x+Math.cos(theta)*5*scale,groundY+Math.sin(theta)*5*scale,x-Math.cos(theta)*7+side.x*4*scale,groundY-Math.sin(theta)*7+side.y*4*scale,x-Math.cos(theta)*7-side.x*4*scale,groundY-Math.sin(theta)*7-side.y*4*scale);g.lineStyle(3*scale,0xf9f0cf,1);g.lineBetween(tail.x,tail.y,tail.x+side.x*4+Math.cos(theta)*7,tail.y+side.y*4+Math.sin(theta)*7);g.lineBetween(tail.x,tail.y,tail.x-side.x*4+Math.cos(theta)*7,tail.y-side.y*4+Math.sin(theta)*7);
+  }
+  for(const f of this.impacts){const e=f.event,t=(time-f.start)/f.duration,r=e.radius??(e.damageKind==='magic'?20:12),color=e.damageKind==='magic'?0x9aeaff:e.damageKind==='explosive'||e.radius?0xffbe64:0xffe4ac,p=e.radius||e.type==='heal'||e.type==='skill'?e.point:{x:e.point.x,y:e.point.y-22};
+   if(e.type==='heal'){g.lineStyle(2,0xb0ef9b,(1-t)*.8).strokeEllipse(p.x,p.y,34+20*t,18+8*t);g.lineStyle(3,0xd0ffc2,1-t).lineBetween(p.x-5,p.y-26-t*14,p.x+5,p.y-26-t*14).lineBetween(p.x,p.y-31-t*14,p.x,p.y-21-t*14);continue;}
+   if(e.type==='skill'){if(e.kind==='deathray'&&e.target){g.lineStyle(8,0xd4b3ff,1-t).lineBetween(e.target.x,e.target.y-80,p.x,p.y-22);g.lineStyle(3,0xffffff,1-t).lineBetween(e.target.x,e.target.y-80,p.x,p.y-22);}else if(['roots','polymorph','shield','buff'].includes(e.kind??'')){g.lineStyle(3,e.kind==='roots'?0x95cc71:0xc4edce,1-t).strokeCircle(p.x,p.y,12+22*t);}continue;}
+   if(e.effect==='melee'){g.lineStyle(e.branch===1?5:3,e.branch===1?0xffcf8b:0xe2f3ec,1-t);g.beginPath();g.arc(p.x,p.y-25,20+t*8,-1.8+t*2,.4+t*2);g.strokePath();continue;}
+   if(e.radius){g.fillStyle(color,(1-t)*(r>200?.06:.14));g.fillCircle(p.x,p.y,r);g.lineStyle(3*(1-t)+1,color,(1-t)*.65);g.strokeCircle(p.x,p.y,r*Math.min(1,t*2.5));g.fillStyle(0xffedbf,(1-t)*.7);g.fillCircle(p.x,p.y,r*.25*(1-t));if(!low)for(let i=0;i<8;i++){const a=i*Math.PI/4,d=r*.65*t;g.fillStyle(i%2?0xffb765:0x675443,(1-t)*.75);g.fillCircle(p.x+Math.cos(a)*d,p.y+Math.sin(a)*d,5*(1-t)+2);}}
+   else if(e.damageKind==='magic'){g.lineStyle(2,color,1-t);g.strokeCircle(p.x,p.y,6+r*t);g.lineBetween(p.x-r*t,p.y,p.x+r*t,p.y);g.lineBetween(p.x,p.y-r*t,p.x,p.y+r*t);}
+   else{g.lineStyle(3,color,1-t);for(let i=0;i<4;i++){const a=i*Math.PI/2+.6;g.lineBetween(p.x+Math.cos(a)*4,p.y+Math.sin(a)*4,p.x+Math.cos(a)*r*(1+t),p.y+Math.sin(a)*r*(1+t));}}
+  }
+ }
+}

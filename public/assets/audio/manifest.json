@@ -1,0 +1,89 @@
+{
+  "music-forest": [
+    "music-v4-forest-0.mp3",
+    "music-v4-forest-1.mp3",
+    "music-v4-forest-2.mp3"
+  ],
+  "music-dark": [
+    "music-v4-dark-0.mp3",
+    "music-v4-dark-1.mp3",
+    "music-v4-dark-2.mp3"
+  ],
+  "music-boss": [
+    "music-v4-boss-0.mp3",
+    "music-v4-boss-1.mp3",
+    "music-v4-boss-2.mp3"
+  ],
+  "bow": [
+    "bow-v4-0.wav",
+    "bow-v4-1.wav",
+    "bow-v4-2.wav"
+  ],
+  "impact": [
+    "impact-0.wav",
+    "impact-1.wav",
+    "impact-2.wav"
+  ],
+  "shield": [
+    "shield-0.wav",
+    "shield-1.wav",
+    "shield-2.wav"
+  ],
+  "cannon": [
+    "cannon-0.wav",
+    "cannon-1.wav",
+    "cannon-2.wav"
+  ],
+  "explosion": [
+    "explosion-0.wav",
+    "explosion-1.wav",
+    "explosion-2.wav"
+  ],
+  "magic": [
+    "magic-0.wav",
+    "magic-1.wav",
+    "magic-2.wav"
+  ],
+  "magic-hit": [
+    "magic-hit-0.wav",
+    "magic-hit-1.wav",
+    "magic-hit-2.wav"
+  ],
+  "lightning": [
+    "lightning-0.wav",
+    "lightning-1.wav",
+    "lightning-2.wav"
+  ],
+  "heal": [
+    "heal-0.wav"
+  ],
+  "upgrade": [
+    "upgrade-0.wav"
+  ],
+  "wave": [
+    "wave-0.wav"
+  ],
+  "leak": [
+    "leak-0.wav"
+  ],
+  "ui": [
+    "ui-0.wav"
+  ],
+  "victory": [
+    "victory-0.wav"
+  ],
+  "defeat": [
+    "defeat-0.wav"
+  ],
+  "boss": [
+    "boss-0.wav"
+  ],
+  "ambient": [
+    "ambient.ogg"
+  ],
+  "crossbow": [
+    "crossbow-v4-0.wav",
+    "crossbow-v4-1.wav",
+    "crossbow-v4-2.wav"
+  ]
+}

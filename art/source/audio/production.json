@@ -1,0 +1,229 @@
+{
+  "license": "CC0; authored wind is project-original",
+  "sources": [
+    "https://kenney.nl/assets/rpg-audio",
+    "https://kenney.nl/assets/impact-sounds",
+    "https://kenney.nl/assets/interface-sounds",
+    "https://opengameart.org/content/once-upon-a-time-loop",
+    "https://opengameart.org/content/dark-place-loop",
+    "https://opengameart.org/content/determined-pursuit-epic-orchestra-loop"
+  ],
+  "credits": [
+    {
+      "file": "music-forest.ogg",
+      "source": "art/source/audio/forest.wav",
+      "processing": "loudnorm=I=-18:TP=-1.5:LRA=11"
+    },
+    {
+      "file": "music-dark.ogg",
+      "source": "art/source/audio/dark.ogg",
+      "processing": "loudnorm=I=-18:TP=-1.5:LRA=11"
+    },
+    {
+      "file": "music-boss.ogg",
+      "source": "art/source/audio/boss.wav",
+      "processing": "loudnorm=I=-18:TP=-1.5:LRA=11"
+    },
+    {
+      "file": "bow-0.wav",
+      "source": "art/source/audio/rpg/Audio/creak1.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "bow-1.wav",
+      "source": "art/source/audio/rpg/Audio/creak2.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "bow-2.wav",
+      "source": "art/source/audio/rpg/Audio/creak3.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "impact-0.wav",
+      "source": "art/source/audio/impact/Audio/impactWood_light_000.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "impact-1.wav",
+      "source": "art/source/audio/impact/Audio/impactWood_light_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "impact-2.wav",
+      "source": "art/source/audio/impact/Audio/impactWood_light_002.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "shield-0.wav",
+      "source": "art/source/audio/impact/Audio/impactPlate_heavy_000.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "shield-1.wav",
+      "source": "art/source/audio/impact/Audio/impactPlate_heavy_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "shield-2.wav",
+      "source": "art/source/audio/impact/Audio/impactPlate_heavy_002.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "cannon-0.wav",
+      "source": "art/source/audio/impact/Audio/impactMetal_heavy_000.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "cannon-1.wav",
+      "source": "art/source/audio/impact/Audio/impactMetal_heavy_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "cannon-2.wav",
+      "source": "art/source/audio/impact/Audio/impactMetal_heavy_002.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "explosion-0.wav",
+      "source": "art/source/audio/impact/Audio/impactPunch_heavy_000.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "explosion-1.wav",
+      "source": "art/source/audio/impact/Audio/impactPunch_heavy_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "explosion-2.wav",
+      "source": "art/source/audio/impact/Audio/impactPunch_heavy_002.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "magic-0.wav",
+      "source": "art/source/audio/interface/Audio/glass_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7,aecho=0.8:0.5:55|95:0.22|0.1"
+    },
+    {
+      "file": "magic-1.wav",
+      "source": "art/source/audio/interface/Audio/glass_002.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7,aecho=0.8:0.5:55|95:0.22|0.1"
+    },
+    {
+      "file": "magic-2.wav",
+      "source": "art/source/audio/interface/Audio/glass_003.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7,aecho=0.8:0.5:55|95:0.22|0.1"
+    },
+    {
+      "file": "magic-hit-0.wav",
+      "source": "art/source/audio/interface/Audio/glitch_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "magic-hit-1.wav",
+      "source": "art/source/audio/interface/Audio/glitch_002.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "magic-hit-2.wav",
+      "source": "art/source/audio/interface/Audio/glitch_003.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "lightning-0.wav",
+      "source": "art/source/audio/interface/Audio/glitch_003.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7,aecho=0.8:0.5:55|95:0.22|0.1"
+    },
+    {
+      "file": "lightning-1.wav",
+      "source": "art/source/audio/interface/Audio/glitch_004.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7,aecho=0.8:0.5:55|95:0.22|0.1"
+    },
+    {
+      "file": "lightning-2.wav",
+      "source": "art/source/audio/interface/Audio/glass_003.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7,aecho=0.8:0.5:55|95:0.22|0.1"
+    },
+    {
+      "file": "heal-0.wav",
+      "source": "art/source/audio/interface/Audio/confirmation_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7,aecho=0.8:0.5:55|95:0.22|0.1"
+    },
+    {
+      "file": "upgrade-0.wav",
+      "source": "art/source/audio/interface/Audio/confirmation_002.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "wave-0.wav",
+      "source": "art/source/audio/interface/Audio/bong_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "leak-0.wav",
+      "source": "art/source/audio/interface/Audio/error_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "ui-0.wav",
+      "source": "art/source/audio/interface/Audio/click_001.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "victory-0.wav",
+      "source": "art/source/audio/interface/Audio/confirmation_004.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "defeat-0.wav",
+      "source": "art/source/audio/interface/Audio/error_008.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "boss-0.wav",
+      "source": "art/source/audio/impact/Audio/impactPlate_heavy_004.ogg",
+      "processing": "loudnorm=I=-16:TP=-2:LRA=7"
+    },
+    {
+      "file": "cannon-0.wav",
+      "source": "art/source/audio/impact/Audio/impactMetal_heavy_000.ogg",
+      "processing": "[1:a]lowpass=f=1100,afade=t=out:st=0:d=0.55,volume=.65[n];[2:a]afade=t=out:st=0:d=0.55,volume=.85[b];[0:a][n][b]amix=inputs=3:duration=longest,loudnorm=I=-17:TP=-2:LRA=7[out]",
+      "originalLayers": "seeded brown noise + decaying low-frequency blast"
+    },
+    {
+      "file": "cannon-1.wav",
+      "source": "art/source/audio/impact/Audio/impactMetal_heavy_001.ogg",
+      "processing": "[1:a]lowpass=f=1100,afade=t=out:st=0:d=0.55,volume=.65[n];[2:a]afade=t=out:st=0:d=0.55,volume=.85[b];[0:a][n][b]amix=inputs=3:duration=longest,loudnorm=I=-17:TP=-2:LRA=7[out]",
+      "originalLayers": "seeded brown noise + decaying low-frequency blast"
+    },
+    {
+      "file": "cannon-2.wav",
+      "source": "art/source/audio/impact/Audio/impactMetal_heavy_002.ogg",
+      "processing": "[1:a]lowpass=f=1100,afade=t=out:st=0:d=0.55,volume=.65[n];[2:a]afade=t=out:st=0:d=0.55,volume=.85[b];[0:a][n][b]amix=inputs=3:duration=longest,loudnorm=I=-17:TP=-2:LRA=7[out]",
+      "originalLayers": "seeded brown noise + decaying low-frequency blast"
+    },
+    {
+      "file": "explosion-0.wav",
+      "source": "art/source/audio/impact/Audio/impactPunch_heavy_000.ogg",
+      "processing": "[1:a]lowpass=f=2200,afade=t=out:st=0:d=0.95,volume=.65[n];[2:a]afade=t=out:st=0:d=0.95,volume=.85[b];[0:a][n][b]amix=inputs=3:duration=longest,loudnorm=I=-17:TP=-2:LRA=7[out]",
+      "originalLayers": "seeded brown noise + decaying low-frequency blast"
+    },
+    {
+      "file": "explosion-1.wav",
+      "source": "art/source/audio/impact/Audio/impactPunch_heavy_001.ogg",
+      "processing": "[1:a]lowpass=f=2200,afade=t=out:st=0:d=0.95,volume=.65[n];[2:a]afade=t=out:st=0:d=0.95,volume=.85[b];[0:a][n][b]amix=inputs=3:duration=longest,loudnorm=I=-17:TP=-2:LRA=7[out]",
+      "originalLayers": "seeded brown noise + decaying low-frequency blast"
+    },
+    {
+      "file": "explosion-2.wav",
+      "source": "art/source/audio/impact/Audio/impactPunch_heavy_002.ogg",
+      "processing": "[1:a]lowpass=f=2200,afade=t=out:st=0:d=0.95,volume=.65[n];[2:a]afade=t=out:st=0:d=0.95,volume=.85[b];[0:a][n][b]amix=inputs=3:duration=longest,loudnorm=I=-17:TP=-2:LRA=7[out]",
+      "originalLayers": "seeded brown noise + decaying low-frequency blast"
+    },
+    {
+      "file": "ambient.ogg",
+      "source": "art/source/audio/wind-authored.wav",
+      "processing": "loudnorm=I=-26:TP=-3:LRA=7"
+    }
+  ]
+}

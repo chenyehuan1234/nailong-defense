@@ -1,0 +1,12 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.vite/
+release/
+.env
+.env.*
+art/source/**
+!art/source/**/
+!art/source/**/*.json
+art/reference/

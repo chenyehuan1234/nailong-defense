@@ -10,3 +10,5 @@ art/source/**
 !art/source/**/
 !art/source/**/*.json
 art/reference/
+__pycache__/
+*.pyc

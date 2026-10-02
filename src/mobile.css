@@ -23,6 +23,7 @@
 .mobile #ui button:active{filter:brightness(1.2)}
 .mobile .loading h1{font-size:28px}
 .mobile .mobile-fullscreen{display:inline-flex;font-size:25px}
+.mobile .mobile-fullscreen[hidden]{display:none}
 .mobile .mobile-cancel:not([hidden]){display:block}
 .mobile-stage-picker select{display:block;width:100%;margin-top:8px;background:#fff3d3;color:#304b38;border:1px solid #b39a65;padding:10px;border-radius:6px;min-height:44px}
 

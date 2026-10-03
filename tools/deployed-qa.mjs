@@ -2,6 +2,7 @@ import {openCampaign,openBriefing} from './browser-onboarding.mjs';
 import {chromium,webkit} from '@playwright/test';
 import {mkdir,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import sharp from 'sharp';
 const url=process.env.GAME_URL??'https://chenyehuan1234.github.io/nailong-defense/';
 await mkdir('test-results/deployed',{recursive:true});const reports=[];
 for(const browserKind of [chromium,webkit]){
@@ -10,22 +11,23 @@ for(const browserKind of [chromium,webkit]){
  await page.addInitScript(()=>{const NativeAudio=window.Audio;window.__QA_AUDIO__=[];window.Audio=function(...args){const e=new NativeAudio(...args);window.__QA_AUDIO__.push(e);return e;};window.Audio.prototype=NativeAudio.prototype;});
  page.setDefaultTimeout(90000);page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});page.on('request',r=>requests.push(r.url()));
  const response=await page.goto(url,{waitUntil:'networkidle',timeout:120000});assert.equal(response.status(),200);
- await page.locator('.begin').waitFor();assert.equal(await page.locator('#ui').getAttribute('data-screen'),'home');assert.equal(await page.locator('.version').textContent(),'v0.5.4');
+ await page.locator('.begin').waitFor();assert.equal(await page.locator('#ui').getAttribute('data-screen'),'home');assert.equal(await page.locator('.version').textContent(),'v0.5.5');
  await page.locator('[data-menu-art="home"]').evaluate(e=>e.decode());assert.ok(await page.locator('[data-menu-art="home"]').evaluate(e=>e.naturalWidth>0&&getComputedStyle(e).visibility==='visible'));
- await page.screenshot({path:`test-results/deployed/${browserKind.name()}-home-v54.png`});
+ await page.screenshot({path:`test-results/deployed/${browserKind.name()}-home-v55.png`});
  assert.equal(requests.filter(u=>/\/map-\d+\.webp$/.test(u)||/\/tower-plates\.(?:png|webp)$/.test(u)).length,0,'homepage must not wait for battle images');
  await openCampaign(page,true);assert.equal(await page.locator('[data-level-select] option').count(),26);
  await page.locator('[data-menu-art="campaign"]').evaluate(e=>e.decode());assert.ok(await page.locator('[data-menu-art="campaign"]').evaluate(e=>e.naturalWidth>0&&getComputedStyle(e).visibility==='visible'));
- await page.screenshot({path:`test-results/deployed/${browserKind.name()}-map-v54.png`});
+ await page.screenshot({path:`test-results/deployed/${browserKind.name()}-map-v55.png`});
  assert.equal(await page.locator('.expedition-v2').isVisible(),false);
  const firstTouchMusic=await page.waitForFunction(()=>window.__QA_AUDIO__.some(e=>!e.paused&&e.currentTime>.05),null,{timeout:15000}).then(()=>true,()=>false);if(browserKind===chromium)assert.ok(firstTouchMusic,'music starts on the first homepage action');
  assert.equal(await page.evaluate(()=>Boolean(window.__NAILONG__)),false);
  await page.locator('[data-action="settings"]').tap();await page.locator('[data-volume="musicVolume"]').fill('79');await page.locator('[data-volume="musicVolume"]').dispatchEvent('change');await page.locator('[data-action="close"]').tap();
- await openBriefing(page,true);const brief=await page.locator('.expedition-v2').boundingBox();assert.ok(brief.width>=320&&brief.x>=0&&brief.x+brief.width<=844,'briefing is readable and within the phone viewport');await page.screenshot({path:`test-results/deployed/${browserKind.name()}-brief-v54.png`});await page.locator('[data-action="start"]').tap();await page.locator('.battle-hud').waitFor();const canvas=await page.locator('canvas').boundingBox();await page.touchscreen.tap(canvas.x+645*canvas.width/1600,canvas.y+568*canvas.height/900);assert.deepEqual(await page.locator('.chip-price').allTextContents(),['70','70','100','125']);await page.locator('[data-action="build"][data-kind="archer"]').tap();assert.equal(await page.locator('#gold').textContent(),'195');await page.locator('[data-action="close-tower"]').tap();
+ await openBriefing(page,true);const brief=await page.locator('.expedition-v2').boundingBox();assert.ok(brief.width>=320&&brief.x>=0&&brief.x+brief.width<=844,'briefing is readable and within the phone viewport');await page.screenshot({path:`test-results/deployed/${browserKind.name()}-brief-v55.png`});await page.locator('[data-action="start"]').tap();await page.locator('.battle-hud').waitFor();const canvas=await page.locator('canvas').boundingBox();await page.touchscreen.tap(canvas.x+645*canvas.width/1600,canvas.y+568*canvas.height/900);assert.deepEqual(await page.locator('.chip-price').allTextContents(),['70','70','100','125']);await page.locator('[data-action="build"][data-kind="archer"]').tap();assert.equal(await page.locator('#gold').textContent(),'195');await page.locator('[data-action="close-tower"]').tap();
  assert.deepEqual([...new Set(requests.filter(u=>/\/map-\d+\.webp$/.test(u)).map(u=>new URL(u).pathname.split('/').pop()))],['map-01.webp']);assert.ok(requests.some(u=>u.endsWith('/tower-plates.webp')),'compressed battle sheets should be deployed');
  await page.locator('#next-wave').tap();await page.waitForTimeout(1000);assert.match(await page.locator('#wave').textContent(),/^1 \/ /);
  await page.locator('[data-action="speed"]').tap();await page.locator('[data-action="speed"]').tap();assert.equal(await page.locator('#speed').textContent(),'3×');
  await page.screenshot({path:`test-results/deployed/${browserKind.name()}-mobile.png`});
+ const canvasPNG=await page.locator('canvas').screenshot(),canvasMeta=await sharp(canvasPNG).metadata(),crop={left:Math.floor(canvasMeta.width*.2),top:Math.floor(canvasMeta.height*.18),width:Math.floor(canvasMeta.width*.6),height:Math.floor(canvasMeta.height*.55)},terrain=await sharp(canvasPNG).extract(crop).stats();assert.ok(terrain.channels.slice(0,3).some(c=>c.stdev>15),'battle map must show actual terrain, not a magnified patch');
  await page.locator('.battle-tools [data-action="pause"]').tap();await page.locator('[data-action="quit"]').tap();await page.reload({waitUntil:'networkidle'});await page.locator('[data-action="settings"]').tap();assert.equal(await page.locator('[data-volume="musicVolume"]').inputValue(),'79');
  assert.deepEqual(errors,[]);const base=new URL(url),unexpected=requests.filter(r=>{const u=new URL(r);if(u.protocol==='data:')return false;if(u.protocol==='blob:')return u.origin!==base.origin;return u.origin!==base.origin||!u.pathname.startsWith(base.pathname);});
  assert.deepEqual(unexpected,[],'assets should use the GitHub project path');
@@ -35,6 +37,6 @@ for(const browserKind of [chromium,webkit]){
  const playback=await page.evaluate(()=>window.__QA_AUDIO__.map(e=>({duration:Number.isFinite(e.duration)?e.duration:null,readyState:e.readyState,currentTime:e.currentTime,paused:e.paused,error:e.error?.code??null})));
  if(browserKind===chromium)assert.ok(decoded,'Chromium should decode a full-length music stream');
  assert.ok(playback.every(e=>!e.error),'streaming MP3 should decode without a media error');
- reports.push({browser:browserKind.name(),url,status:'passed',version:'0.5.4',homeFirst:true,mapFirst:true,firstTouchMusic,http:200,projectAssets:true,productionDebugAbsent:true,touchBuild:true,iconPriceMenus:true,goldAfterBuild:195,waveStart:true,speed3:true,settingsSurviveReload:true,musicAvailable:true,musicDecoded:decoded,audioLimitation:decoded&&firstTouchMusic?null:'Headless media playback differs from physical iPhone hardware; real device audio is unverified.',playback,errors});console.log(browserKind.name()+' deployed mobile passed');await browser.close();
+ reports.push({browser:browserKind.name(),url,status:'passed',version:'0.5.5',homeFirst:true,mapFirst:true,firstTouchMusic,http:200,projectAssets:true,productionDebugAbsent:true,touchBuild:true,iconPriceMenus:true,goldAfterBuild:195,waveStart:true,speed3:true,settingsSurviveReload:true,musicAvailable:true,musicDecoded:decoded,audioLimitation:decoded&&firstTouchMusic?null:'Headless media playback differs from physical iPhone hardware; real device audio is unverified.',playback,errors});console.log(browserKind.name()+' deployed mobile passed');await browser.close();
 }
 await writeFile('test-results/deployed-v5.json',JSON.stringify(reports,null,2));

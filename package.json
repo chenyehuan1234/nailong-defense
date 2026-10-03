@@ -1,6 +1,6 @@
 {
   "name": "nailong-defense",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "private": true,
   "type": "module",
   "scripts": {
@@ -17,7 +17,8 @@
     "test:mobile": "node tools/mobile-qa.mjs",
     "test:mobile-experience": "node tools/mobile-experience-qa.mjs",
     "test:startup": "node tools/startup-qa.mjs",
-    "test:menus": "node tools/menu-layout-qa.mjs"
+    "test:menus": "node tools/menu-layout-qa.mjs",
+    "test:battle-maps": "node tools/battle-map-qa.mjs"
   },
   "dependencies": {
     "phaser": "3.90.0"

@@ -38,8 +38,8 @@ for(const channel of ['chrome','msedge']){
  const maps=[];
  for(let index=0;index<26;index++){
   await page.evaluate(async i=>{const a=window.__NAILONG__;a.ui.selectedLevel=i;await a.ui.start();a.scene.speed=1;},index);await page.waitForTimeout(80);
-  const result=await page.evaluate(async()=>{const a=window.__NAILONG__,s=a.sim;return{id:s.level.id,slots:s.level.slots.length,paths:s.roads.length,texture:a.scene.textures.exists(s.level.map),hero:s.level.heroes!==false,initialGold:s.gold};});
-  if(!result.texture)throw Error('Missing map '+result.id);maps.push(result);
+  const result=await page.evaluate(async()=>{const a=window.__NAILONG__,s=a.sim,o=a.scene.background;return{id:s.level.id,slots:s.level.slots.length,paths:s.roads.length,texture:a.scene.textures.exists(s.level.map),hero:s.level.heroes!==false,initialGold:s.gold,background:[o.displayWidth,o.displayHeight,o.scaleX,o.scaleY]};});
+  if(!result.texture)throw Error('Missing map '+result.id);if(result.background.join(',')!=='1600,900,1,1')throw Error('Incorrect map scale '+result.id);maps.push(result);
  }
  // A real UI action must hide the panel before accepting a rally click under it.
  await page.evaluate(async()=>{const a=window.__NAILONG__,{TRAINING}=await import('/content/training.ts');await a.ui.start(TRAINING[1]);a.scene.speed=1;a.sim.command({type:'build',slot:3,kind:'barracks'});a.scene.syncTowers();a.scene.selectedSlot=3;a.ui.towerPanel();});

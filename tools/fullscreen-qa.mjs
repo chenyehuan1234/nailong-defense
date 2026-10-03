@@ -1,3 +1,4 @@
+import {openCampaign,openBriefing} from './browser-onboarding.mjs';
 import {chromium,webkit} from '@playwright/test';
 import {mkdir,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
@@ -10,7 +11,7 @@ for(const kind of [chromium,webkit]){
   const context=await browser.newContext({viewport:{width:844,height:standalone?390:268},hasTouch:true,isMobile:true,userAgent:iphone}),page=await context.newPage(),errors=[];
   await page.addInitScript(({standalone})=>{Object.defineProperty(document,'fullscreenEnabled',{value:false});Object.defineProperty(navigator,'standalone',{value:standalone});},{standalone});
   page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
-  await page.goto(url,{waitUntil:'networkidle'});await page.locator('[data-action="training-skip"]').tap();
+  await page.goto(url,{waitUntil:'networkidle'});await openCampaign(page,true);
   const manifest=await (await page.request.get(new URL('manifest.webmanifest',url).href)).json();
   assert.equal(manifest.display,'standalone');assert.equal(manifest.start_url,'./');assert.equal(manifest.scope,'./');assert.equal(manifest.orientation,'landscape');
   for(const icon of manifest.icons){const res=await page.request.get(new URL(icon.src,url).href);assert.equal(res.status(),200);assert.match(res.headers()['content-type'],/image\/png/);}
@@ -21,7 +22,7 @@ for(const kind of [chromium,webkit]){
    await page.locator('.app-install-steps li:last-child').scrollIntoViewIfNeeded();assert.equal(await page.locator('.app-install-steps li:last-child').isVisible(),true);
    await page.screenshot({path:`test-results/fullscreen/${kind.name()}-iphone-guide.png`});await page.locator('[data-action="close"]').tap();
   }else assert.equal(await page.locator('.world-header [data-action="app-guide"]').isVisible(),false);
-  await page.locator('[data-action="start"]').tap();
+  await openBriefing(page,true);await page.locator('[data-action="start"]').tap();
   const h=standalone?390:268;assert.equal(Math.round((await page.locator('#game-shell').boundingBox()).height),h);
   for(const selector of ['[data-action="auto-wave"]','[data-action="speed"]','.battle-tools [data-action="pause"]','#next-wave','[data-skill="reinforce"]','[data-skill="meteor"]']){
    const b=await page.locator(selector).boundingBox();assert.ok(b.x>=0&&b.y>=0&&b.x+b.width<=845&&b.y+b.height<=h+1&&b.width>=44&&b.height>=44,selector+' stays inside the available viewport');
@@ -34,7 +35,7 @@ for(const kind of [chromium,webkit]){
  }
  // A browser that exposes the native install prompt gets a working install action.
  const installPage=await browser.newPage({viewport:{width:844,height:390},hasTouch:true,isMobile:true});
- await installPage.goto(url,{waitUntil:'networkidle'});await installPage.locator('[data-action="training-skip"]').tap();
+ await installPage.goto(url,{waitUntil:'networkidle'});await openCampaign(installPage,true);
  await installPage.evaluate(()=>{const event=new Event('beforeinstallprompt');event.prompt=async()=>{window.__QA_PROMPT_SHOWN__=true;};event.userChoice=Promise.resolve({outcome:'accepted'});window.dispatchEvent(event);});
  await installPage.locator('.world-header [data-action="app-guide"]').tap();await installPage.locator('[data-action="install-app"]').tap();assert.equal(await installPage.evaluate(()=>window.__QA_PROMPT_SHOWN__),true);await installPage.locator('.install-modal').waitFor({state:'hidden'});await installPage.close();
  await browser.close();console.log(kind.name()+' fullscreen and short landscape passed');

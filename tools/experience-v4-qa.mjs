@@ -1,3 +1,4 @@
+import {openCampaign,openBriefing} from './browser-onboarding.mjs';
 import {chromium} from '@playwright/test';
 import fs from 'node:fs';
 const url=process.env.GAME_URL??'http://127.0.0.1:5188/';
@@ -6,13 +7,13 @@ for(const channel of ['chrome','msedge']){
  const browser=await chromium.launch({channel,headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
  const page=await browser.newPage({viewport:{width:1600,height:900}}),errors=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
- await page.goto(url,{waitUntil:'networkidle'});await page.waitForSelector('.world-node');
+ await page.goto(url,{waitUntil:'networkidle'});await page.waitForSelector('.begin');
  // Verify migration against a disposable browser profile, including an existing editor work.
  await page.evaluate(async()=>{const w=await import('/src/workshop.ts');const c=w.newCampaign();c.name='保留的编辑器作品';await w.saveDraft(c);localStorage.removeItem('nailong-defense.save.v4');localStorage.setItem('nailong-defense.save.v3',JSON.stringify({version:3,scores:{'stage-12':{stars:3}},hero:'star',settings:{music:true,speed:3},upgrades:{mage:5}}));});
- await page.reload({waitUntil:'networkidle'});await page.waitForSelector('.world-node');
+ await page.reload({waitUntil:'networkidle'});await page.waitForSelector('.begin');
  const migration=await page.evaluate(async()=>({save:window.__NAILONG__.ui.save,draft:(await (await import('/src/workshop.ts')).loadDraft()).name,old:localStorage.getItem('nailong-defense.save.v3')}));
  if(migration.save.version!==4||Object.keys(migration.save.scores).length||migration.save.discovered.length||migration.draft!=='保留的编辑器作品'||migration.old!==null)throw Error('Campaign reset/editor preservation failed');
- await page.locator('[data-action="training-skip"]').click();await page.waitForFunction(()=>window.__NAILONG__.ui.audio.buffers.size>30);
+ await openCampaign(page);await page.waitForFunction(()=>window.__NAILONG__.ui.audio.buffers.size>30);
  const fresh={nodes:await page.locator('.world-node').count(),open:await page.locator('.world-node:not([disabled])').count(),heroes:await page.locator('[data-action="hero"]').count(),heroOpen:await page.locator('[data-action="hero"]:not([disabled])').count()};
  if(fresh.nodes!==26||fresh.open!==1||fresh.heroes!==13||fresh.heroOpen!==0)throw Error('Fresh campaign unlocks incorrect');
  await page.screenshot({path:`test-results/visual-v4/world-${channel}.png`});

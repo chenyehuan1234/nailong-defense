@@ -1,3 +1,4 @@
+import {openCampaign,openBriefing} from './browser-onboarding.mjs';
 import {chromium} from '@playwright/test';
 import {writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
@@ -5,7 +6,7 @@ const reports=[];
 for(const channel of ['chrome','msedge']){
  const browser=await chromium.launch({channel,headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
  const page=await browser.newPage({viewport:{width:1600,height:900}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('http://127.0.0.1:5188/',{waitUntil:'networkidle'});await page.locator('[data-action="training-skip"]').click();await page.waitForFunction(()=>window.__NAILONG__.ui.audio.buffers.size===36);
+ await page.goto('http://127.0.0.1:5188/',{waitUntil:'networkidle'});await openCampaign(page);await page.waitForFunction(()=>window.__NAILONG__.ui.audio.buffers.size===36);
  const result=await page.evaluate(async()=>{
   const ui=window.__NAILONG__.ui,a=ui.audio;const update=a.update.bind(a);a.update=()=>{};ui.screen='audio-qa'; // keep scene HUD from choosing a different theme during the isolated audio test
   let peakEffects=0;const samples=[],started=performance.now();update(false,'forest',3);

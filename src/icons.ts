@@ -18,6 +18,9 @@ const paths:Record<string,string>={
   sound:'<path d="m10 4-5 5H2v6h3l5 5V4Zm4 4c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/>',
   lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/>',
   tool:'<path d="M14 3c-2 3-1 6 2 7 2 1 4 0 5-2 0 5-4 7-7 5L5 22l-3-3 9-9c-2-3 0-7 3-7Z"/>',
+  axe:'<path d="m5 21 13-17M12 5c3 0 6-2 8-3l2 7-8 4-4-4 2-4Z"/>',
+  swords:'<path d="m3 3 6 2 11 15m1-17-6 2L4 20M3 15l6 6m6 0 6-6"/>',
+  swirl:'<path d="M21 12a9 9 0 1 1-4-7M17 2v4h4M16 12a4 4 0 1 1-4-4m0 3a1 1 0 1 0 1 1"/>',
 };
 export function icon(name:string,cls=''){return `<svg class="icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]??paths.star}</svg>`;}
 export function escapeHtml(value:string){return value.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));}

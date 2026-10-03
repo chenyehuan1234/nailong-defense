@@ -1,10 +1,11 @@
+import {openCampaign,openBriefing} from './browser-onboarding.mjs';
 import {chromium} from '@playwright/test';
 import {writeFile} from 'node:fs/promises';
 const reports=[];
 for(const channel of ['chrome','msedge']){
   const browser=await chromium.launch({channel,headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
   const page=await browser.newPage({viewport:{width:1920,height:1080}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
-  await page.goto('http://127.0.0.1:5188',{waitUntil:'networkidle'});await page.locator('[data-action="training-skip"]').click();await page.locator('.world-node').first().waitFor();await page.evaluate(()=>window.__NAILONG__.ui.audio.unlock());await page.waitForTimeout(800);
+  await page.goto('http://127.0.0.1:5188',{waitUntil:'networkidle'});await openCampaign(page);await page.locator('.world-node').first().waitFor();await page.evaluate(()=>window.__NAILONG__.ui.audio.unlock());await page.waitForTimeout(800);
   await page.evaluate(()=>{
     const a=window.__NAILONG__;a.ui.selectedLevel=11;a.ui.start();const s=a.sim;s.gold=30000;s.lives=10000;
     const kinds=['archer','mage','barracks','engineer'];for(let i=0;i<s.level.slots.length;i++){s.command({type:'build',slot:i,kind:kinds[i%4]});s.command({type:'upgrade',slot:i});s.command({type:'upgrade',slot:i});s.command({type:'upgrade',slot:i,branch:i%2});s.command({type:'tower-skill',slot:i,skill:0});s.command({type:'tower-skill',slot:i,skill:1});}

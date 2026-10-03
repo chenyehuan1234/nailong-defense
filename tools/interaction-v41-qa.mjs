@@ -1,3 +1,4 @@
+import {openCampaign,openBriefing} from './browser-onboarding.mjs';
 import {chromium} from '@playwright/test';
 import {mkdir,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
@@ -8,7 +9,7 @@ for(const channel of ['chrome','msedge']){
  const browser=await chromium.launch({channel,headless:true,args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
  const context=await browser.newContext({viewport:{width:1600,height:900}}),page=await context.newPage(),errors=[];
  page.on('pageerror',e=>errors.push(e.stack??e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
- await page.goto(url,{waitUntil:'networkidle'});await page.locator('[data-action="training-skip"]').click();
+ await page.goto(url,{waitUntil:'networkidle'});await openCampaign(page);
  await page.locator('[data-action="home"]').first().click();
  assert.equal(await page.evaluate(()=>window.__NAILONG__.scene.background.texture.key),'home-v4.1');
  assert.equal(await page.locator('.hero-showcase').count(),0);await page.screenshot({path:`test-results/visual-v41/home-${channel}.png`});
@@ -60,7 +61,7 @@ for(const channel of ['chrome','msedge']){
  await page.mouse.move(scaled.x+60,scaled.y+20);await page.mouse.down();await page.mouse.move(scaled.x+220,scaled.y+60,{steps:10});await page.mouse.up();
  const moved=await page.evaluate(()=>window.__NAILONG__.ui.editorPanelPosition);assert.ok(Math.abs(moved.x-position.x-200)<5,'scaled drag should stay in game coordinates');
  await page.setViewportSize({width:1600,height:900});await page.waitForTimeout(600);
- await page.reload({waitUntil:'networkidle'});await page.locator('[data-action="editor"]').click();
+ await page.reload({waitUntil:'networkidle'});await page.locator('[data-action="editor"]').click();await page.locator('[data-work="level-index"]').waitFor();
  assert.equal(await page.locator('[data-work="level-index"] option').count(),2);await page.locator('[data-work="level-index"]').selectOption('1');assert.equal(await page.locator('[data-work="gold"]').inputValue(),'777');
  // Deterministic, isolated actors for hit testing; no player's save or campaign is altered.
  await page.evaluate(()=>{const a=window.__NAILONG__;a.ui.trainingIndex=-1;a.ui.save.hero='shield';a.ui.selectedLevel=3;a.ui.start();const s=a.sim;s.gold=300;s.command({type:'build',slot:0,kind:'barracks'});const e=s.spawn('boar',0,200);e.x=740;e.y=480;e.immobileUntil=Infinity;const soldier=s.allies.find(f=>f.tower===0);soldier.x=930;soldier.y=660;soldier.stunnedUntil=Infinity;s.hero.x=1060;s.hero.y=475;s.hero.stunnedUntil=Infinity;a.scene.syncUnits();window.qaActors={enemy:e.id,soldier:soldier.id,hero:s.hero.id};});

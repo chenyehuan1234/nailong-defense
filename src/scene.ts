@@ -4,6 +4,7 @@ import {TowerRig} from './tower-rig';
 import { paintRoads } from './road-art';
 import { CombatFX } from './combat-fx';
 import Phaser from 'phaser';
+import {isMobile} from './viewport';
 import { ENEMIES, HEROES, TOWERS, HERO_KEYS, ENEMY_KEYS } from '../content/definitions';
 import { Road, Random, distance } from './math';
 import { Simulation, STEP } from './simulation';
@@ -28,7 +29,7 @@ export class BattleScene extends Phaser.Scene {
     const towerTexture=this.textures.get('tower-plates');for(let i=0;i<20;i++){const f=towerTexture.get(i),cut=[[97,78,69,80,72],[135,118,102,96,110],[142,108,88,74,82],[134,122,108,114,97]][Math.floor(i/5)][i%5];towerTexture.add(`${i}-front`,0,f.cutX,f.cutY+cut,192,192-cut);}
     const canvas=this.textures.createCanvas('spark',32,32)!;const ctx=canvas.context;const gradient=ctx.createRadialGradient(16,16,0,16,16,16);gradient.addColorStop(0,'#fff');gradient.addColorStop(.3,'#fff8c4');gradient.addColorStop(1,'#fff0');ctx.fillStyle=gradient;ctx.fillRect(0,0,32,32);canvas.refresh();
     this.range=this.add.graphics().setDepth(10);this.fx=this.add.graphics().setDepth(1800);this.combatFx=new CombatFX(this.fx);this.decor=this.add.graphics().setDepth(3);this.shadows=this.add.graphics().setDepth(25);this.healthBars=this.add.graphics().setDepth(1700);
-    this.input.on('pointerdown',(p:Phaser.Input.Pointer)=>this.hooks.click({x:p.x,y:p.y}));this.hooks.ready(this);
+    this.input.on('pointerdown',(p:Phaser.Input.Pointer)=>{if(!isMobile()||!this.sim||this.editorActive)this.hooks.click({x:p.x,y:p.y});});this.hooks.ready(this);
   }
   clearBattle(){for(const slot of this.slots.values())slot.destroy();this.slots.clear();for(const t of this.towers.values())t.destroy();this.towers.clear();for(const u of this.units.values())u.destroy();this.units.clear();this.roadImage?.destroy();this.gate?.destroy();for(const p of this.particles)p.image.setVisible(false);this.particlePool.push(...this.particles.map(p=>p.image));this.particles=[];for(const t of this.texts)t.destroy();this.texts=[];this.range.clear();this.combatFx.clear();this.decor.clear();this.shadows.clear();this.healthBars.clear();this.selectedSlot=-1;this.heroSelected=false;this.inspectedUnitId=undefined;this.mode='';this.lessonTarget=undefined;this.editorActive=false;this.artMode=false;this.accumulator=0;this.seen=0;this.previousPositions.clear();}
   showHome(map='forest'){this.clearBattle();this.sim=undefined;this.background.setTexture(map);this.paused=false;}

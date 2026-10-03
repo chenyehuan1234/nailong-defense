@@ -283,3 +283,73 @@
  .mobile .editor-header h2{font-size:14px}
 }
 @media (prefers-reduced-motion:reduce){.mobile *, .mobile *:before, .mobile *:after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+
+/* Phone campaign: start with the whole map, then inspect one stage. */
+.mobile-home-background,.mobile-level-preview,.brief-close,.map-controls{display:none}
+.mobile .mobile-home-background{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center;pointer-events:none}
+.mobile .home-copy{top:17%}
+.mobile .world-v4{grid-template-columns:minmax(0,1fr);position:absolute;inset:0}
+.mobile .chapter-nav{grid-column:1}
+.mobile .world-v4 .world-map{grid-column:1;grid-row:3;margin-bottom:60px;overflow:auto}
+.mobile .world-map-surface{width:100%;height:100%;min-width:0;min-height:0}
+.mobile .world-map-surface>img{object-fit:cover}
+.mobile .expedition-v2{display:none;position:absolute;right:var(--safe-right);top:58px;bottom:var(--safe-bottom);width:min(360px,48%);margin:0;height:auto;z-index:12;box-shadow:0 10px 40px #10251cb0}
+.mobile .brief-open .expedition-v2{display:block}
+.mobile .brief-close{display:flex;align-items:center;justify-content:center;position:sticky;top:-10px;margin:-8px -4px 4px auto;width:44px;height:44px;border-radius:8px;background:#364e35;color:#ffe9b5;font-size:26px;z-index:2}
+.mobile .mobile-level-preview{display:flex;position:absolute;left:var(--safe-left);right:var(--safe-right);bottom:var(--safe-bottom);height:44px;gap:12px;align-items:center;justify-content:center;z-index:4;background:#f6d586;border:1px solid #fff0bd;border-radius:8px;color:#2a432f;font-size:16px;font-weight:700}
+.mobile .mobile-level-preview>span{font-size:13px;font-weight:400}
+.mobile .brief-open .mobile-level-preview{display:none}
+.mobile .map-controls{display:flex;position:absolute;right:var(--safe-right);bottom:88px;gap:6px;pointer-events:auto;z-index:4}
+.mobile .map-controls button{width:44px;height:44px;border-radius:9px;border:1px solid #a99f6d80;background:#203c2ad9;color:#ffe5a7;font-size:23px}
+.mobile .map-controls [data-action=map-fit]{font-size:12px}
+.mobile #ui:not([data-command=""]) .map-controls{display:none}
+.mobile .battle-tools [data-action=settings]{display:inline-flex}
+.mobile .tower-wheel{display:flex;align-items:center;width:max-content;padding:8px;gap:8px;max-height:none;overflow:visible;background:none;border:0;box-shadow:none}
+.mobile .tower-wheel:before{display:none}
+.mobile .wheel-options{display:grid;grid-template-columns:repeat(2,68px);gap:8px}
+.mobile .wheel-options.wheel-many{grid-template-columns:repeat(3,68px)}
+.mobile .tower-wheel .tower-chip{position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;width:68px;height:72px;padding:3px 2px;gap:0;min-width:68px;background:linear-gradient(#ecd69e,#a28f57);border:2px solid #ffedb2;border-radius:14px;box-shadow:0 3px 0 #293e2f,0 5px 12px #10281860;color:#273f2d}
+.mobile .tower-chip>.icon{width:38px;height:38px;margin:6px 0}
+.mobile .mini-tower-art{display:block;width:50px;height:50px;background-size:250px 200px;flex:none}
+.mobile .chip-price{display:flex;align-items:center;justify-content:center;gap:3px;line-height:16px;font-size:13px;font-weight:800;white-space:nowrap}
+.mobile .chip-price .icon{width:13px;height:13px}
+.mobile .chip-up,.mobile .chip-rank{position:absolute;right:3px;top:3px;min-width:17px;background:#234a31;color:#fff4c9;border-radius:4px;font-size:11px;line-height:17px;font-style:normal;padding:0 2px}
+.mobile .tower-chip[data-action=sell]{background:linear-gradient(#d9a276,#a66d48)}
+.mobile .wheel-close{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:#203e2ee8;border:1px solid #edcd87;border-radius:50%;color:#ffe9b5}
+.mobile .wheel-close .icon{width:20px;height:20px}
+.mobile .unit-info{display:grid;grid-template-columns:38px minmax(88px,1fr) auto;align-items:center;gap:8px;padding:7px 10px;min-height:64px}
+.mobile .unit-summary h3{font-size:12px}
+.mobile .unit-details{display:block;min-width:0}
+.mobile .unit-details>p,.mobile .unit-details>small{display:none}
+.mobile .unit-info-stats{display:flex;gap:9px;justify-content:flex-end;margin:0}
+.mobile .unit-info-stats>span{display:flex;flex-direction:column;gap:3px;min-width:28px}
+.mobile .unit-info-stats small{font-size:10px;color:#c5d1b1;white-space:nowrap}
+.mobile .unit-info-stats b{font-size:12px;white-space:nowrap}
+.mobile .unit-more{display:none}
+.mobile #sound-start{border:1px solid #d5bd78;border-radius:7px;padding:8px 12px;background:#234333c9;color:#ffedb3}
+.mobile #sound-start[hidden]{display:none}
+@media(max-width:720px){.mobile .unit-info{grid-template-columns:minmax(80px,1fr) auto;gap:6px;padding:6px}.mobile .unit-info-stats{gap:6px}.mobile .unit-info-stats b{font-size:11px}}
+@media(max-height:330px) and (orientation:landscape){
+ .mobile .wheel-options,.mobile .wheel-options.wheel-many{display:flex;gap:5px}
+ .mobile .tower-wheel .tower-chip{width:60px;min-width:60px;height:72px}
+ .mobile .home-copy{top:19%}
+ .mobile .home-copy h1{font-size:30px;margin:8px 0}
+ .mobile .home-copy p{display:none}
+ .mobile .home-meta{display:none}
+ .mobile .begin{margin-top:10px;font-size:16px!important;min-height:44px}
+ .mobile .menu-footer>span{display:none}
+}
+@media(orientation:portrait){
+ .mobile .world-v4{display:grid;overflow:hidden;grid-template-rows:98px 52px minmax(0,1fr)}
+ .mobile .world-header{position:relative;top:auto}
+ .mobile .chapter-nav{position:relative;top:auto;grid-row:2}
+ .mobile .world-v4 .world-map{height:auto;margin:8px 8px 60px}
+ .mobile .expedition-v2{top:106px;left:var(--safe-left);right:var(--safe-right);width:auto;bottom:var(--safe-bottom);overflow-y:auto;height:auto;padding:16px}
+ .mobile .home-copy{top:auto;bottom:125px;left:7%;right:7%}
+ .mobile .home-copy h1{font-size:38px;margin:10px 0}
+ .mobile .home-copy p{font-size:15px}
+ .mobile .home-meta{font-size:11px;margin-top:10px}
+ .mobile .home-shade{background:linear-gradient(0deg,#122b24 0%,#122b24d9 30%,#122b2420 78%,#122b2455 100%)}
+ .mobile .mobile-home-background{object-position:69% center}
+ .mobile .menu-footer{gap:8px}
+}

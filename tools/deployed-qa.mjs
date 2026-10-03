@@ -1,3 +1,4 @@
+import {openCampaign,openBriefing} from './browser-onboarding.mjs';
 import {chromium,webkit} from '@playwright/test';
 import {mkdir,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
@@ -9,10 +10,13 @@ for(const browserKind of [chromium,webkit]){
  await page.addInitScript(()=>{const NativeAudio=window.Audio;window.__QA_AUDIO__=[];window.Audio=function(...args){const e=new NativeAudio(...args);window.__QA_AUDIO__.push(e);return e;};window.Audio.prototype=NativeAudio.prototype;});
  page.setDefaultTimeout(90000);page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});page.on('request',r=>requests.push(r.url()));
  const response=await page.goto(url,{waitUntil:'networkidle',timeout:120000});assert.equal(response.status(),200);
- await page.locator('[data-action="training-skip"]').tap();assert.equal(await page.locator('[data-level-select] option').count(),26);
+ await page.locator('.begin').waitFor();assert.equal(await page.locator('#ui').getAttribute('data-screen'),'home');assert.equal(await page.locator('.version').textContent(),'v0.5.2');
+ await openCampaign(page,true);assert.equal(await page.locator('[data-level-select] option').count(),26);
+ assert.equal(await page.locator('.expedition-v2').isVisible(),false);
+ const firstTouchMusic=await page.waitForFunction(()=>window.__QA_AUDIO__.some(e=>!e.paused&&e.currentTime>.05),null,{timeout:15000}).then(()=>true,()=>false);if(browserKind===chromium)assert.ok(firstTouchMusic,'music starts on the first homepage action');
  assert.equal(await page.evaluate(()=>Boolean(window.__NAILONG__)),false);
  await page.locator('[data-action="settings"]').tap();await page.locator('[data-volume="musicVolume"]').fill('79');await page.locator('[data-volume="musicVolume"]').dispatchEvent('change');await page.locator('[data-action="close"]').tap();
- await page.locator('[data-action="start"]').tap();const canvas=await page.locator('canvas').boundingBox();await page.touchscreen.tap(canvas.x+645*canvas.width/1600,canvas.y+568*canvas.height/900);await page.locator('[data-action="build"][data-kind="archer"]').tap();assert.equal(await page.locator('#gold').textContent(),'195');await page.locator('[data-action="close-tower"]').tap();
+ await openBriefing(page,true);await page.locator('[data-action="start"]').tap();const canvas=await page.locator('canvas').boundingBox();await page.touchscreen.tap(canvas.x+645*canvas.width/1600,canvas.y+568*canvas.height/900);assert.deepEqual(await page.locator('.chip-price').allTextContents(),['70','70','100','125']);await page.locator('[data-action="build"][data-kind="archer"]').tap();assert.equal(await page.locator('#gold').textContent(),'195');await page.locator('[data-action="close-tower"]').tap();
  await page.locator('#next-wave').tap();await page.waitForTimeout(1000);assert.match(await page.locator('#wave').textContent(),/^1 \/ /);
  await page.locator('[data-action="speed"]').tap();await page.locator('[data-action="speed"]').tap();assert.equal(await page.locator('#speed').textContent(),'3×');
  await page.screenshot({path:`test-results/deployed/${browserKind.name()}-mobile.png`});
@@ -25,6 +29,6 @@ for(const browserKind of [chromium,webkit]){
  const playback=await page.evaluate(()=>window.__QA_AUDIO__.map(e=>({duration:Number.isFinite(e.duration)?e.duration:null,readyState:e.readyState,currentTime:e.currentTime,paused:e.paused,error:e.error?.code??null})));
  if(browserKind===chromium)assert.ok(decoded,'Chromium should decode a full-length music stream');
  assert.ok(playback.every(e=>!e.error),'streaming MP3 should decode without a media error');
- reports.push({browser:browserKind.name(),url,status:'passed',http:200,projectAssets:true,productionDebugAbsent:true,touchBuild:true,goldAfterBuild:195,waveStart:true,speed3:true,settingsSurviveReload:true,musicAvailable:true,musicDecoded:decoded,audioLimitation:decoded?null:'Windows WebKit did not resume/decode audio in headless mode; physical iPhone audio is unverified.',playback,errors});console.log(browserKind.name()+' deployed mobile passed');await browser.close();
+ reports.push({browser:browserKind.name(),url,status:'passed',version:'0.5.2',homeFirst:true,mapFirst:true,firstTouchMusic,http:200,projectAssets:true,productionDebugAbsent:true,touchBuild:true,iconPriceMenus:true,goldAfterBuild:195,waveStart:true,speed3:true,settingsSurviveReload:true,musicAvailable:true,musicDecoded:decoded,audioLimitation:decoded&&firstTouchMusic?null:'Headless media playback differs from physical iPhone hardware; real device audio is unverified.',playback,errors});console.log(browserKind.name()+' deployed mobile passed');await browser.close();
 }
 await writeFile('test-results/deployed-v5.json',JSON.stringify(reports,null,2));

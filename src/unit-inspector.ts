@@ -24,7 +24,7 @@ export function unitInformation(sim:Simulation,selection?:UnitSelection):UnitInf
     if(e.shieldHits)state.push('护盾剩余'+e.shieldHits+'次');
     if(e.sheep)state.push('变羊');if(sim.blocked.has(e.id))state.push('被拦截');
     return{id:e.id,name:e.sheep?'变羊 · '+d.name:d.name,category:d.behavior.boss?'首领 · '+(e.phase===1?'第二形态':'第一形态'):sim.isFlying(e)?'飞行敌人':'地面敌人',portrait:`${ASSET_BASE}${e.sheep?'enemy-new-4':d.sheet}-${e.sheep?7:d.row}.png`,hp:e.hp,maxHp:e.maxHp,
-      stats:[{label:'攻击',value:e.sheep?'0':damage((d.minDamage??d.damage)*factor,d.damage*factor)},{label:'护甲',value:percent(e.armor)},{label:'魔抗',value:percent(d.resist)},{label:'移速',value:Math.round(d.speed/S)+' / 秒'},{label:'漏怪',value:'−'+d.leak+'生命'}],
+      stats:[{label:'攻击',value:e.sheep?'0':damage((d.minDamage??d.damage)*factor,d.damage*factor)},{label:'护甲',value:percent(e.armor*(e.statuses.some(s=>s.type==='curse')?.5:1))},{label:'魔抗',value:percent(d.resist)},{label:'移速',value:Math.round(d.speed/S)+' / 秒'},{label:'漏怪',value:'−'+d.leak+'生命'}],
       description:advice.tags.join(' · ')+(advice.recommended.length?' ｜ 应对：'+advice.recommended.join('、'):''),state:state.join(' · ')||'正常'};
   }
   const a=sim.allies.find(a=>a.id===selection.id);if(!a)return;
@@ -44,5 +44,5 @@ export function unitInformation(sim:Simulation,selection?:UnitSelection):UnitInf
   if(a.buffUntil>sim.time)states.push('勇气鼓舞');if((a.transformedUntil??0)>sim.time)states.push('强化形态');if((a.stunnedUntil??0)>sim.time)states.push('眩晕');
   const skills=h?Object.entries(t.hero.skills).map(([key,d],i)=>{const data=d as {level:number};const unlock=HERO_LEVELS[h.native!].findIndex(l=>l.hero.skills[key]?.level>0)+1;return h.skills[i%2]+' '+(data.level?'Lv.'+data.level:'Lv.'+unlock+'解锁');}).join(' · '):tower?(TOWERS[tower.kind].branches[tower.branch]?.skills??[]).filter((_,i)=>tower.skills[i]>0).map((s,i)=>s.name).join(' · '):a.expires?'临时援军 · 剩余'+Math.max(0,Math.ceil(a.expires-sim.time))+'秒':'拦截地面敌人';
   return{id:a.id,name,category:h?'英雄 · Lv.'+a.level:tower?TOWERS[tower.kind].name:'友军',portrait:`${ASSET_BASE}${sheet}-${row}.png`,hp:a.hp,maxHp:a.maxHp,
-    stats:[{label:'攻击',value:damage(lo,hi)},{label:'护甲',value:percent(a.armor)},{label:'类型',value:damageType(a.summon?.damageKind??(inMelee?(attack?.damage_type===1?'true':attack?.damage_type===4?'magic':'physical'):h?.damageKind??'physical'))},{label:'移速',value:Math.round((h?.speed??a.summon?.speed??(t?.motion?.max_speed??75)*S)/S)+' / 秒'},{label:h?'成长':'拦截',value:h?'经验 '+Math.round(a.xp):'地面敌人'}],description:skills||'拦截地面敌人，脱战后恢复生命。',state:states.join(' · ')};
+    stats:[{label:'攻击',value:damage(lo,hi)},{label:'护甲',value:percent(Math.min(.95,a.armor+(a.buffUntil>sim.time?.05*(a.courageRank??0):0)))},{label:'魔抗',value:'0%'},{label:'类型',value:damageType(a.summon?.damageKind??(inMelee?(attack?.damage_type===1?'true':attack?.damage_type===4?'magic':'physical'):h?.damageKind??'physical'))},{label:'移速',value:Math.round((h?.speed??a.summon?.speed??(t?.motion?.max_speed??75)*S)/S)+' / 秒'},{label:h?'成长':'拦截',value:h?'经验 '+Math.round(a.xp):'地面敌人'}],description:skills||'拦截地面敌人，脱战后恢复生命。',state:states.join(' · ')};
 }

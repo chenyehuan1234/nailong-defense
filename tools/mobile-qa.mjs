@@ -1,3 +1,4 @@
+import {openCampaign,openBriefing} from './browser-onboarding.mjs';
 import {chromium,webkit} from '@playwright/test';
 import {mkdir,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
@@ -11,7 +12,7 @@ for(const browserKind of process.env.WEBKIT_ONLY?[webkit]:[chromium]){
   const context=await browser.newContext({viewport:{width:device.width,height:device.height},deviceScaleFactor:1,isMobile:true,hasTouch:true}),page=await context.newPage(),errors=[];
   page.on('pageerror',e=>errors.push(e.stack??e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
   const prefix=browserKind.name()+'-'+device.name;
-  await page.goto(url,{waitUntil:'networkidle'});await page.locator('[data-action="training-skip"]').tap();
+  await page.goto(url,{waitUntil:'networkidle'});await openCampaign(page,true);
   assert.equal(await page.evaluate(()=>document.documentElement.classList.contains('mobile')),true);
   await page.screenshot({path:`test-results/mobile/${prefix}-campaign.png`});
   await page.locator('[data-action="settings"]').tap();await page.locator('.settings-modal').waitFor();
@@ -19,7 +20,7 @@ for(const browserKind of process.env.WEBKIT_ONLY?[webkit]:[chromium]){
   await page.locator('[data-volume="musicVolume"]').fill('81');await page.locator('[data-volume="musicVolume"]').dispatchEvent('change');
   await page.locator('[data-action="close"]').tap();
   await page.locator('[data-action="upgrades"]').tap();await page.locator('.upgrade-modal').waitFor();await page.screenshot({path:`test-results/mobile/${prefix}-upgrades.png`});await page.locator('[data-action="close"]').tap();
-  await page.locator('[data-action="start"]').tap();await page.locator('.battle-hud').waitFor();
+  await openBriefing(page,true);await page.locator('[data-action="start"]').tap();await page.locator('.battle-hud').waitFor();
   const worldTap=async(x,y)=>{const r=await page.locator('#canvas canvas').boundingBox();await page.touchscreen.tap(r.x+x*r.width/1600,r.y+y*r.height/900);};
   await worldTap(645,568);await page.locator('.tower-popover').waitFor();
   const popover=await page.locator('.tower-popover').boundingBox();assert.ok(popover.x>=0&&popover.x+popover.width<=device.width+1&&popover.y>=0&&popover.y+popover.height<=device.height+1,'tower panel stays onscreen');
@@ -41,14 +42,18 @@ for(const browserKind of process.env.WEBKIT_ONLY?[webkit]:[chromium]){
   // Isolated fourth-stage fixture adds heroes and unlocked powers for touch tests.
   await page.evaluate(async()=>{const a=window.__NAILONG__,{LEVELS}=await import('/content/levels.ts'),{scoreKey}=await import('/src/save.ts');for(const l of LEVELS.slice(0,3))a.ui.save.scores[scoreKey('main',l.id)]={stars:3,lives:20,hero:'shield',difficulty:'normal'};a.ui.selectedLevel=3;a.ui.start();a.sim.gold=800;a.sim.cooldowns.reinforce=0;});
   await page.locator('[data-skill="reinforce"]').tap();await page.locator('.mobile-cancel').waitFor();await page.locator('.mobile-cancel').tap();assert.equal(await page.evaluate(()=>window.__NAILONG__.scene.mode),'');
-  await page.locator('[data-action="select-hero"]').tap();assert.equal(await page.evaluate(()=>window.__NAILONG__.scene.heroSelected),true);await page.locator('[data-action="unit-details"]').tap();await page.locator('.unit-detail-modal').waitFor();await page.locator('[data-action="close"]').tap();
+  await page.locator('[data-action="select-hero"]').tap();assert.equal(await page.evaluate(()=>window.__NAILONG__.scene.heroSelected),true);assert.equal(await page.locator('[data-action="unit-details"]').count(),0);assert.match(await page.locator('#unit-inspector').textContent(),/物抗/);assert.match(await page.locator('#unit-inspector').textContent(),/魔抗/);
+  await page.screenshot({path:`test-results/mobile/${prefix}-unit-hero.png`});
   await worldTap(1050,640);assert.equal(await page.evaluate(()=>window.__NAILONG__.sim.hero.commanded),true);await page.locator('.mobile-cancel').tap();
   const site=await page.evaluate(()=>window.__NAILONG__.sim.level.slots[0]);await worldTap(site.x,site.y);await page.locator('[data-action="build"][data-kind="barracks"]').tap();await page.locator('[data-action="rally"]').tap();assert.equal(await page.locator('.tower-popover').count(),0);
   const rally=await page.evaluate(()=>window.__NAILONG__.sim.towers[0].rally);await worldTap(rally.x,rally.y);assert.equal(await page.evaluate(()=>window.__NAILONG__.scene.mode),'');await page.locator('.tower-popover').waitFor();await page.locator('[data-action="close-tower"]').tap();
   await page.screenshot({path:`test-results/mobile/${prefix}-hero.png`});
+  const soldier=await page.evaluate(()=>{const a=window.__NAILONG__.sim.allies.find(a=>a.kind==='soldier');return{x:a.x,y:a.y-20};});await worldTap(soldier.x,soldier.y);await page.locator('.unit-info[data-side="ally"]').waitFor();assert.match(await page.locator('#unit-inspector').textContent(),/魔抗/);await page.screenshot({path:`test-results/mobile/${prefix}-unit-soldier.png`});
+  await page.evaluate(()=>{const a=window.__NAILONG__,e=a.sim.spawn('boar',0,400);e.immobileUntil=Infinity;a.scene.syncUnits();window.mobileEnemy={x:e.x,y:e.y-20};});const enemy=await page.evaluate(()=>window.mobileEnemy);await worldTap(enemy.x,enemy.y);await page.locator('.unit-info[data-side="enemy"]').waitFor();assert.match(await page.locator('#unit-inspector').textContent(),/物抗/);await page.screenshot({path:`test-results/mobile/${prefix}-unit-enemy.png`});
+  await page.locator('.battle-tools [data-action="settings"]').tap();assert.equal(await page.evaluate(()=>window.__NAILONG__.scene.paused),true);await page.locator('[data-action="close"]').tap();assert.equal(await page.evaluate(()=>window.__NAILONG__.scene.paused),false);
   await page.locator('.battle-tools [data-action="pause"]').tap();await page.locator('[data-action="quit"]').tap();
   await page.setViewportSize({width:390,height:844});await page.waitForTimeout(100);await page.screenshot({path:`test-results/mobile/${prefix}-portrait-menu.png`});
-  assert.equal(await page.locator('[data-level-select]').isVisible(),true);
+  await openBriefing(page,true);assert.equal(await page.locator('[data-level-select]').isVisible(),true);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await page.setViewportSize({width:device.width,height:device.height});await page.locator('[data-action="editor"]').tap();await page.locator('.editor-floating').waitFor();
   await page.locator('[data-work="level-index"]').selectOption('3');assert.equal(await page.evaluate(()=>window.__NAILONG__.ui.editorLevel.map),'map-04');
@@ -57,7 +62,7 @@ for(const browserKind of process.env.WEBKIT_ONLY?[webkit]:[chromium]){
   else{await page.mouse.move(handle.x+65,handle.y+20);await page.mouse.down();await page.mouse.move(handle.x-75,handle.y+20,{steps:10});await page.mouse.up();}
   const floating=await page.locator('.editor-floating').boundingBox();assert.ok(floating.x<origin.x-50&&floating.x>=0&&floating.x+floating.width<=device.width+1,'workshop panel drags inside the mobile viewport');
   await page.screenshot({path:`test-results/mobile/${prefix}-workshop.png`});
-  assert.deepEqual(errors,[]);reports.push({browser:browserKind.name(),device:device.name,status:'passed',touchBuild:true,screenCoordinatesCorrect:true,controls44px:true,panelsInViewport:true,touchSkillCancel:true,touchHeroMovement:true,touchUnitDetails:true,touchRally:true,wavesAndSpeed:true,rotationPausesAndResumes:true,manualPauseSurvivesRotation:true,portraitMenu:true,mobileWorkshop:true,errors});
+  assert.deepEqual(errors,[]);reports.push({browser:browserKind.name(),device:device.name,status:'passed',touchBuild:true,screenCoordinatesCorrect:true,controls44px:true,panelsInViewport:true,touchSkillCancel:true,touchHeroMovement:true,unitStatsVisible:true,touchRally:true,wavesAndSpeed:true,rotationPausesAndResumes:true,manualPauseSurvivesRotation:true,portraitMenu:true,mobileWorkshop:true,errors});
   console.log(prefix+' mobile passed');await context.close();
  }
  await browser.close();

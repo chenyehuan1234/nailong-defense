@@ -1,6 +1,6 @@
 {
   "name": "nailong-defense",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,14 +8,15 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 5188 --strictPort",
     "test": "vitest run",
-    "assets": "node tools/prepare-assets.mjs && node tools/pack-expansion.mjs && node tools/pack-walk-cycles.mjs && node tools/pack-action-layers.mjs && node tools/prepare-tower-icons.mjs && node tools/prepare-audio.mjs && node tools/prepare-audio-v4.mjs && node tools/prepare-reference-maps.mjs && node tools/update-asset-manifest.mjs",
+    "assets": "node tools/prepare-assets.mjs && node tools/pack-expansion.mjs && node tools/pack-walk-cycles.mjs && node tools/pack-action-layers.mjs && node tools/prepare-tower-icons.mjs && node tools/prepare-runtime-sheets.mjs && node tools/prepare-audio.mjs && node tools/prepare-audio-v4.mjs && node tools/prepare-reference-maps.mjs && node tools/update-asset-manifest.mjs",
     "verify": "npm run test && npm run build",
     "test:browser": "node tools/experience-v4-qa.mjs && node tools/production-qa.mjs",
     "test:audio": "node tools/audio-soak-v4.mjs",
     "test:performance": "node tools/performance.mjs",
     "test:interaction": "node tools/interaction-v41-qa.mjs",
     "test:mobile": "node tools/mobile-qa.mjs",
-    "test:mobile-experience": "node tools/mobile-experience-qa.mjs"
+    "test:mobile-experience": "node tools/mobile-experience-qa.mjs",
+    "test:startup": "node tools/startup-qa.mjs"
   },
   "dependencies": {
     "phaser": "3.90.0"

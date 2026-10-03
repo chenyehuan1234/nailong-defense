@@ -285,7 +285,8 @@
 @media (prefers-reduced-motion:reduce){.mobile *, .mobile *:before, .mobile *:after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
 
 /* Phone campaign: start with the whole map, then inspect one stage. */
-.mobile-home-background,.mobile-level-preview,.brief-close,.map-controls{display:none}
+.mobile-home-background{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.mobile-level-preview,.brief-close,.map-controls{display:none}
 .mobile .mobile-home-background{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center;pointer-events:none}
 .mobile .home-copy{top:17%}
 .mobile .world-v4{grid-template-columns:minmax(0,1fr);position:absolute;inset:0}
@@ -328,6 +329,13 @@
 .mobile .unit-more{display:none}
 .mobile #sound-start{border:1px solid #d5bd78;border-radius:7px;padding:8px 12px;background:#234333c9;color:#ffedb3}
 .mobile #sound-start[hidden]{display:none}
+#asset-loading{z-index:100;pointer-events:auto;gap:16px;text-align:center;padding:24px}
+#asset-loading p,#asset-loading small{max-width:340px;line-height:1.7}
+.asset-progress{width:min(320px,75vw);height:8px;border-radius:8px;background:#4b654a;overflow:hidden}
+.asset-progress i{display:block;width:0;height:100%;background:#f7d483;transition:width .1s}
+.startup-error{z-index:100;pointer-events:auto;text-align:center;padding:24px}
+.startup-error p{max-width:420px;line-height:1.7}
+.startup-error .button{pointer-events:auto;min-height:44px}
 @media(max-width:720px){.mobile .unit-info{grid-template-columns:minmax(80px,1fr) auto;gap:6px;padding:6px}.mobile .unit-info-stats{gap:6px}.mobile .unit-info-stats b{font-size:11px}}
 @media(max-height:330px) and (orientation:landscape){
  .mobile .wheel-options,.mobile .wheel-options.wheel-many{display:flex;gap:5px}

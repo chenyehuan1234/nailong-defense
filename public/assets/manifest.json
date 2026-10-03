@@ -70,77 +70,87 @@
   },
   "atlases": {
     "heroes": {
-      "file": "heroes.png",
+      "file": "heroes.webp",
       "columns": 8,
       "rows": 4,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "heroes.png"
     },
     "soldiers": {
-      "file": "soldiers.png",
+      "file": "soldiers.webp",
       "columns": 8,
       "rows": 4,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "soldiers.png"
     },
     "towers": {
-      "file": "towers.png",
+      "file": "towers.webp",
       "columns": 5,
       "rows": 4,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "towers.png"
     },
     "enemies-a": {
-      "file": "enemies-a.png",
+      "file": "enemies-a.webp",
       "columns": 7,
       "rows": 5,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "enemies-a.png"
     },
     "enemies-b": {
-      "file": "enemies-b.png",
+      "file": "enemies-b.webp",
       "columns": 7,
       "rows": 6,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "enemies-b.png"
     },
     "enemy-new-1": {
-      "file": "enemy-new-1.png",
+      "file": "enemy-new-1.webp",
       "columns": 7,
       "rows": 8,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "enemy-new-1.png"
     },
     "enemy-new-2": {
-      "file": "enemy-new-2.png",
+      "file": "enemy-new-2.webp",
       "columns": 7,
       "rows": 8,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "enemy-new-2.png"
     },
     "enemy-new-3": {
-      "file": "enemy-new-3.png",
+      "file": "enemy-new-3.webp",
       "columns": 7,
       "rows": 8,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "enemy-new-3.png"
     },
     "enemy-new-4": {
-      "file": "enemy-new-4.png",
+      "file": "enemy-new-4.webp",
       "columns": 7,
       "rows": 8,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "enemy-new-4.png"
     },
     "special-allies": {
-      "file": "special-allies.png",
+      "file": "special-allies.webp",
       "columns": 8,
       "rows": 3,
       "frameWidth": 192,
-      "frameHeight": 192
+      "frameHeight": 192,
+      "sourceFile": "special-allies.png"
     },
     "heroes-walk-a": {
-      "file": "heroes-walk-a.png",
+      "file": "heroes-walk-a.webp",
       "columns": 6,
       "rows": 6,
       "frameWidth": 192,
@@ -148,10 +158,11 @@
       "anchor": {
         "x": 96,
         "y": 176
-      }
+      },
+      "sourceFile": "heroes-walk-a.png"
     },
     "heroes-walk-b": {
-      "file": "heroes-walk-b.png",
+      "file": "heroes-walk-b.webp",
       "columns": 6,
       "rows": 6,
       "frameWidth": 192,
@@ -159,10 +170,11 @@
       "anchor": {
         "x": 96,
         "y": 176
-      }
+      },
+      "sourceFile": "heroes-walk-b.png"
     },
     "soldiers-walk-a": {
-      "file": "soldiers-walk-a.png",
+      "file": "soldiers-walk-a.webp",
       "columns": 6,
       "rows": 6,
       "frameWidth": 192,
@@ -170,10 +182,11 @@
       "anchor": {
         "x": 96,
         "y": 176
-      }
+      },
+      "sourceFile": "soldiers-walk-a.png"
     },
     "soldiers-walk-b": {
-      "file": "soldiers-walk-b.png",
+      "file": "soldiers-walk-b.webp",
       "columns": 6,
       "rows": 6,
       "frameWidth": 192,
@@ -181,10 +194,11 @@
       "anchor": {
         "x": 96,
         "y": 176
-      }
+      },
+      "sourceFile": "soldiers-walk-b.png"
     },
     "tower-plates": {
-      "file": "tower-plates.png",
+      "file": "tower-plates.webp",
       "columns": 5,
       "rows": 4,
       "frameWidth": 192,
@@ -192,10 +206,11 @@
       "anchor": {
         "x": 96,
         "y": 176
-      }
+      },
+      "sourceFile": "tower-plates.png"
     },
     "tower-operators": {
-      "file": "tower-operators.png",
+      "file": "tower-operators.webp",
       "columns": 6,
       "rows": 4,
       "frameWidth": 192,
@@ -203,10 +218,11 @@
       "anchor": {
         "x": 96,
         "y": 176
-      }
+      },
+      "sourceFile": "tower-operators.png"
     },
     "heroes-actions": {
-      "file": "heroes-actions.png",
+      "file": "heroes-actions.webp",
       "columns": 6,
       "rows": 4,
       "frameWidth": 192,
@@ -214,10 +230,11 @@
       "anchor": {
         "x": 96,
         "y": 176
-      }
+      },
+      "sourceFile": "heroes-actions.png"
     },
     "soldiers-actions": {
-      "file": "soldiers-actions.png",
+      "file": "soldiers-actions.webp",
       "columns": 6,
       "rows": 4,
       "frameWidth": 192,
@@ -225,7 +242,8 @@
       "anchor": {
         "x": 96,
         "y": 176
-      }
+      },
+      "sourceFile": "soldiers-actions.png"
     }
   },
   "sources": [
@@ -242,5 +260,10 @@
     "source": "art/source/home-v4.1.png",
     "production": "art/source/home-v4.1.json",
     "version": "4.1"
+  },
+  "runtimeSheets": {
+    "manifest": "runtime-sheets.json",
+    "format": "WebP",
+    "fallback": "PNG"
   }
 }

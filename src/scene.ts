@@ -1,10 +1,10 @@
-import {ASSET_BASE} from './assets';
 import {ACTION_SCALES} from '../content/action-scales';
 import {TowerRig} from './tower-rig';
 import { paintRoads } from './road-art';
 import { CombatFX } from './combat-fx';
 import Phaser from 'phaser';
 import {isMobile} from './viewport';
+import {BATTLE_SHEETS,SceneAssets} from './scene-assets';
 import { ENEMIES, HEROES, TOWERS, HERO_KEYS, ENEMY_KEYS } from '../content/definitions';
 import { Road, Random, distance } from './math';
 import { Simulation, STEP } from './simulation';
@@ -19,21 +19,21 @@ export class BattleScene extends Phaser.Scene {
   combatFx!:CombatFX;lessonTarget?:string;
   particles:Particle[]=[];particlePool:Phaser.GameObjects.Image[]=[];texts:Phaser.GameObjects.Text[]=[];seen=0;accumulator=0;wall=0;hudTimer=0;gate?:Phaser.GameObjects.Image;
   editorActive=false;artMode=false;artClock=0;artPage=0;
+  assets!:SceneAssets;
+  battleAssets(map:string){return [...BATTLE_SHEETS,map,'road-texture'];}
+  releaseMaps(keep:string){for(const key of this.textures.getTextureKeys())if(/^(map-\d+|forest|river|ruins)$/.test(key)&&key!==keep)this.textures.remove(key);}
   artEntries=[...HERO_KEYS.map(k=>({name:HEROES[k].name,sheet:'heroes',row:HEROES[k].row,kind:k,columns:8,size:115})),...['基础卫兵','升级守卫','皇家盾卫','狂战奶龙'].map((name,row)=>({name,sheet:'soldiers',row,kind:'soldier',columns:8,size:105})),...['精灵奶龙','雪人奶龙','大地奶龙'].map((name,row)=>({name,sheet:'special-allies',row,kind:['elf','sasquatch','elemental'][row],columns:8,size:115})),...ENEMY_KEYS.map(k=>({name:ENEMIES[k].name,sheet:ENEMIES[k].sheet,row:ENEMIES[k].row,kind:k,columns:7,size:ENEMIES[k].behavior.boss?140:105})),{name:'荆棘魔王 · 真身',sheet:'enemy-new-4',row:3,kind:'boss',columns:7,size:145}];
   previousPositions=new Map<number,Point>();
   renderedPoint(unit:AllyState|EnemyState){const prev=this.previousPositions.get(unit.id);if(!prev||this.paused)return unit;const alpha=this.accumulator/STEP;return{x:prev.x+(unit.x-prev.x)*alpha,y:prev.y+(unit.y-prev.y)*alpha};}
   constructor(public hooks:SceneHooks){super('battle');}
-  preload(){for(const map of ['forest','river','ruins','home-v4.1','campaign-v2','campaign-v4','road-texture',...Array.from({length:26},(_,i)=>'map-'+String(i+1).padStart(2,'0'))])this.load.image(map,`${ASSET_BASE}${map}.webp`);for(const sheet of ['tower-plates','tower-operators','heroes-actions','soldiers-actions','heroes-walk-a','heroes-walk-b','soldiers-walk-a','soldiers-walk-b','heroes','soldiers','towers','enemies-a','enemies-b','enemy-new-1','enemy-new-2','enemy-new-3','enemy-new-4','special-allies'])this.load.spritesheet(sheet,`${ASSET_BASE}${sheet}.png`,{frameWidth:192,frameHeight:192});this.load.on('loaderror',(file:Phaser.Loader.File)=>this.hooks.loadError(file.key));}
-  create(){this.background=this.add.image(800,450,'forest').setDisplaySize(1600,900).setDepth(0);
-    for(const [sheet,cols,rows]of [['heroes',8,4],['soldiers',8,4],['enemies-a',7,5],['enemies-b',7,6],['enemy-new-1',7,8],['enemy-new-2',7,8],['enemy-new-3',7,8],['enemy-new-4',7,8],['special-allies',8,3]] as const){const tex=this.textures.get(sheet);for(let i=0;i<cols*rows;i++){const f=tex.get(i);tex.add(`${i}-body`,0,f.cutX,f.cutY,192,160);tex.add(`${i}-legL`,0,f.cutX,f.cutY+154,96,38);tex.add(`${i}-legR`,0,f.cutX+96,f.cutY+154,96,38);for(const n of [2,4,6])for(let j=0;j<n;j++)tex.add(`${i}-foot${n}-${j}`,0,f.cutX+j*192/n,f.cutY+(n===6?140:154),192/n,n===6?52:38);tex.add(`${i}-flight-body`,0,f.cutX+64,f.cutY,64,192);tex.add(`${i}-wing0`,0,f.cutX,f.cutY,72,192);tex.add(`${i}-wing1`,0,f.cutX+120,f.cutY,72,192);}}
-    const towerTexture=this.textures.get('tower-plates');for(let i=0;i<20;i++){const f=towerTexture.get(i),cut=[[97,78,69,80,72],[135,118,102,96,110],[142,108,88,74,82],[134,122,108,114,97]][Math.floor(i/5)][i%5];towerTexture.add(`${i}-front`,0,f.cutX,f.cutY+cut,192,192-cut);}
+  create(){this.assets=new SceneAssets(this);this.background=this.add.image(800,450,'__WHITE').setTint(0x274735).setDisplaySize(1600,900).setDepth(0);
     const canvas=this.textures.createCanvas('spark',32,32)!;const ctx=canvas.context;const gradient=ctx.createRadialGradient(16,16,0,16,16,16);gradient.addColorStop(0,'#fff');gradient.addColorStop(.3,'#fff8c4');gradient.addColorStop(1,'#fff0');ctx.fillStyle=gradient;ctx.fillRect(0,0,32,32);canvas.refresh();
     this.range=this.add.graphics().setDepth(10);this.fx=this.add.graphics().setDepth(1800);this.combatFx=new CombatFX(this.fx);this.decor=this.add.graphics().setDepth(3);this.shadows=this.add.graphics().setDepth(25);this.healthBars=this.add.graphics().setDepth(1700);
     this.input.on('pointerdown',(p:Phaser.Input.Pointer)=>{if(!isMobile()||!this.sim||this.editorActive)this.hooks.click({x:p.x,y:p.y});});this.hooks.ready(this);
   }
   clearBattle(){for(const slot of this.slots.values())slot.destroy();this.slots.clear();for(const t of this.towers.values())t.destroy();this.towers.clear();for(const u of this.units.values())u.destroy();this.units.clear();this.roadImage?.destroy();this.gate?.destroy();for(const p of this.particles)p.image.setVisible(false);this.particlePool.push(...this.particles.map(p=>p.image));this.particles=[];for(const t of this.texts)t.destroy();this.texts=[];this.range.clear();this.combatFx.clear();this.decor.clear();this.shadows.clear();this.healthBars.clear();this.selectedSlot=-1;this.heroSelected=false;this.inspectedUnitId=undefined;this.mode='';this.lessonTarget=undefined;this.editorActive=false;this.artMode=false;this.accumulator=0;this.seen=0;this.previousPositions.clear();}
-  showHome(map='forest'){this.clearBattle();this.sim=undefined;this.background.setTexture(map);this.paused=false;}
-  start(sim:Simulation){this.clearBattle();this.sim=sim;this.paused=false;this.speed=1;this.background.setTexture(sim.level.map);if(!sim.level.referenceBuild)this.makeRoads(sim.roads,sim.level.map);
+  showHome(map='forest'){this.clearBattle();this.sim=undefined;this.background.setTexture(this.textures.exists(map)?map:'__WHITE').setTint(0x274735);this.paused=false;}
+  start(sim:Simulation){this.clearBattle();this.sim=sim;this.paused=false;this.speed=1;this.background.setTexture(sim.level.map).clearTint();this.releaseMaps(sim.level.map);if(!sim.level.referenceBuild)this.makeRoads(sim.roads,sim.level.map);
     sim.level.slots.forEach((p,i)=>{
       const root=this.add.container(p.x,p.y).setDepth(20),ring=this.add.ellipse(0,0,96,52,0x6c603e,.35).setStrokeStyle(3,0xf4dc9b,.8),base=this.add.ellipse(0,-2,82,44,0xc5b68b,.45);
       const cross=this.add.text(0,-6,'＋',{fontFamily:'Georgia',fontSize:'34px',color:'#fff2bc',stroke:'#635b35',strokeThickness:3}).setOrigin(.5);
@@ -44,7 +44,7 @@ export class BattleScene extends Phaser.Scene {
     this.addFloating({x:Math.min(1530,exit.x),y:exit.y},'守护出口',0xffefbc,3);
   }
   makeRoads(roads:Road[],map:string){this.roadImage?.destroy();this.roadImage=paintRoads(this,roads,map);}
-  setArtMode(page=0){this.clearBattle();this.sim=undefined;this.artMode=true;this.artClock=0;this.artPage=page;this.background.setTexture('forest');this.artEntries.slice(page*16,page*16+16).forEach((entry,i)=>{const label=this.add.text(300+(i%4)*330,290+Math.floor(i/4)*180,entry.name,{fontFamily:'Microsoft YaHei',fontSize:'16px',color:'#fff2bf',stroke:'#243d29',strokeThickness:4}).setOrigin(.5).setDepth(1900);this.texts.push(label);});}
+  setArtMode(page=0){this.clearBattle();this.sim=undefined;this.artMode=true;this.artClock=0;this.artPage=page;this.background.setTexture('forest').clearTint();this.artEntries.slice(page*16,page*16+16).forEach((entry,i)=>{const label=this.add.text(300+(i%4)*330,290+Math.floor(i/4)*180,entry.name,{fontFamily:'Microsoft YaHei',fontSize:'16px',color:'#fff2bf',stroke:'#243d29',strokeThickness:4}).setOrigin(.5).setDepth(1900);this.texts.push(label);});}
   syncUnits(){if(!this.sim)return;const alive=new Set<number>();for(const e of this.sim.enemies){alive.add(e.id);const d=ENEMIES[e.kind],rage=e.kind==='boss'&&e.phase===1,sheet=e.sheep?'enemy-new-4':rage?'enemy-new-4':d.sheet,row=e.sheep?7:rage?3:d.row;let rig=this.units.get(e.id);if(rig&&(rig.row!==row||rig.sheet!==sheet)){rig.destroy();this.units.delete(e.id);rig=undefined;}if(!rig){rig=new UnitRig(this,sheet,row,e.sheep?60:rage?215:e.phase===-1?d.size*.65:d.size,7,e.id);this.units.set(e.id,rig);}rig.draw(e,this.sim.time);}
     for(const a of this.sim.allies){alive.add(a.id);let row=a.kind in HEROES?HEROES[a.kind as HeroKind].row:0;let sheet=a.kind in HEROES?'heroes':a.kind==='soldier'?'soldiers':'special-allies';if(a.kind==='elf')row=0;if(a.kind==='sasquatch')row=1;if(a.kind==='elemental')row=2;if(a.kind==='soldier'&&a.tower!==undefined){const t=this.sim.towerAt(a.tower);row=t?.branch===1?3:t?.branch===0?2:(t?.level??1)>1?1:0;}let rig=this.units.get(a.id);if(rig&&rig.row!==row){rig.destroy();this.units.delete(a.id);rig=undefined;}if(!rig){rig=new UnitRig(this,sheet,row,a.kind==='soldier'?65:a.kind==='sasquatch'?130:110,sheet==='special-allies'?8:sheet==='enemy-new-4'?7:8,a.id);this.units.set(a.id,rig);}rig.draw(a,this.sim.time,a===this.sim.hero);}
     for(const [id,rig]of this.units)if(!alive.has(id)){rig.destroy();this.units.delete(id);}

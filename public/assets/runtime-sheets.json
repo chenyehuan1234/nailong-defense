@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "quality": 90,
+  "alphaQuality": 100,
+  "frameSize": 192,
+  "sourceBytes": 31383078,
+  "runtimeBytes": 8019726,
+  "files": [
+    {
+      "key": "tower-plates",
+      "source": "tower-plates.png",
+      "runtime": "tower-plates.webp",
+      "width": 960,
+      "height": 768,
+      "bytes": 311914
+    },
+    {
+      "key": "tower-operators",
+      "source": "tower-operators.png",
+      "runtime": "tower-operators.webp",
+      "width": 1152,
+      "height": 768,
+      "bytes": 314400
+    },
+    {
+      "key": "heroes-actions",
+      "source": "heroes-actions.png",
+      "runtime": "heroes-actions.webp",
+      "width": 1152,
+      "height": 768,
+      "bytes": 276700
+    },
+    {
+      "key": "soldiers-actions",
+      "source": "soldiers-actions.png",
+      "runtime": "soldiers-actions.webp",
+      "width": 1152,
+      "height": 768,
+      "bytes": 267776
+    },
+    {
+      "key": "heroes-walk-a",
+      "source": "heroes-walk-a.png",
+      "runtime": "heroes-walk-a.webp",
+      "width": 1152,
+      "height": 1152,
+      "bytes": 475062
+    },
+    {
+      "key": "heroes-walk-b",
+      "source": "heroes-walk-b.png",
+      "runtime": "heroes-walk-b.webp",
+      "width": 1152,
+      "height": 1152,
+      "bytes": 515258
+    },
+    {
+      "key": "soldiers-walk-a",
+      "source": "soldiers-walk-a.png",
+      "runtime": "soldiers-walk-a.webp",
+      "width": 1152,
+      "height": 1152,
+      "bytes": 463080
+    },
+    {
+      "key": "soldiers-walk-b",
+      "source": "soldiers-walk-b.png",
+      "runtime": "soldiers-walk-b.webp",
+      "width": 1152,
+      "height": 1152,
+      "bytes": 507326
+    },
+    {
+      "key": "heroes",
+      "source": "heroes.png",
+      "runtime": "heroes.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 384988
+    },
+    {
+      "key": "soldiers",
+      "source": "soldiers.png",
+      "runtime": "soldiers.webp",
+      "width": 1536,
+      "height": 768,
+      "bytes": 420338
+    },
+    {
+      "key": "towers",
+      "source": "towers.png",
+      "runtime": "towers.webp",
+      "width": 960,
+      "height": 768,
+      "bytes": 343370
+    },
+    {
+      "key": "enemies-a",
+      "source": "enemies-a.png",
+      "runtime": "enemies-a.webp",
+      "width": 1344,
+      "height": 960,
+      "bytes": 443524
+    },
+    {
+      "key": "enemies-b",
+      "source": "enemies-b.png",
+      "runtime": "enemies-b.webp",
+      "width": 1344,
+      "height": 1152,
+      "bytes": 561280
+    },
+    {
+      "key": "enemy-new-1",
+      "source": "enemy-new-1.png",
+      "runtime": "enemy-new-1.webp",
+      "width": 1344,
+      "height": 1536,
+      "bytes": 576872
+    },
+    {
+      "key": "enemy-new-2",
+      "source": "enemy-new-2.png",
+      "runtime": "enemy-new-2.webp",
+      "width": 1344,
+      "height": 1536,
+      "bytes": 609164
+    },
+    {
+      "key": "enemy-new-3",
+      "source": "enemy-new-3.png",
+      "runtime": "enemy-new-3.webp",
+      "width": 1344,
+      "height": 1536,
+      "bytes": 601458
+    },
+    {
+      "key": "enemy-new-4",
+      "source": "enemy-new-4.png",
+      "runtime": "enemy-new-4.webp",
+      "width": 1344,
+      "height": 1536,
+      "bytes": 630722
+    },
+    {
+      "key": "special-allies",
+      "source": "special-allies.png",
+      "runtime": "special-allies.webp",
+      "width": 1536,
+      "height": 576,
+      "bytes": 316494
+    }
+  ]
+}

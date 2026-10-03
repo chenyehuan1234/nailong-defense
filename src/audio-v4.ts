@@ -3,6 +3,9 @@ import type {CombatEvent,SaveData} from './types';
 type Theme='forest'|'dark'|'boss';
 type MusicVoice={element:HTMLAudioElement;source?:MediaElementAudioSourceNode;gain?:GainNode;theme:Theme;index:number};
 type Voice={source:AudioBufferSourceNode;gain:GainNode};
+// A short, project-authored silent WAV grants permission to the two persistent
+// media elements even when the playlist manifest has not arrived yet.
+const SILENCE='data:audio/wav;base64,UklGRiQBAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAB'+ 'A'.repeat(344);
 /** Short effects are decoded once; full songs stay in the browser's streaming cache. */
 export class AudioDirector {
  ctx?:AudioContext;master?:GainNode;musicGain?:GainNode;sfxGain?:GainNode;ambientGain?:GainNode;enabled=true;music=true;
@@ -29,7 +32,7 @@ export class AudioDirector {
   this.focused=true;const resumed=this.ctx&&this.ctx.state!=='running'?this.ctx.resume():Promise.resolve();
   // Media play and context resume must both happen inside the trusted gesture,
   // before any await. SFX decoding must never delay the first song.
-  this.setTheme(this.theme);if(this.musicVoice)this.startMusic(this.musicVoice);this.preloadNext();if(this.nextVoice)this.startMusic(this.nextVoice,true);
+  this.primeMusicPool();this.setTheme(this.theme);if(this.musicVoice)this.startMusic(this.musicVoice);this.preloadNext();if(this.nextVoice)this.startMusic(this.nextVoice,true);
   return resumed;
  }
  async load(){try{
@@ -38,12 +41,14 @@ export class AudioDirector {
   await Promise.all(files.map(async file=>{const r=await fetch(ASSET_BASE+'audio/'+file);if(!r.ok)throw Error('音频加载失败：'+file);this.buffers.set(file,await this.ctx!.decodeAudioData(await r.arrayBuffer()));}));
   this.setTheme(this.theme);this.startAmbient();
  }catch(e){this.error=e instanceof Error?e.message:'音频加载失败';}}
- createMusic(theme:Theme,index:number):MusicVoice{
-  let voice=this.musicPool.find(v=>v!==this.musicVoice&&v!==this.nextVoice&&v!==this.retiring);
-  if(!voice){const element=new Audio();element.preload='auto';element.loop=false;element.playbackRate=1;
+ newMusicVoice(theme:Theme,index:number):MusicVoice{
+   const element=new Audio();element.preload='auto';element.loop=false;element.playbackRate=1;
    const source=this.ctx?.createMediaElementSource(element),gain=this.ctx?.createGain();if(source&&gain){source.connect(gain);gain.connect(this.musicGain!);gain.gain.value=0;}else element.volume=0;
-   element.addEventListener('error',()=>{this.error='音乐加载失败，请刷新重试';});voice={element,source,gain,theme,index};this.musicPool.push(voice);
-  }
+   element.addEventListener('error',()=>{this.error='音乐加载失败，请刷新重试';});const voice={element,source,gain,theme,index};this.musicPool.push(voice);return voice;
+ }
+ primeMusicPool(){while(this.musicPool.length<2)this.newMusicVoice(this.theme,0);for(const voice of this.musicPool)if(voice!==this.musicVoice&&voice!==this.retiring){if(!voice.element.getAttribute('src'))voice.element.src=SILENCE;this.startMusic(voice,true);}}
+ createMusic(theme:Theme,index:number):MusicVoice{
+  const voice=this.musicPool.find(v=>v!==this.musicVoice&&v!==this.nextVoice&&v!==this.retiring)??this.newMusicVoice(theme,index);
   voice.theme=theme;voice.index=index;voice.element.onloadedmetadata=null;voice.element.src=ASSET_BASE+'audio/'+this.manifest['music-'+theme][index];return voice;
  }
  startMusic(v:MusicVoice,warm=false){void v.element.play().then(()=>{if(warm&&v!==this.musicVoice&&v!==this.retiring){v.element.pause();v.element.currentTime=0;}}).catch(()=>{});}

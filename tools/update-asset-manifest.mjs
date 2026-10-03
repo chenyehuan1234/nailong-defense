@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 const file='public/assets/manifest.json',manifest=JSON.parse(fs.readFileSync(file,'utf8'));
 manifest.version=4;
-manifest.menu={image:'home-v4.1.webp',source:'art/source/home-v4.1.png',production:'art/source/home-v4.1.json',version:'4.1'};
-if(!fs.existsSync('public/assets/'+manifest.menu.image))throw Error('Missing menu art');
+manifest.menu={image:'menu-home.jpg',fallback:'home-v4.1.webp',campaign:'menu-campaign.jpg',campaignFallback:'campaign-v4.webp',formats:'menu-images.json',source:'art/source/home-v4.1.png',production:'art/source/home-v4.1.json',version:'4.1'};
+for(const key of ['image','fallback','campaign','campaignFallback','formats'])if(!fs.existsSync('public/assets/'+manifest.menu[key]))throw Error('Missing menu art '+manifest.menu[key]);
 manifest.maps=Array.from({length:26},(_,i)=>`map-${String(i+1).padStart(2,'0')}.webp`);
 for(const [key,columns,rows]of [['heroes-walk-a',6,6],['heroes-walk-b',6,6],['soldiers-walk-a',6,6],['soldiers-walk-b',6,6],['tower-plates',5,4],['tower-operators',6,4],['heroes-actions',6,4],['soldiers-actions',6,4]])manifest.atlases[key]={file:key+'.png',columns,rows,frameWidth:192,frameHeight:192,anchor:{x:96,y:176}};
 manifest.audio={type:'streamed HTMLAudio music + short WebAudio buffers',manifest:'audio/manifest.json',production:'art/source/audio/v4/downloads.json',license:'CC0 + CC BY 4.0 + project-authored layers',credits:'audio/CREDITS.md',version:4};

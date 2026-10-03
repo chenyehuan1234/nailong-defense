@@ -11,12 +11,14 @@ for(const kind of process.env.AUDIO_ONLY?[]:[chromium,webkit]){
   page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});await page.goto(url,{waitUntil:'networkidle'});await page.locator('.begin').waitFor();
   assert.equal(await page.locator('#ui').getAttribute('data-screen'),'home');assert.equal(await page.locator('.training-modal').count(),0);
   const photo=await page.locator('.mobile-home-background').boundingBox();assert.equal(Math.round(photo.width),size.width);assert.equal(Math.round(photo.height),size.height);
+  assert.ok(await page.locator('.mobile-home-background').evaluate(e=>e.complete&&e.naturalWidth>0&&getComputedStyle(e).visibility==='visible'),'home picture is actually loaded');
   const begin=await page.locator('.begin').boundingBox();assert.ok(begin.y>=0&&begin.y+begin.height<=size.height,'first home screen start button is visible');
   await page.screenshot({path:`test-results/mobile-v52/${id}-home.png`});
   await openCampaign(page,true);assert.equal(await page.locator('.expedition-v2').isVisible(),false);
   const map=await page.locator('.world-map').boundingBox();assert.ok(map.width>=size.width-24,'campaign map uses the phone width');
   const overflow=await page.locator('.world-map').evaluate(e=>({x:e.scrollWidth-e.clientWidth,y:e.scrollHeight-e.clientHeight}));assert.ok(overflow.x<3&&overflow.y<3,'map starts fully fitted');
-  await page.screenshot({path:`test-results/mobile-v52/${id}-map.png`});await openBriefing(page,true);await page.screenshot({path:`test-results/mobile-v52/${id}-brief.png`});
+  await page.waitForFunction(()=>{const e=document.querySelector('[data-menu-art="campaign"]');return e?.complete&&e.naturalWidth>0&&getComputedStyle(e).visibility==='visible';});assert.ok(await page.locator('[data-menu-art="campaign"]').evaluate(e=>e.complete&&e.naturalWidth>0),'map picture is actually loaded');
+  await page.screenshot({path:`test-results/mobile-v52/${id}-map.png`});await openBriefing(page,true);const briefing=await page.locator('.expedition-v2').boundingBox();assert.ok(briefing.width>=Math.min(320,size.width-24)&&briefing.x>=0&&briefing.x+briefing.width<=size.width,'briefing is wide enough and on screen');await page.screenshot({path:`test-results/mobile-v52/${id}-brief.png`});
   if(size.width<size.height){await page.setViewportSize({width:844,height:390});}
   await page.locator('[data-action="start"]').tap();await page.locator('.battle-hud').waitFor();const tap=async(x,y)=>{const r=await page.locator('canvas').boundingBox();await page.touchscreen.tap(r.x+x*r.width/1600,r.y+y*r.height/900);};
   await tap(645,568);assert.equal(await page.locator('.tower-wheel [data-action="build"]').count(),4);assert.equal(await page.locator('.tower-stats,.upgrade-delta,.panel-note').count(),0);
@@ -71,6 +73,6 @@ await page.waitForTimeout(5200);await page.evaluate(async()=>{const a=window.__N
 const audio=await page.evaluate(async()=>({pool:window.__NAILONG__.ui.audio.musicPool.length,denied:window.__QA_PLAY__.filter(p=>!p.allowed).length,error:window.__NAILONG__.ui.audio.error}));assert.equal(audio.pool,2);assert.equal(audio.denied,0);assert.equal(audio.error,'');
 reports.push({audio:'first touch and automatic theme transition',musicBeforeEffects:true,reusedMediaElements:audio.pool,denied:audio.denied});
 await page.evaluate(async()=>{const ui=window.__NAILONG__.ui;ui.save.settings.music=false;ui.save.settings.sound=false;ui.persist();});
-await page.route('**/assets/home-v4.1.webp',async route=>{await new Promise(r=>setTimeout(r,4000));await route.continue();});await page.reload({waitUntil:'domcontentloaded'});await page.locator('.begin').waitFor();await page.touchscreen.tap(420,180);
+await page.route('**/assets/menu-home.jpg',async route=>{await new Promise(r=>setTimeout(r,4000));await route.continue();});await page.reload({waitUntil:'domcontentloaded'});await page.locator('.begin').waitFor();await page.touchscreen.tap(420,180);
 const muted=await page.evaluate(async()=>{const a=window.__NAILONG__.ui.audio;return{music:a.music,sound:a.enabled,gain:a.musicGain.gain.value};});assert.deepEqual(muted,{music:false,sound:false,gain:0});
 reports.push({audio:'saved mute applies before homepage artwork finishes loading',mutedOnFirstLoadingTouch:true});await browser.close();await writeFile('test-results/mobile-experience-v52.json',JSON.stringify(reports,null,2));

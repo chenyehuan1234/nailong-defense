@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "format": "progressive JPEG",
+  "quality": 84,
+  "files": [
+    {
+      "kind": "home",
+      "file": "menu-home.jpg",
+      "source": "home-v4.1.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 254480
+    },
+    {
+      "kind": "campaign",
+      "file": "menu-campaign.jpg",
+      "source": "campaign-v4.webp",
+      "width": 1280,
+      "height": 720,
+      "bytes": 292589
+    }
+  ]
+}

@@ -11,7 +11,7 @@ for(const channel of ['chrome','msedge']){
  page.on('pageerror',e=>errors.push(e.stack??e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
  await page.goto(url,{waitUntil:'networkidle'});await openCampaign(page);
  await page.locator('[data-action="home"]').first().click();
- assert.match(await page.locator('.mobile-home-background').getAttribute('src'),/home-v4\.1\.webp$/);
+ assert.match(await page.locator('.mobile-home-background').getAttribute('src'),/menu-home\.jpg$/);
  assert.equal(await page.locator('.hero-showcase').count(),0);await page.screenshot({path:`test-results/visual-v41/home-${channel}.png`});
  await page.locator('[data-action="campaign"]').click();
  await page.evaluate(async()=>{const a=window.__NAILONG__,{LEVELS}=await import('/content/levels.ts'),{scoreKey}=await import('/src/save.ts');for(const l of LEVELS)a.ui.save.scores[scoreKey('main',l.id)]={stars:3,lives:20,hero:'shield',difficulty:'normal'};a.ui.selectedLevel=3;a.ui.campaign(true);});

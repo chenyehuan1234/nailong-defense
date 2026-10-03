@@ -256,7 +256,11 @@
     "art/source/animation-v3/action-manifest.json"
   ],
   "menu": {
-    "image": "home-v4.1.webp",
+    "image": "menu-home.jpg",
+    "fallback": "home-v4.1.webp",
+    "campaign": "menu-campaign.jpg",
+    "campaignFallback": "campaign-v4.webp",
+    "formats": "menu-images.json",
     "source": "art/source/home-v4.1.png",
     "production": "art/source/home-v4.1.json",
     "version": "4.1"
